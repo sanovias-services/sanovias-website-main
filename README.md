@@ -1,3 +1,24 @@
+# Developer Docu
+
+## Introduction
+See vendor docu for more information about how to start the app locally, learn about the Next.JS framework, or deploy the app on Vercel.
+
+## Configuration files :
+* package.json: lists dependencies (next, react, react-dom) and scripts (dev, build, start)
+* next.config.ts: used to customise Next.Js behaviour (redirects, environment variables, image optimization, etc.)
+* tsconfig.json: configuration of typescript
+* eslintrc.json: eslint rules for clean code
+
+## Strcuture
+* Front-end: React components (pages, layouts, components) running in the browser
+* Back-end: API routes are Node.js functions, running on server side, and can connect to DB, CRM, or perform secure operations. No need to setup Express.js in addition
+* Client components (Interactive UI elements) run in browser while server components (default) run on server
+
+## How to run
+* Development: (npm run dev) spins up a nodejs server (using vite and turbopack under the hood)
+* Production: Can be deployed to Vercel, Nodejs server, or some cloud like AWS. TBD
+
+# Vendor Docu
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
