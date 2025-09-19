@@ -1,13 +1,14 @@
-import Header from "../components/Header";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "About | Smart Journey",
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "Smart Journey connects international patients with Tunisia's top accredited healthcare providers. Learn about our mission and services.",
+  keywords: ["medical tourism Tunisia", "about Smart Journey", "healthcare abroad"],
 };
 
 export default function AboutPage() {
   return (
     <div>
-      <Header />
       <section className="max-w-5xl mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-6 text-center">About Smart Journey</h1>
         <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto text-center">
