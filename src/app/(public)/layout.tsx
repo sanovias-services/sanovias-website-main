@@ -1,10 +1,6 @@
-// Split into two files to avoid "use client" with metadata export
-// This file only handles client components
-
 "use client";
 
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 export default function PublicLayout({
   children,
@@ -17,7 +13,10 @@ export default function PublicLayout({
       <main className="flex-grow">
         {children}
       </main>
-      <Footer />
+      {/* Footer temporarily removed due to import issue */}
+      <footer className="bg-gray-800 text-white p-8 text-center">
+        <p>&copy; {new Date().getFullYear()} Smart Journey. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
