@@ -4,7 +4,13 @@ import Image from 'next/image';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Header from './components/Header';
+import { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  description: 'Experience premium medical tourism in Tunisia with top-quality healthcare at affordable prices, short waiting times, and all-inclusive packages.',
+  keywords: ['medical tourism', 'Tunisia healthcare', 'medical travel packages', 'affordable healthcare'],
+};
 
 export default function Home() {
   const sliderSettings = {
@@ -19,7 +25,6 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
 
       {/* Hero Section with Image Slider */}
       <section className="relative">
@@ -54,9 +59,9 @@ export default function Home() {
           </div>
           <h3 className="text-2xl font-bold mb-4 text-gray-800">Fast Appointments</h3>
           <p className="text-gray-600 mb-6">No long waiting lists like in Europe.</p>
-          <a href="/about" className="mt-auto text-teal-600 hover:text-teal-800 font-medium flex items-center">
+          <Link href="/about" className="mt-auto text-teal-600 hover:text-teal-800 font-medium flex items-center">
             Learn more <span className="ml-1">→</span>
-          </a>
+          </Link>
         </div>
 
         {/* Card 2 */}
@@ -68,9 +73,9 @@ export default function Home() {
           </div>
           <h3 className="text-2xl font-bold mb-4 text-gray-800">Accredited Clinics</h3>
           <p className="text-gray-600 mb-6">All hospitals are internationally certified.</p>
-          <a href="/about" className="mt-auto text-blue-600 hover:text-blue-800 font-medium flex items-center">
+          <Link href="/about" className="mt-auto text-blue-600 hover:text-blue-800 font-medium flex items-center">
             See certifications <span className="ml-1">→</span>
-          </a>
+          </Link>
         </div>
 
         {/* Card 3 */}
@@ -82,9 +87,9 @@ export default function Home() {
           </div>
           <h3 className="text-2xl font-bold mb-4 text-gray-800">All-Inclusive Packages</h3>
           <p className="text-gray-600 mb-6">Travel, treatment, and aftercare covered.</p>
-          <a href="/about" className="mt-auto text-purple-600 hover:text-purple-800 font-medium flex items-center">
+          <Link href="/about" className="mt-auto text-purple-600 hover:text-purple-800 font-medium flex items-center">
             View packages <span className="ml-1">→</span>
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -92,14 +97,14 @@ export default function Home() {
       <section className="mt-12 px-4 text-center">
         <h2 className="text-3xl font-bold mb-4">Our Services</h2>
         <p className="max-w-2xl mx-auto text-gray-600 mb-6">From advanced plastic surgery to comprehensive dental care and complex treatments, Tunisia offers world-class healthcare at accessible prices.</p>
-        <a href="/services" className="inline-block px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-500">Explore Services →</a>
+        <Link href="/services" className="inline-block px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-500">Explore Services →</Link>
       </section>
 
       {/* Contact CTA */}
       <section className="mt-16 px-4 text-center">
         <h2 className="text-2xl font-bold mb-4">Have Questions?</h2>
         <p className="text-gray-600 mb-6">Get a personalized treatment plan and cost estimate.</p>
-        <a href="/contact" className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700">Contact Us →</a>
+        <Link href="/contact" className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700">Contact Us →</Link>
       </section>
     </div>
   );
