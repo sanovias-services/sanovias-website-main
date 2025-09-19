@@ -1,6 +1,5 @@
-import Header from "../components/Header";
-
-export const metadata = { title: "Services | Smart Journey" };
+"use client";
+import Link from "next/link";
 
 const services = [
   {
@@ -23,7 +22,6 @@ const services = [
 export default function ServicesPage() {
   return (
     <div>
-      <Header />
       <section className="max-w-6xl mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-6 text-center">Medical Services</h1>
         <p className="text-gray-600 max-w-3xl mx-auto text-center mb-12">
@@ -37,7 +35,7 @@ export default function ServicesPage() {
               <ul className="text-sm text-gray-700 space-y-1 mb-4 list-disc list-inside">
                 {s.items.map(i => <li key={i}>{i}</li>)}
               </ul>
-              <a href="/contact" className="mt-auto inline-block text-teal-600 hover:text-teal-800 font-medium">Request Details →</a>
+              <Link href="/contact" className="mt-auto inline-block text-teal-600 hover:text-teal-800 font-medium">Request Details →</Link>
             </div>
           ))}
         </div>

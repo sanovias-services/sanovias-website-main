@@ -1,13 +1,8 @@
-import Header from "../components/Header";
-
-export const metadata = {
-  title: "About | Smart Journey",
-};
+"use client";
 
 export default function AboutPage() {
   return (
     <div>
-      <Header />
       <section className="max-w-5xl mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-6 text-center">About Smart Journey</h1>
         <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto text-center">

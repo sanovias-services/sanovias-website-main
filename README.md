@@ -9,10 +9,10 @@ See vendor docu for more information about how to start the app locally, learn a
 * tsconfig.json: configuration of typescript
 * eslintrc.json: eslint rules for clean code
 
-## Strcuture
-* Front-end: React components (pages, layouts, components) running in the browser
-* Back-end: API routes are Node.js functions, running on server side, and can connect to DB, CRM, or perform secure operations. No need to setup Express.js in addition
-* Client components (Interactive UI elements) run in browser while server components (default) run on server
+## Strcuture (Client/Server)
+Client components (Interactive UI elements) run in browser while server components (default) run on server.
+* Front-end: React components (pages, layouts, components) running in the browser. The TSX files use JSX syntax (xml injected within javascript) for React components. Files with directive "use client" are client components.
+* Back-end: API routes are Node.js functions, running on server side, and can connect to DB, CRM, or perform secure operations. Therefore, no need to setup Express.js in addition. API routes (located in /api/) always run on server side to process HTTP requests and return data (JSON, etc.), not UI elements. That is why the are in .ts format.
 
 ## How to run
 * Development: (npm run dev) spins up a nodejs server (using vite and turbopack under the hood)
