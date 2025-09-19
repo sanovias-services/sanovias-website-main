@@ -4,13 +4,7 @@ import Image from 'next/image';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Metadata } from "next";
 import Link from "next/link";
-
-export const metadata: Metadata = {
-  description: 'Experience premium medical tourism in Tunisia with top-quality healthcare at affordable prices, short waiting times, and all-inclusive packages.',
-  keywords: ['medical tourism', 'Tunisia healthcare', 'medical travel packages', 'affordable healthcare'],
-};
 
 export default function Home() {
   const sliderSettings = {
