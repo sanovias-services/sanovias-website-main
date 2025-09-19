@@ -1,10 +1,4 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About Us",
-  description: "Smart Journey connects international patients with Tunisia's top accredited healthcare providers. Learn about our mission and services.",
-  keywords: ["medical tourism Tunisia", "about Smart Journey", "healthcare abroad"],
-};
+"use client";
 
 export default function AboutPage() {
   return (
