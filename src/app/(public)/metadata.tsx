@@ -5,6 +5,13 @@ export const metadata: Metadata = {
     template: '%s | Smart Journey',
     default: 'Smart Journey - Premium Medical Tourism in Tunisia',
   },
-  description: 'Premium medical tourism services in Tunisia. Access high-quality healthcare at affordable prices with complete travel support and aftercare.',
-  keywords: ['medical tourism', 'Tunisia healthcare', 'plastic surgery Tunisia', 'dental care abroad'],
+  description: 'Experience premium medical tourism in Tunisia with top-quality healthcare at affordable prices, short waiting times, and all-inclusive packages.',
+  keywords: [
+    'medical tourism', 
+    'Tunisia healthcare', 
+    'plastic surgery Tunisia', 
+    'dental care abroad',
+    'medical travel packages', 
+    'affordable healthcare'
+  ],
 };
