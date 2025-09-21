@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -87,98 +88,216 @@ export default function ContactPage() {
 
   return (
     <div>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">Get in Touch</h1>
+          <p className="text-xl text-center max-w-2xl mx-auto">We&apos;re here to help with your medical tourism journey. Contact us for a free consultation.</p>
+        </div>
+      </section>
+      
+      {/* Contact Information and Map */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-gray-800">Our Offices</h2>
+              
+              <div className="space-y-8">
+                {/* Tunisia Office */}
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="font-bold text-xl mb-3 text-teal-600">Tunisia Headquarters</h3>
+                  <div className="space-y-3 text-gray-600">
+                    <div className="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <span>123 Medical Avenue, <br/>Tunis 1002, Tunisia</span>
+                    </div>
+                    <div className="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      <span>+216 123 456 789</span>
+                    </div>
+                    <div className="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      <span>tunisia@smartjourney.com</span>
+                    </div>
+                    <div className="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span>Mon-Fri: 9:00 AM - 6:00 PM (GMT+1)<br/>Saturday: 9:00 AM - 1:00 PM</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Europe Office */}
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="font-bold text-xl mb-3 text-teal-600">European Office</h3>
+                  <div className="space-y-3 text-gray-600">
+                    <div className="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <span>35 Health Street, <br/>Frankfurt 60311, Germany</span>
+                    </div>
+                    <div className="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      <span>+49 123 456 7890</span>
+                    </div>
+                    <div className="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      <span>europe@smartjourney.com</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Map */}
+            <div className="h-96 bg-gray-300 rounded-lg overflow-hidden shadow-md">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12779.767530904846!2d10.17557311231232!3d36.81034306520403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd337f5e7ef543%3A0xd671924e714a0275!2sTunis%2C%20Tunisia!5e0!3m2!1sen!2sus!4v1646157370229!5m2!1sen!2sus" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }}
+                allowFullScreen 
+                loading="lazy" 
+                title="Smart Journey Office Location"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <section className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-4 text-center">Contact Us</h1>
+        <h2 className="text-3xl font-bold mb-4 text-center">Send Us a Message</h2>
         <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">Tell us about your medical goals. A coordinator will respond with treatment options and a cost estimate.</p>
         
         {status === "success" ? (
-          <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl mx-auto">
-            <svg className="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <h2 className="text-2xl font-bold text-green-800 mb-2">Thank You!</h2>
-            <p className="text-green-700 mb-6">{statusMessage}</p>
+          <div className="bg-gradient-to-r from-teal-50 to-green-50 border border-green-200 rounded-xl p-10 text-center max-w-xl mx-auto shadow-lg">
+            <div className="rounded-full bg-green-100 w-20 h-20 flex items-center justify-center mx-auto mb-6">
+              <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h2 className="text-3xl font-bold text-gray-800 mb-3">Thank You!</h2>
+            <p className="text-gray-600 mb-8 text-lg">{statusMessage}</p>
             <button 
               onClick={() => setStatus("idle")}
-              className="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+              className="px-8 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors duration-300 shadow-md"
             >
               Send Another Message
             </button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-md max-w-xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-4 mb-4">
+          <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg max-w-xl mx-auto border border-gray-100">
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
+                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
                 <input 
                   type="text" 
+                  id="firstName"
                   name="firstName"
                   value={formState.firstName}
                   onChange={handleChange}
-                  placeholder="First Name" 
-                  className={`w-full p-3 border rounded ${errors.firstName ? 'border-red-500' : ''}`}
+                  placeholder="Your first name" 
+                  className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all ${
+                    errors.firstName ? 'border-red-500' : 'border-gray-300'
+                  }`}
                 />
                 {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
               </div>
               <div>
+                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
                 <input 
                   type="text" 
+                  id="lastName"
                   name="lastName"
                   value={formState.lastName}
                   onChange={handleChange}
-                  placeholder="Last Name" 
-                  className={`w-full p-3 border rounded ${errors.lastName ? 'border-red-500' : ''}`}
+                  placeholder="Your last name" 
+                  className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all ${
+                    errors.lastName ? 'border-red-500' : 'border-gray-300'
+                  }`}
                 />
                 {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
               </div>
             </div>
             
-            <div className="mb-4">
+            <div className="mb-6">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
               <input 
                 type="email" 
+                id="email"
                 name="email"
                 value={formState.email}
                 onChange={handleChange}
-                placeholder="Email" 
-                className={`w-full p-3 border rounded ${errors.email ? 'border-red-500' : ''}`}
+                placeholder="Your email address" 
+                className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all ${
+                  errors.email ? 'border-red-500' : 'border-gray-300'
+                }`}
               />
               {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
             </div>
             
-            <div className="mb-4">
+            <div className="mb-6">
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number <span className="text-gray-400">(optional)</span></label>
               <input 
                 type="tel" 
+                id="phone"
                 name="phone"
                 value={formState.phone}
                 onChange={handleChange}
-                placeholder="Phone (optional)" 
-                className="w-full p-3 border rounded"
+                placeholder="Your phone number" 
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all"
               />
             </div>
             
-            <div className="mb-4">
+            <div className="mb-6">
+              <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
               <select 
+                id="service"
                 name="service"
                 value={formState.service}
                 onChange={handleChange}
-                className={`w-full p-3 border rounded ${errors.service ? 'border-red-500' : ''}`}
+                className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all ${
+                  errors.service ? 'border-red-500' : 'border-gray-300'
+                }`}
               >
-                <option value="">Select Service</option>
+                <option value="">Select a service</option>
                 <option value="Plastic Surgery">Plastic Surgery</option>
                 <option value="Dental Care">Dental Care</option>
                 <option value="Complex Treatments">Complex Treatments</option>
-                <option value="Other">Other</option>
+                <option value="Hair Transplant">Hair Transplant</option>
+                <option value="Weight Loss Surgery">Weight Loss Surgery</option>
+                <option value="Other">Other Medical Services</option>
               </select>
               {errors.service && <p className="text-red-500 text-xs mt-1">{errors.service}</p>}
             </div>
             
-            <div className="mb-4">
+            <div className="mb-6">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
               <textarea 
+                id="message"
                 name="message"
                 value={formState.message}
                 onChange={handleChange}
-                placeholder="Describe your needs" 
-                className={`w-full p-3 border rounded ${errors.message ? 'border-red-500' : ''}`}
-                rows={5}
+                placeholder="Please describe your medical needs, questions, or any specific treatments you're interested in..." 
+                className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all ${
+                  errors.message ? 'border-red-500' : 'border-gray-300'
+                }`}
+                rows={6}
               ></textarea>
               {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
             </div>
@@ -186,7 +305,7 @@ export default function ContactPage() {
             <button 
               type="submit" 
               disabled={status === "submitting"}
-              className={`w-full px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center justify-center ${
+              className={`w-full px-6 py-4 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors duration-300 flex items-center justify-center font-medium shadow-md ${
                 status === "submitting" ? "opacity-70 cursor-not-allowed" : ""
               }`}
             >
@@ -198,18 +317,83 @@ export default function ContactPage() {
                   </svg>
                   Sending...
                 </>
-              ) : "Submit"}
+              ) : (
+                <>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Send Message
+                </>
+              )}
             </button>
             
             {status === "error" && (
-              <div className="mt-4 p-3 bg-red-50 border border-red-200 text-red-700 rounded text-center">
-                {statusMessage}
+              <div className="mt-6 p-4 bg-red-50 border border-red-200 text-red-700 rounded-lg text-center">
+                <div className="flex items-center justify-center mb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="font-medium">Error</span>
+                </div>
+                <p>{statusMessage}</p>
               </div>
             )}
             
-            <p className="text-xs text-gray-500 mt-3 text-center">By submitting, you agree to be contacted regarding your inquiry.</p>
+            <div className="mt-6 text-center">
+              <p className="text-sm text-gray-500">By submitting, you agree to be contacted regarding your inquiry.</p>
+              <p className="text-sm text-gray-500 mt-2">Your data will be processed according to our <Link href="/privacy" className="text-teal-600 hover:underline">Privacy Policy</Link></p>
+            </div>
           </form>
         )}
+      </section>
+      
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
+          
+          <div className="space-y-6">
+            {/* FAQ Item 1 */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="font-bold text-xl mb-3">How quickly will I receive a response after submitting my inquiry?</h3>
+              <p className="text-gray-600">Our team typically responds within 24-48 business hours. For urgent matters, please indicate so in your message, and we&apos;ll prioritize your inquiry.</p>
+            </div>
+            
+            {/* FAQ Item 2 */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="font-bold text-xl mb-3">Do I need to provide my medical records when contacting you?</h3>
+              <p className="text-gray-600">Not initially. After our first consultation, our medical team will advise what records are needed for a proper assessment of your case and treatment options.</p>
+            </div>
+            
+            {/* FAQ Item 3 */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="font-bold text-xl mb-3">Can you arrange video consultations with doctors before I travel?</h3>
+              <p className="text-gray-600">Yes, we can arrange virtual consultations with your chosen specialist before you commit to traveling. This helps ensure you&apos;re comfortable with your doctor and treatment plan.</p>
+            </div>
+            
+            {/* FAQ Item 4 */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="font-bold text-xl mb-3">How do I get a cost estimate for my treatment?</h3>
+              <p className="text-gray-600">After reviewing your medical information, we&apos;ll provide a detailed cost breakdown including the procedure, hospital stay, medications, follow-up care, and any additional services you request.</p>
+            </div>
+            
+            {/* FAQ Item 5 */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="font-bold text-xl mb-3">Is there a fee for your consultation services?</h3>
+              <p className="text-gray-600">Initial consultations and treatment coordination services are complimentary. Our fees are included in the overall treatment package once you decide to proceed.</p>
+            </div>
+          </div>
+          
+          <div className="text-center mt-10">
+            <p className="text-lg text-gray-600">Still have questions?</p>
+            <div className="mt-4 inline-flex items-center text-teal-600 font-semibold hover:text-teal-700 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call us at +216 123 456 789
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
