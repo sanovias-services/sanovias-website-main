@@ -222,6 +222,114 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Partners Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Trusted Partners</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">We work with the best healthcare providers, hotels, and insurance companies to ensure you receive exceptional care and service.</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+            {/* Polyclinique hammamet */}
+            <a href="https://polycliniquehammamet.net/" target="_blank" rel="noopener noreferrer" 
+              className="flex flex-col items-center group">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center">
+                <Image 
+                  src="/partners/polyclinic.png" 
+                  alt="Polyclinique Hammamet" 
+                  width={120} 
+                  height={60}
+                  className="object-contain max-h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
+                />
+              </div>
+              <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Polyclinique Hammamet</span>
+            </a>
+            
+            {/* Hotel Sindbad Hammamet */}
+            <a href="https://sindbadhotel.com/" target="_blank" rel="noopener noreferrer" 
+              className="flex flex-col items-center group">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center">
+                <Image 
+                  src="/partners/sindbad.png" 
+                  alt="Hotel Sindbad Hammamet" 
+                  width={120} 
+                  height={60}
+                  className="object-contain max-h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
+                />
+              </div>
+              <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Hotel Sindbad Hammamet</span>
+            </a>
+            
+            {/* Hotel Khayem garden */}
+            <a href="https://www.khayamgarden.com/" target="_blank" rel="noopener noreferrer" 
+              className="flex flex-col items-center group">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center">
+                <Image 
+                  src="/partners/khayam.png" 
+                  alt="Hotel Khayem Garden" 
+                  width={120} 
+                  height={60}
+                  className="object-contain max-h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
+                />
+              </div>
+              <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Hotel Khayem Garden</span>
+            </a>
+            
+            {/* STCE */}
+            <a href="https://stce.tn/" target="_blank" rel="noopener noreferrer" 
+              className="flex flex-col items-center group">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center">
+                <Image 
+                  src="/partners/stce.png" 
+                  alt="STCE" 
+                  width={120} 
+                  height={60}
+                  className="object-contain max-h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
+                />
+              </div>
+              <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">STCE</span>
+            </a>
+            
+            {/* Allianz insurance */}
+            <a href="https://www.allianz.at/" target="_blank" rel="noopener noreferrer" 
+              className="flex flex-col items-center group">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center">
+                <Image 
+                  src="/partners/allianz.png" 
+                  alt="Allianz Insurance" 
+                  width={120} 
+                  height={60}
+                  className="object-contain max-h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
+                />
+              </div>
+              <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Allianz Insurance</span>
+            </a>
+            
+            {/* Uniqa insurance */}
+            <a href="https://www.uniqa.at/" target="_blank" rel="noopener noreferrer" 
+              className="flex flex-col items-center group">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center">
+                <Image 
+                  src="/partners/uniqa.png" 
+                  alt="Uniqa Insurance" 
+                  width={120} 
+                  height={60}
+                  className="object-contain max-h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
+                />
+              </div>
+              <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Uniqa Insurance</span>
+            </a>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link href="/about#partners" className="text-teal-600 hover:text-teal-800 font-medium inline-flex items-center">
+              Learn about our partnerships <span className="ml-1">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+      
       {/* Contact CTA */}
       <section className="py-16 px-4 bg-gradient-to-r from-teal-700 to-teal-800 text-white">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
