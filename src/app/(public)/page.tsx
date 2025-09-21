@@ -295,7 +295,7 @@ export default function Home() {
                   className="flex flex-col items-center group">
                   <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
                     <Image 
-                      src="/partners/polyclinic.png" 
+                      src="/partners/polyclinic-logo.webp" 
                       alt="Polyclinique Hammamet" 
                       width={120} 
                       height={60}
@@ -310,26 +310,24 @@ export default function Home() {
               <div className="px-3">
                 <a href="https://sindbadhotel.com/" target="_blank" rel="noopener noreferrer" 
                   className="flex flex-col items-center group">
-                  <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
+                  <div className="bg-sky-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-sky-100">
                     <Image 
-                      src="/partners/sindbad.png" 
+                      src="/partners/sindbad-logo.gif" 
                       alt="Hotel Sindbad Hammamet" 
                       width={120} 
                       height={60}
-                      className="object-contain max-h-16 opacity-80 group-hover:opacity-100 transition-opacity duration-300" 
+                      className="object-contain max-h-16 opacity-90 group-hover:opacity-100 transition-opacity duration-300" 
                     />
                   </div>
                   <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Hotel Sindbad Hammamet</span>
                 </a>
-              </div>
-              
-              {/* Hotel Khayem garden */}
+              </div>              {/* Hotel Khayem garden */}
               <div className="px-3">
                 <a href="https://www.khayamgarden.com/" target="_blank" rel="noopener noreferrer" 
                   className="flex flex-col items-center group">
                   <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
                     <Image 
-                      src="/partners/khayam.png" 
+                      src="/partners/khayem-logo.svg" 
                       alt="Hotel Khayem Garden" 
                       width={120} 
                       height={60}
@@ -344,13 +342,13 @@ export default function Home() {
               <div className="px-3">
                 <a href="https://stce.tn/" target="_blank" rel="noopener noreferrer" 
                   className="flex flex-col items-center group">
-                  <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
+                  <div className="bg-gray-800 p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-700">
                     <Image 
-                      src="/partners/stce.png" 
+                      src="/partners/stce-header3.png" 
                       alt="STCE" 
                       width={120} 
                       height={60}
-                      className="object-contain max-h-16 opacity-80 group-hover:opacity-100 transition-opacity duration-300" 
+                      className="object-contain max-h-16 opacity-90 group-hover:opacity-100 transition-opacity duration-300" 
                     />
                   </div>
                   <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">STCE</span>
@@ -363,7 +361,7 @@ export default function Home() {
                   className="flex flex-col items-center group">
                   <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
                     <Image 
-                      src="/partners/allianz.png" 
+                      src="/partners/allianz-logo.svg" 
                       alt="Allianz Insurance" 
                       width={120} 
                       height={60}
@@ -380,7 +378,7 @@ export default function Home() {
                   className="flex flex-col items-center group">
                   <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
                     <Image 
-                      src="/partners/uniqa.png" 
+                      src="/partners/uniqa-logo.svg" 
                       alt="Uniqa Insurance" 
                       width={120} 
                       height={60}
