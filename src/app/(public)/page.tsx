@@ -7,7 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
 
 export default function Home() {
-  const sliderSettings = {
+  // Hero slider settings
+  const heroSliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -16,13 +17,34 @@ export default function Home() {
     autoplay: true,
     autoplaySpeed: 4000,
   };
+  
+  // Partner slider is configured inline in the component
 
   return (
     <div>
+      {/* Custom CSS for partner slider */}
+      <style jsx global>{`
+        .partner-slider .slick-track {
+          display: flex !important;
+          align-items: center;
+        }
+        .partner-slider .slick-slide {
+          height: inherit;
+          display: flex !important;
+          justify-content: center;
+          align-items: center;
+        }
+        .partner-slider .slick-arrow:before {
+          color: #0f766e !important; /* teal-700 */
+        }
+        .partner-slider .slick-arrow:hover:before {
+          color: #14b8a6 !important; /* teal-500 */
+        }
+      `}</style>
 
       {/* Hero Section with Image Slider */}
       <section className="relative">
-        <Slider {...sliderSettings}>
+        <Slider {...heroSliderSettings}>
           <div>
             <Image src="/images/slider1.png" alt="Medical Tourism Tunisia" width={1920} height={600} className="w-full object-cover h-[600px]" />
           </div>
@@ -222,7 +244,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Partners Section */}
+      {/* Our Partners Section - Logo Slider */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -230,99 +252,148 @@ export default function Home() {
             <p className="max-w-2xl mx-auto text-gray-600">We work with the best healthcare providers, hotels, and insurance companies to ensure you receive exceptional care and service.</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            {/* Polyclinique hammamet */}
-            <a href="https://polycliniquehammamet.net/" target="_blank" rel="noopener noreferrer" 
-              className="flex flex-col items-center group">
-              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center">
-                <Image 
-                  src="/partners/polyclinic.png" 
-                  alt="Polyclinique Hammamet" 
-                  width={120} 
-                  height={60}
-                  className="object-contain max-h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
-                />
+          <div className="px-8 py-4 mb-8">
+            <Slider
+              dots={false}
+              infinite={true}
+              speed={1000}
+              slidesToShow={4}
+              slidesToScroll={1}
+              autoplay={true}
+              autoplaySpeed={3000}
+              pauseOnHover={true}
+              cssEase={"linear"}
+              responsive={[
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false
+                  }
+                }
+              ]}
+              className="partner-slider"
+            >
+              {/* Polyclinique hammamet */}
+              <div className="px-3">
+                <a href="https://polycliniquehammamet.net/" target="_blank" rel="noopener noreferrer" 
+                  className="flex flex-col items-center group">
+                  <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
+                    <Image 
+                      src="/partners/polyclinic.png" 
+                      alt="Polyclinique Hammamet" 
+                      width={120} 
+                      height={60}
+                      className="object-contain max-h-16 opacity-80 group-hover:opacity-100 transition-opacity duration-300" 
+                    />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Polyclinique Hammamet</span>
+                </a>
               </div>
-              <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Polyclinique Hammamet</span>
-            </a>
-            
-            {/* Hotel Sindbad Hammamet */}
-            <a href="https://sindbadhotel.com/" target="_blank" rel="noopener noreferrer" 
-              className="flex flex-col items-center group">
-              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center">
-                <Image 
-                  src="/partners/sindbad.png" 
-                  alt="Hotel Sindbad Hammamet" 
-                  width={120} 
-                  height={60}
-                  className="object-contain max-h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
-                />
+              
+              {/* Hotel Sindbad Hammamet */}
+              <div className="px-3">
+                <a href="https://sindbadhotel.com/" target="_blank" rel="noopener noreferrer" 
+                  className="flex flex-col items-center group">
+                  <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
+                    <Image 
+                      src="/partners/sindbad.png" 
+                      alt="Hotel Sindbad Hammamet" 
+                      width={120} 
+                      height={60}
+                      className="object-contain max-h-16 opacity-80 group-hover:opacity-100 transition-opacity duration-300" 
+                    />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Hotel Sindbad Hammamet</span>
+                </a>
               </div>
-              <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Hotel Sindbad Hammamet</span>
-            </a>
-            
-            {/* Hotel Khayem garden */}
-            <a href="https://www.khayamgarden.com/" target="_blank" rel="noopener noreferrer" 
-              className="flex flex-col items-center group">
-              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center">
-                <Image 
-                  src="/partners/khayam.png" 
-                  alt="Hotel Khayem Garden" 
-                  width={120} 
-                  height={60}
-                  className="object-contain max-h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
-                />
+              
+              {/* Hotel Khayem garden */}
+              <div className="px-3">
+                <a href="https://www.khayamgarden.com/" target="_blank" rel="noopener noreferrer" 
+                  className="flex flex-col items-center group">
+                  <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
+                    <Image 
+                      src="/partners/khayam.png" 
+                      alt="Hotel Khayem Garden" 
+                      width={120} 
+                      height={60}
+                      className="object-contain max-h-16 opacity-80 group-hover:opacity-100 transition-opacity duration-300" 
+                    />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Hotel Khayem Garden</span>
+                </a>
               </div>
-              <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Hotel Khayem Garden</span>
-            </a>
-            
-            {/* STCE */}
-            <a href="https://stce.tn/" target="_blank" rel="noopener noreferrer" 
-              className="flex flex-col items-center group">
-              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center">
-                <Image 
-                  src="/partners/stce.png" 
-                  alt="STCE" 
-                  width={120} 
-                  height={60}
-                  className="object-contain max-h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
-                />
+              
+              {/* STCE */}
+              <div className="px-3">
+                <a href="https://stce.tn/" target="_blank" rel="noopener noreferrer" 
+                  className="flex flex-col items-center group">
+                  <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
+                    <Image 
+                      src="/partners/stce.png" 
+                      alt="STCE" 
+                      width={120} 
+                      height={60}
+                      className="object-contain max-h-16 opacity-80 group-hover:opacity-100 transition-opacity duration-300" 
+                    />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">STCE</span>
+                </a>
               </div>
-              <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">STCE</span>
-            </a>
-            
-            {/* Allianz insurance */}
-            <a href="https://www.allianz.at/" target="_blank" rel="noopener noreferrer" 
-              className="flex flex-col items-center group">
-              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center">
-                <Image 
-                  src="/partners/allianz.png" 
-                  alt="Allianz Insurance" 
-                  width={120} 
-                  height={60}
-                  className="object-contain max-h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
-                />
+              
+              {/* Allianz insurance */}
+              <div className="px-3">
+                <a href="https://www.allianz.at/" target="_blank" rel="noopener noreferrer" 
+                  className="flex flex-col items-center group">
+                  <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
+                    <Image 
+                      src="/partners/allianz.png" 
+                      alt="Allianz Insurance" 
+                      width={120} 
+                      height={60}
+                      className="object-contain max-h-16 opacity-80 group-hover:opacity-100 transition-opacity duration-300" 
+                    />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Allianz Insurance</span>
+                </a>
               </div>
-              <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Allianz Insurance</span>
-            </a>
-            
-            {/* Uniqa insurance */}
-            <a href="https://www.uniqa.at/" target="_blank" rel="noopener noreferrer" 
-              className="flex flex-col items-center group">
-              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center">
-                <Image 
-                  src="/partners/uniqa.png" 
-                  alt="Uniqa Insurance" 
-                  width={120} 
-                  height={60}
-                  className="object-contain max-h-16 opacity-70 group-hover:opacity-100 transition-opacity duration-300" 
-                />
+              
+              {/* Uniqa insurance */}
+              <div className="px-3">
+                <a href="https://www.uniqa.at/" target="_blank" rel="noopener noreferrer" 
+                  className="flex flex-col items-center group">
+                  <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
+                    <Image 
+                      src="/partners/uniqa.png" 
+                      alt="Uniqa Insurance" 
+                      width={120} 
+                      height={60}
+                      className="object-contain max-h-16 opacity-80 group-hover:opacity-100 transition-opacity duration-300" 
+                    />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Uniqa Insurance</span>
+                </a>
               </div>
-              <span className="mt-2 text-xs text-gray-500 group-hover:text-teal-600">Uniqa Insurance</span>
-            </a>
+            </Slider>
           </div>
           
-          <div className="text-center mt-12">
+          <div className="text-center mt-4">
             <Link href="/about#partners" className="text-teal-600 hover:text-teal-800 font-medium inline-flex items-center">
               Learn about our partnerships <span className="ml-1">→</span>
             </Link>
