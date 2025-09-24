@@ -175,7 +175,7 @@ export default function HowItWorksPage() {
       {/* Trust Indicators */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-10">Why Travelers Trust Smart Journey</h2>
+          <h2 className="text-3xl font-bold text-center mb-10">Why Travelers Trust Sanovias</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6 rounded-lg border border-gray-200 bg-gray-50">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-500 mb-4">

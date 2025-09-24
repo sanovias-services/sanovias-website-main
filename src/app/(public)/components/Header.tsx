@@ -17,7 +17,7 @@ export function Header() {
     <header className="bg-white shadow-md py-3 px-6 flex items-center sticky top-0 z-50">
       <div className="flex-shrink-0">
         <Link href="/">
-          <Image src="/logo.png" alt="Smart Journey Logo" width={160} height={50} className="object-contain h-[80px] w-auto" />
+          <Image src="/sanovias_logo.png" alt="Sanovias Logo" width={160} height={50} className="object-contain h-[80px] w-auto" />
         </Link>
       </div>
       <nav className="flex-grow flex justify-center">
