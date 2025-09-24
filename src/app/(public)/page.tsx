@@ -46,13 +46,16 @@ export default function Home() {
       <section className="relative">
         <Slider {...heroSliderSettings}>
           <div>
-            <Image src="/images/slider1.png" alt="Medical Tourism Tunisia" width={1920} height={600} className="w-full object-cover h-[600px]" />
+            <Image src="/images/slider1.jpg" alt="Aestetic surgery" width={1920} height={600} className="w-full object-cover h-[600px]" />
           </div>
           <div>
-            <Image src="/images/slider2.jpg" alt="High-Quality Healthcare" width={1920} height={600} className="w-full object-cover h-[600px]" />
+            <Image src="/images/slider2.png" alt="High-Quality Healthcare" width={1920} height={600} className="w-full object-cover h-[600px]" />
           </div>
           <div>
-            <Image src="/images/slider3.jpg" alt="Affordable Treatments" width={1920} height={600} className="w-full object-cover h-[600px]" />
+            <Image src="/images/slider3.jpeg" alt="Tunisian Culture" width={1920} height={600} className="w-full object-cover h-[600px]" />
+          </div>
+          <div>
+            <Image src="/images/slider4.jpg" alt="Hammamet Hotels" width={1920} height={600} className="w-full object-cover h-[600px]" />
           </div>
         </Slider>
 
