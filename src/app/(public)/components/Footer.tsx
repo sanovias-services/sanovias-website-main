@@ -13,8 +13,8 @@ export default function Footer() {
           <div>
             <Link href="/">
               <Image
-                src="/logo.png"
-                alt="Smart Journey Logo"
+                src="/sanovias_logo.png"
+                alt="Sanovias Logo"
                 width={140}
                 height={45}
                 className="object-contain h-[60px] w-auto mb-4 brightness-150"
@@ -130,7 +130,7 @@ export default function Footer() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 text-teal-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:info@smartjourney.com" className="hover:text-white transition-colors duration-200">info@smartjourney.com</a>
+                <a href="mailto:info@sanovias.com" className="hover:text-white transition-colors duration-200">info@sanovias.com</a>
               </div>
               <div className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 text-teal-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -156,7 +156,7 @@ export default function Footer() {
         
         {/* Bottom Footer */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Smart Journey Medical Tourism. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Sanovias Services Limited. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="hover:text-white transition-colors duration-200">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors duration-200">Terms of Service</Link>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -173,7 +174,7 @@ export default function ContactPage() {
                 style={{ border: 0 }}
                 allowFullScreen 
                 loading="lazy" 
-                title="Smart Journey Office Location"
+                title="Sanovias Office Location"
               ></iframe>
             </div>
           </div>
@@ -181,6 +182,15 @@ export default function ContactPage() {
       </section>
       
       <section className="max-w-4xl mx-auto px-4 py-16">
+        <div className="text-center mb-6">
+          <Image 
+            src="/images/sanovias_2.png" 
+            alt="Sanovias" 
+            width={350} 
+            height={130}
+            className="mx-auto"
+          />
+        </div>
         <h2 className="text-3xl font-bold mb-4 text-center">Send Us a Message</h2>
         <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">Tell us about your medical goals. A coordinator will respond with treatment options and a cost estimate.</p>
         

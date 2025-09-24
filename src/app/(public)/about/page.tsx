@@ -7,9 +7,19 @@ export default function AboutPage() {
   return (
     <div>
       <section className="max-w-5xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-6 text-center">About Smart Journey</h1>
+        <div className="text-center mb-6">
+          <Image 
+            src="/images/sanovias_2.png" 
+            alt="About Sanovias" 
+            width={400} 
+            height={150}
+            className="mx-auto"
+          />
+          {/* Hidden H1 for SEO purposes */}
+          <h1 className="sr-only">About Sanovias</h1>
+        </div>
         <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto text-center">
-          Smart Journey connects international patients with Tunisia&apos;s top accredited hospitals, clinics, and specialists. Our mission is to make high-quality medical care accessible, transparent, and stress-free.
+          Sanovias connects international patients with Tunisia&apos;s top accredited hospitals, clinics, and specialists. Our mission is to make high-quality medical care accessible, transparent, and stress-free.
         </p>
       </section>
 
@@ -51,10 +61,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto px-4 py-16">
+      <section className="max-w-4xl mx-auto px-4 py-16 text-center">
         <h2 className="text-3xl font-bold mb-4">Our Approach</h2>
-        <p className="text-gray-600 mb-4">We curate trusted medical providers and guide patients through every stage: consultation, travel logistics, procedure, recovery, and follow-ups. Transparency and patient safety are our priorities.</p>
-        <p className="text-gray-600">Each case is handled by a dedicated coordinator who ensures seamless communication between you and your medical team.</p>
+        <p className="text-gray-600 mb-4 max-w-3xl mx-auto">We curate trusted medical providers and guide patients through every stage: consultation, travel logistics, procedure, recovery, and follow-ups. Transparency and patient safety are our priorities.</p>
+        <p className="text-gray-600 max-w-3xl mx-auto">Each case is handled by a dedicated coordinator who ensures seamless communication between you and your medical team.</p>
       </section>
 
       {/* Team Section */}
@@ -63,7 +73,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Our Leadership Team</h2>
             <p className="max-w-2xl mx-auto text-gray-600">
-              Meet the experts behind Smart Journey who are dedicated to providing you with the highest quality medical tourism experience.
+              Meet the experts behind Sanovias who are dedicated to providing you with the highest quality medical tourism experience.
             </p>
           </div>
           
@@ -83,7 +93,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold mb-1 text-gray-800">Ing. Alain A. Selmi, MA</h3>
                 <p className="text-teal-600 font-semibold mb-4">Founder & Managing Director</p>
                 <p className="text-gray-600 mb-5 line-clamp-3 group-hover:line-clamp-none transition-all duration-300">
-                  With over 15 years of experience in healthcare management and international business development, Alain brings expertise in creating seamless medical tourism experiences. His background in engineering and business administration drives Smart Journey&apos;s commitment to efficiency, quality, and patient satisfaction.
+                  With over 15 years of experience in healthcare management and international business development, Alain brings expertise in creating seamless medical tourism experiences. His background in engineering and business administration drives Sanovias&apos;s commitment to efficiency, quality, and patient satisfaction.
                 </p>
                 <div className="flex space-x-3 pt-3 border-t border-gray-100">
                   <a 

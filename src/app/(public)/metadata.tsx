@@ -2,8 +2,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Smart Journey',
-    default: 'Smart Journey - Premium Medical Tourism in Tunisia',
+    template: '%s | Sanovias',
+    default: 'Sanovias - Premium Medical Tourism in Tunisia',
   },
   description: 'Experience premium medical tourism in Tunisia with top-quality healthcare at affordable prices, short waiting times, and all-inclusive packages.',
   keywords: [
