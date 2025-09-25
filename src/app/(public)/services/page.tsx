@@ -31,9 +31,9 @@ export default function ServicesPage() {
           {services.map((s, index) => (
             <div key={s.title} className="bg-white p-8 rounded-xl shadow-md border border-gray-100 flex flex-col hover:shadow-lg transition-shadow duration-300">
               <div className={`w-12 h-12 rounded-full mb-6 flex items-center justify-center ${
-                index === 0 ? 'bg-[#2CA6A4] bg-opacity-20' : 
-                index === 1 ? 'bg-[#C9A66B] bg-opacity-20' : 
-                'bg-[#2CA6A4] bg-opacity-20'
+                index === 0 ? 'bg-[#2CA6A4]/10' : 
+                index === 1 ? 'bg-[#C9A66B]/10' : 
+                'bg-[#2CA6A4]/10'
               }`}>
                 {index === 0 && (
                   <svg className="w-6 h-6 text-[#2CA6A4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
