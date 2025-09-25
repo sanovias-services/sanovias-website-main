@@ -70,6 +70,95 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
+
+      {/* Partner Doctors Section */}
+      <section className="py-16 px-4 bg-[#F7F5F2]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-playfair text-4xl font-semibold mb-6 text-[#1C3C47]">Our Partner Medical Experts</h2>
+            <p className="max-w-3xl mx-auto font-inter text-gray-600 text-lg leading-relaxed">
+              We collaborate with Tunisia&apos;s most respected specialists to ensure you receive world-class medical care from experienced professionals.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+            {/* Dr. Atef M. Souissi */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden group transform transition duration-300 hover:-translate-y-2">
+              <div className="relative h-64 w-full bg-gradient-to-br from-[#2CA6A4]/20 to-[#2CA6A4]/10 flex items-center justify-center">
+                <div className="w-32 h-32 rounded-full bg-[#2CA6A4]/20 flex items-center justify-center">
+                  <svg className="w-16 h-16 text-[#2CA6A4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="font-playfair text-2xl font-semibold mb-1 text-[#1C3C47]">Dr. Atef M. Souissi</h3>
+                <p className="text-[#2CA6A4] font-inter font-semibold mb-4">Plastic & Maxillo-Facial Surgery</p>
+                <p className="font-inter text-gray-600 text-sm leading-relaxed mb-5">
+                  Renowned specialist in plastic and maxillo-facial surgery with over 15 years of experience. Dr. Souissi combines advanced surgical techniques with an artistic approach to deliver exceptional aesthetic and reconstructive results.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">Rhinoplasty</span>
+                  <span className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">Facelift</span>
+                  <span className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">Jaw Surgery</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Dr. Amira Ben Salem */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden group transform transition duration-300 hover:-translate-y-2">
+              <div className="relative h-64 w-full bg-gradient-to-br from-[#C9A66B]/20 to-[#C9A66B]/10 flex items-center justify-center">
+                <div className="w-32 h-32 rounded-full bg-[#C9A66B]/20 flex items-center justify-center">
+                  <svg className="w-16 h-16 text-[#C9A66B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="font-playfair text-2xl font-semibold mb-1 text-[#1C3C47]">Dr. Amira Ben Salem</h3>
+                <p className="text-[#C9A66B] font-inter font-semibold mb-4">Cosmetic & Restorative Dentistry</p>
+                <p className="font-inter text-gray-600 text-sm leading-relaxed mb-5">
+                  Leading dental specialist focusing on cosmetic and restorative dentistry. Dr. Ben Salem is known for her meticulous attention to detail and gentle approach, creating beautiful, natural-looking smiles for international patients.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-3 py-1 bg-[#C9A66B]/10 text-[#C9A66B] text-xs font-inter rounded-full">Hollywood Smile</span>
+                  <span className="px-3 py-1 bg-[#C9A66B]/10 text-[#C9A66B] text-xs font-inter rounded-full">Implants</span>
+                  <span className="px-3 py-1 bg-[#C9A66B]/10 text-[#C9A66B] text-xs font-inter rounded-full">Veneers</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Dr. Hedi Antar */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden group transform transition duration-300 hover:-translate-y-2">
+              <div className="relative h-64 w-full bg-gradient-to-br from-[#2CA6A4]/20 to-[#2CA6A4]/10 flex items-center justify-center">
+                <div className="w-32 h-32 rounded-full bg-[#2CA6A4]/20 flex items-center justify-center">
+                  <svg className="w-16 h-16 text-[#2CA6A4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="font-playfair text-2xl font-semibold mb-1 text-[#1C3C47]">Dr. Hedi Antar</h3>
+                <p className="text-[#2CA6A4] font-inter font-semibold mb-4">Orthopedic Surgery</p>
+                <p className="font-inter text-gray-600 text-sm leading-relaxed mb-5">
+                  Expert orthopedic surgeon specializing in joint replacement and sports medicine. Dr. Antar brings cutting-edge surgical techniques and rehabilitation protocols to help patients regain mobility and return to active lifestyles.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">Hip Replacement</span>
+                  <span className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">Knee Surgery</span>
+                  <span className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">Sports Medicine</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/contact" className="inline-block px-8 py-4 bg-[#2CA6A4] text-white font-inter font-semibold rounded-lg hover:bg-[#26928F] transition-all duration-300 transform hover:-translate-y-1 shadow-md">
+              Schedule a Consultation →
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
