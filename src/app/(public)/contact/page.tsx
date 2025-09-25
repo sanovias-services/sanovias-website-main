@@ -90,75 +90,75 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white py-16">
+      <section className="bg-gradient-to-r from-[#1C3C47] to-[#2CA6A4] text-white py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">Get in Touch</h1>
-          <p className="text-xl text-center max-w-2xl mx-auto">We&apos;re here to help with your medical tourism journey. Contact us for a free consultation.</p>
+          <h1 className="font-playfair text-4xl md:text-5xl font-semibold mb-4 text-center">Get in Touch</h1>
+          <p className="font-inter text-xl text-center max-w-2xl mx-auto leading-relaxed">We&apos;re here to help with your medical tourism journey. Contact us for a free consultation.</p>
         </div>
       </section>
       
       {/* Contact Information and Map */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#F7F5F2]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-gray-800">Our Offices</h2>
+              <h2 className="font-playfair text-4xl font-semibold mb-8 text-[#1C3C47]">Our Offices</h2>
               
               <div className="space-y-8">
                 {/* Tunisia Office */}
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="font-bold text-xl mb-3 text-teal-600">Tunisia Headquarters</h3>
-                  <div className="space-y-3 text-gray-600">
+                <div className="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                  <h3 className="font-playfair font-semibold text-2xl mb-4 text-[#2CA6A4]">Tunisia Headquarters</h3>
+                  <div className="space-y-4 text-gray-600">
                     <div className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-[#2CA6A4] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
-                      <span>123 Medical Avenue, <br/>Tunis 1002, Tunisia</span>
+                      <span className="font-inter leading-relaxed">123 Medical Avenue, <br/>Tunis 1002, Tunisia</span>
                     </div>
                     <div className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-[#2CA6A4] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                      <span>+216 123 456 789</span>
+                      <span className="font-inter">+216 123 456 789</span>
                     </div>
                     <div className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-[#2CA6A4] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
-                      <span>tunisia@smartjourney.com</span>
+                      <span className="font-inter">tunisia@sanovias.com</span>
                     </div>
                     <div className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-[#2CA6A4] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <span>Mon-Fri: 9:00 AM - 6:00 PM (GMT+1)<br/>Saturday: 9:00 AM - 1:00 PM</span>
+                      <span className="font-inter leading-relaxed">Mon-Fri: 9:00 AM - 6:00 PM (GMT+1)<br/>Saturday: 9:00 AM - 1:00 PM</span>
                     </div>
                   </div>
                 </div>
                 
                 {/* Europe Office */}
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="font-bold text-xl mb-3 text-teal-600">European Office</h3>
-                  <div className="space-y-3 text-gray-600">
+                <div className="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                  <h3 className="font-playfair font-semibold text-2xl mb-4 text-[#2CA6A4]">European Office</h3>
+                  <div className="space-y-4 text-gray-600">
                     <div className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-[#2CA6A4] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
-                      <span>35 Health Street, <br/>Frankfurt 60311, Germany</span>
+                      <span className="font-inter leading-relaxed">35 Health Street, <br/>Frankfurt 60311, Germany</span>
                     </div>
                     <div className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-[#2CA6A4] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                      <span>+49 123 456 7890</span>
+                      <span className="font-inter">+49 123 456 7890</span>
                     </div>
                     <div className="flex items-start">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-[#2CA6A4] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
-                      <span>europe@smartjourney.com</span>
+                      <span className="font-inter">europe@sanovias.com</span>
                     </div>
                   </div>
                 </div>
@@ -191,8 +191,8 @@ export default function ContactPage() {
             className="mx-auto"
           />
         </div>
-        <h2 className="text-3xl font-bold mb-4 text-center">Send Us a Message</h2>
-        <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">Tell us about your medical goals. A coordinator will respond with treatment options and a cost estimate.</p>
+        <h2 className="font-playfair text-4xl font-semibold mb-6 text-center text-[#1C3C47]">Send Us a Message</h2>
+        <p className="font-inter text-gray-600 text-center text-lg leading-relaxed max-w-2xl mx-auto mb-10">Tell us about your medical goals. A coordinator will respond with treatment options and a cost estimate.</p>
         
         {status === "success" ? (
           <div className="bg-gradient-to-r from-teal-50 to-green-50 border border-green-200 rounded-xl p-10 text-center max-w-xl mx-auto shadow-lg">
@@ -205,7 +205,7 @@ export default function ContactPage() {
             <p className="text-gray-600 mb-8 text-lg">{statusMessage}</p>
             <button 
               onClick={() => setStatus("idle")}
-              className="px-8 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors duration-300 shadow-md"
+              className="px-8 py-3 bg-[#2CA6A4] text-white font-inter font-semibold rounded-lg hover:bg-[#26928F] transition-colors duration-300 shadow-md"
             >
               Send Another Message
             </button>
@@ -214,7 +214,7 @@ export default function ContactPage() {
           <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg max-w-xl mx-auto border border-gray-100">
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                <label htmlFor="firstName" className="block text-sm font-inter font-medium text-gray-700 mb-1">First Name</label>
                 <input 
                   type="text" 
                   id="firstName"
@@ -222,14 +222,14 @@ export default function ContactPage() {
                   value={formState.firstName}
                   onChange={handleChange}
                   placeholder="Your first name" 
-                  className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all ${
+                  className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-[#2CA6A4] focus:border-[#2CA6A4] font-inter transition-all ${
                     errors.firstName ? 'border-red-500' : 'border-gray-300'
                   }`}
                 />
                 {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
               </div>
               <div>
-                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                <label htmlFor="lastName" className="block text-sm font-inter font-medium text-gray-700 mb-1">Last Name</label>
                 <input 
                   type="text" 
                   id="lastName"
@@ -237,7 +237,7 @@ export default function ContactPage() {
                   value={formState.lastName}
                   onChange={handleChange}
                   placeholder="Your last name" 
-                  className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all ${
+                  className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-[#2CA6A4] focus:border-[#2CA6A4] font-inter transition-all ${
                     errors.lastName ? 'border-red-500' : 'border-gray-300'
                   }`}
                 />
@@ -246,7 +246,7 @@ export default function ContactPage() {
             </div>
             
             <div className="mb-6">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+              <label htmlFor="email" className="block text-sm font-inter font-medium text-gray-700 mb-1">Email Address</label>
               <input 
                 type="email" 
                 id="email"
@@ -254,7 +254,7 @@ export default function ContactPage() {
                 value={formState.email}
                 onChange={handleChange}
                 placeholder="Your email address" 
-                className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all ${
+                className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-[#2CA6A4] focus:border-[#2CA6A4] font-inter transition-all ${
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -262,7 +262,7 @@ export default function ContactPage() {
             </div>
             
             <div className="mb-6">
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number <span className="text-gray-400">(optional)</span></label>
+              <label htmlFor="phone" className="block text-sm font-inter font-medium text-gray-700 mb-1">Phone Number <span className="text-gray-400">(optional)</span></label>
               <input 
                 type="tel" 
                 id="phone"
@@ -270,18 +270,18 @@ export default function ContactPage() {
                 value={formState.phone}
                 onChange={handleChange}
                 placeholder="Your phone number" 
-                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all"
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#2CA6A4] focus:border-[#2CA6A4] font-inter transition-all"
               />
             </div>
             
             <div className="mb-6">
-              <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
+              <label htmlFor="service" className="block text-sm font-inter font-medium text-gray-700 mb-1">Service Interested In</label>
               <select 
                 id="service"
                 name="service"
                 value={formState.service}
                 onChange={handleChange}
-                className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all ${
+                className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-[#2CA6A4] focus:border-[#2CA6A4] font-inter transition-all ${
                   errors.service ? 'border-red-500' : 'border-gray-300'
                 }`}
               >
@@ -297,14 +297,14 @@ export default function ContactPage() {
             </div>
             
             <div className="mb-6">
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+              <label htmlFor="message" className="block text-sm font-inter font-medium text-gray-700 mb-1">Your Message</label>
               <textarea 
                 id="message"
                 name="message"
                 value={formState.message}
                 onChange={handleChange}
                 placeholder="Please describe your medical needs, questions, or any specific treatments you're interested in..." 
-                className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all ${
+                className={`w-full p-3 border rounded-md focus:ring-2 focus:ring-[#2CA6A4] focus:border-[#2CA6A4] font-inter transition-all ${
                   errors.message ? 'border-red-500' : 'border-gray-300'
                 }`}
                 rows={6}
@@ -315,7 +315,7 @@ export default function ContactPage() {
             <button 
               type="submit" 
               disabled={status === "submitting"}
-              className={`w-full px-6 py-4 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors duration-300 flex items-center justify-center font-medium shadow-md ${
+              className={`w-full px-6 py-4 bg-[#2CA6A4] text-white font-inter font-semibold rounded-lg hover:bg-[#26928F] transition-colors duration-300 flex items-center justify-center shadow-md ${
                 status === "submitting" ? "opacity-70 cursor-not-allowed" : ""
               }`}
             >
@@ -350,53 +350,53 @@ export default function ContactPage() {
             )}
             
             <div className="mt-6 text-center">
-              <p className="text-sm text-gray-500">By submitting, you agree to be contacted regarding your inquiry.</p>
-              <p className="text-sm text-gray-500 mt-2">Your data will be processed according to our <Link href="/privacy" className="text-teal-600 hover:underline">Privacy Policy</Link></p>
+              <p className="font-inter text-sm text-gray-500">By submitting, you agree to be contacted regarding your inquiry.</p>
+              <p className="font-inter text-sm text-gray-500 mt-2">Your data will be processed according to our <Link href="/privacy" className="text-[#2CA6A4] hover:text-[#26928F] hover:underline transition-colors duration-150">Privacy Policy</Link></p>
             </div>
           </form>
         )}
       </section>
       
       {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#F7F5F2]">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
+          <h2 className="font-playfair text-4xl font-semibold mb-12 text-center text-[#1C3C47]">Frequently Asked Questions</h2>
           
           <div className="space-y-6">
             {/* FAQ Item 1 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="font-bold text-xl mb-3">How quickly will I receive a response after submitting my inquiry?</h3>
-              <p className="text-gray-600">Our team typically responds within 24-48 business hours. For urgent matters, please indicate so in your message, and we&apos;ll prioritize your inquiry.</p>
+            <div className="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+              <h3 className="font-playfair font-semibold text-xl mb-4 text-[#1C3C47]">How quickly will I receive a response after submitting my inquiry?</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">Our team typically responds within 24-48 business hours. For urgent matters, please indicate so in your message, and we&apos;ll prioritize your inquiry.</p>
             </div>
             
             {/* FAQ Item 2 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="font-bold text-xl mb-3">Do I need to provide my medical records when contacting you?</h3>
-              <p className="text-gray-600">Not initially. After our first consultation, our medical team will advise what records are needed for a proper assessment of your case and treatment options.</p>
+            <div className="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+              <h3 className="font-playfair font-semibold text-xl mb-4 text-[#1C3C47]">Do I need to provide my medical records when contacting you?</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">Not initially. After our first consultation, our medical team will advise what records are needed for a proper assessment of your case and treatment options.</p>
             </div>
             
             {/* FAQ Item 3 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="font-bold text-xl mb-3">Can you arrange video consultations with doctors before I travel?</h3>
-              <p className="text-gray-600">Yes, we can arrange virtual consultations with your chosen specialist before you commit to traveling. This helps ensure you&apos;re comfortable with your doctor and treatment plan.</p>
+            <div className="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+              <h3 className="font-playfair font-semibold text-xl mb-4 text-[#1C3C47]">Can you arrange video consultations with doctors before I travel?</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">Yes, we can arrange virtual consultations with your chosen specialist before you commit to traveling. This helps ensure you&apos;re comfortable with your doctor and treatment plan.</p>
             </div>
             
             {/* FAQ Item 4 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="font-bold text-xl mb-3">How do I get a cost estimate for my treatment?</h3>
-              <p className="text-gray-600">After reviewing your medical information, we&apos;ll provide a detailed cost breakdown including the procedure, hospital stay, medications, follow-up care, and any additional services you request.</p>
+            <div className="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+              <h3 className="font-playfair font-semibold text-xl mb-4 text-[#1C3C47]">How do I get a cost estimate for my treatment?</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">After reviewing your medical information, we&apos;ll provide a detailed cost breakdown including the procedure, hospital stay, medications, follow-up care, and any additional services you request.</p>
             </div>
             
             {/* FAQ Item 5 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="font-bold text-xl mb-3">Is there a fee for your consultation services?</h3>
-              <p className="text-gray-600">Initial consultations and treatment coordination services are complimentary. Our fees are included in the overall treatment package once you decide to proceed.</p>
+            <div className="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+              <h3 className="font-playfair font-semibold text-xl mb-4 text-[#1C3C47]">Is there a fee for your consultation services?</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">Initial consultations and treatment coordination services are complimentary. Our fees are included in the overall treatment package once you decide to proceed.</p>
             </div>
           </div>
           
           <div className="text-center mt-10">
-            <p className="text-lg text-gray-600">Still have questions?</p>
-            <div className="mt-4 inline-flex items-center text-teal-600 font-semibold hover:text-teal-700 transition-colors">
+            <p className="font-inter text-lg text-gray-600 mb-4">Still have questions?</p>
+            <div className="inline-flex items-center text-[#2CA6A4] font-inter font-semibold hover:text-[#26928F] transition-colors duration-150">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>

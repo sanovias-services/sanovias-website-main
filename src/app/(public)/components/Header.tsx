@@ -14,19 +14,21 @@ const navItems = [
 export function Header() {
   const pathname = usePathname();
   return (
-    <header className="bg-white shadow-md py-3 px-6 flex items-center sticky top-0 z-50">
+    <header className="bg-white border-b border-gray-100 py-4 px-6 flex items-center sticky top-0 z-50">
       <div className="flex-shrink-0">
         <Link href="/">
-          <Image src="/sanovias_logo.png" alt="Sanovias Logo" width={160} height={50} className="object-contain h-[80px] w-auto" />
+          <Image src="/sanovias_logo.png" alt="Sanovias Logo" width={160} height={50} className="object-contain h-[60px] w-auto" />
         </Link>
       </div>
       <nav className="flex-grow flex justify-center">
-        <ul className="flex space-x-6 text-gray-700">
+        <ul className="flex space-x-8 text-gray-700">
           {navItems.map(item => (
             <li key={item.href}>
               <Link
                 href={item.href}
-                className={`hover:text-teal-600 transition-colors ${pathname === item.href ? 'text-teal-600 font-semibold' : ''}`}
+                className={`font-inter font-medium text-sm hover:text-[#2CA6A4] transition-colors duration-150 ${
+                  pathname === item.href ? 'text-[#2CA6A4] font-semibold border-b-2 border-[#2CA6A4] pb-1' : ''
+                }`}
               >
                 {item.label}
               </Link>
@@ -34,6 +36,14 @@ export function Header() {
           ))}
         </ul>
       </nav>
+      <div className="flex-shrink-0 ml-4">
+        <Link 
+          href="/contact" 
+          className="bg-[#2CA6A4] text-white px-6 py-2 rounded-lg font-inter font-semibold text-sm uppercase tracking-wide hover:bg-[#26928F] transition-all duration-150 hover:shadow-lg"
+        >
+          Get Quote
+        </Link>
+      </div>
     </header>
   );
 }
