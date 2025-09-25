@@ -18,61 +18,61 @@ export default function AboutPage() {
           {/* Hidden H1 for SEO purposes */}
           <h1 className="sr-only">About Sanovias</h1>
         </div>
-        <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto text-center">
+        <p className="font-inter text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto text-center">
           Sanovias connects international patients with Tunisia&apos;s top accredited hospitals, clinics, and specialists. Our mission is to make high-quality medical care accessible, transparent, and stress-free.
         </p>
       </section>
 
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4 bg-[#F7F5F2]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12">Our Services</h2>
+          <h2 className="font-playfair text-4xl font-semibold mb-12 text-[#1C3C47]">Our Services</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 rounded-full bg-[#2CA6A4] bg-opacity-20 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#2CA6A4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Fast Appointments</h3>
-              <p className="text-gray-600">Skip the waiting lists and get scheduled quickly with top specialists.</p>
+              <h3 className="font-playfair text-xl font-semibold mb-3 text-[#1C3C47]">Fast Appointments</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">Skip the waiting lists and get scheduled quickly with top specialists.</p>
             </div>
             
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 rounded-full bg-[#C9A66B] bg-opacity-20 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#C9A66B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Accredited Clinics</h3>
-              <p className="text-gray-600">We only partner with facilities that meet strict international standards and certifications.</p>
+              <h3 className="font-playfair text-xl font-semibold mb-3 text-[#1C3C47]">Accredited Clinics</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">We only partner with facilities that meet strict international standards and certifications.</p>
             </div>
             
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 rounded-full bg-[#2CA6A4] bg-opacity-20 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#2CA6A4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">All-Inclusive Packages</h3>
-              <p className="text-gray-600">Complete packages covering treatment, travel arrangements and comprehensive aftercare support.</p>
+              <h3 className="font-playfair text-xl font-semibold mb-3 text-[#1C3C47]">All-Inclusive Packages</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">Complete packages covering treatment, travel arrangements and comprehensive aftercare support.</p>
             </div>
           </div>
         </div>
       </section>
 
       <section className="max-w-4xl mx-auto px-4 py-16 text-center">
-        <h2 className="text-3xl font-bold mb-4">Our Approach</h2>
-        <p className="text-gray-600 mb-4 max-w-3xl mx-auto">We curate trusted medical providers and guide patients through every stage: consultation, travel logistics, procedure, recovery, and follow-ups. Transparency and patient safety are our priorities.</p>
-        <p className="text-gray-600 max-w-3xl mx-auto">Each case is handled by a dedicated coordinator who ensures seamless communication between you and your medical team.</p>
+        <h2 className="font-playfair text-4xl font-semibold mb-6 text-[#1C3C47]">Our Approach</h2>
+        <p className="font-inter text-gray-600 text-lg leading-relaxed mb-6 max-w-3xl mx-auto">We curate trusted medical providers and guide patients through every stage: consultation, travel logistics, procedure, recovery, and follow-ups. Transparency and patient safety are our priorities.</p>
+        <p className="font-inter text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">Each case is handled by a dedicated coordinator who ensures seamless communication between you and your medical team.</p>
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section id="team" className="py-16 bg-gradient-to-br from-[#F7F5F2] to-[#F0F0F0]">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Our Leadership Team</h2>
-            <p className="max-w-2xl mx-auto text-gray-600">
+            <h2 className="font-playfair text-4xl font-semibold mb-6 text-[#1C3C47]">Our Leadership Team</h2>
+            <p className="max-w-2xl mx-auto font-inter text-gray-600 text-lg leading-relaxed">
               Meet the experts behind Sanovias who are dedicated to providing you with the highest quality medical tourism experience.
             </p>
           </div>
@@ -90,9 +90,9 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
               </div>
               <div className="p-6 relative -mt-20 bg-white rounded-t-2xl">
-                <h3 className="text-2xl font-bold mb-1 text-gray-800">Ing. Alain A. Selmi, MA</h3>
-                <p className="text-teal-600 font-semibold mb-4">Founder & Managing Director</p>
-                <p className="text-gray-600 mb-5 line-clamp-3 group-hover:line-clamp-none transition-all duration-300">
+                <h3 className="font-playfair text-2xl font-semibold mb-1 text-[#1C3C47]">Ing. Alain A. Selmi, MA</h3>
+                <p className="text-[#2CA6A4] font-inter font-semibold mb-4">Founder & Managing Director</p>
+                <p className="font-inter text-gray-600 text-sm leading-relaxed mb-5 line-clamp-3 group-hover:line-clamp-none transition-all duration-300">
                   With over 15 years of experience in healthcare management and international business development, Alain brings expertise in creating seamless medical tourism experiences. His background in engineering and business administration drives Sanovias&apos;s commitment to efficiency, quality, and patient satisfaction.
                 </p>
                 <div className="flex space-x-3 pt-3 border-t border-gray-100">
@@ -132,9 +132,9 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
               </div>
               <div className="p-6 relative -mt-20 bg-white rounded-t-2xl">
-                <h3 className="text-2xl font-bold mb-1 text-gray-800">Dr. Atef M. Souissi</h3>
-                <p className="text-teal-600 font-semibold mb-4">Medical Director</p>
-                <p className="text-gray-600 mb-5 line-clamp-3 group-hover:line-clamp-none transition-all duration-300">
+                <h3 className="font-playfair text-2xl font-semibold mb-1 text-[#1C3C47]">Dr. Atef M. Souissi</h3>
+                <p className="text-[#2CA6A4] font-inter font-semibold mb-4">Medical Director</p>
+                <p className="font-inter text-gray-600 text-sm leading-relaxed mb-5 line-clamp-3 group-hover:line-clamp-none transition-all duration-300">
                   Dr. Souissi is an accomplished medical professional with extensive expertise in international healthcare standards and patient care. With his deep knowledge of medical procedures and patient needs, he ensures that each treatment plan meets the highest quality standards while being tailored to individual requirements.
                 </p>
                 <div className="flex space-x-3 pt-3 border-t border-gray-100">
@@ -170,37 +170,37 @@ export default function AboutPage() {
       {/* Team Values */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12">Our Commitment to Excellence</h2>
+          <h2 className="font-playfair text-4xl font-semibold mb-12 text-[#1C3C47]">Our Commitment to Excellence</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <div className="w-16 h-16 rounded-full bg-[#2CA6A4] bg-opacity-20 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#2CA6A4]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Patient Safety</h3>
-              <p className="text-gray-600">We partner only with accredited healthcare facilities that meet international standards for safety and quality.</p>
+              <h3 className="font-playfair text-xl font-semibold mb-3 text-[#1C3C47]">Patient Safety</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">We partner only with accredited healthcare facilities that meet international standards for safety and quality.</p>
             </div>
             
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <div className="w-16 h-16 rounded-full bg-[#C9A66B] bg-opacity-20 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#C9A66B]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Transparency</h3>
-              <p className="text-gray-600">Clear communication and no hidden costs. We provide detailed information about procedures, risks, and outcomes.</p>
+              <h3 className="font-playfair text-xl font-semibold mb-3 text-[#1C3C47]">Transparency</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">Clear communication and no hidden costs. We provide detailed information about procedures, risks, and outcomes.</p>
             </div>
             
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <div className="w-16 h-16 rounded-full bg-[#2CA6A4] bg-opacity-20 flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#2CA6A4]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Personalized Care</h3>
-              <p className="text-gray-600">Every patient receives a customized treatment plan and support throughout their medical journey.</p>
+              <h3 className="font-playfair text-xl font-semibold mb-3 text-[#1C3C47]">Personalized Care</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">Every patient receives a customized treatment plan and support throughout their medical journey.</p>
             </div>
           </div>
         </div>

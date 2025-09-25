@@ -1,26 +1,98 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Sanovias Color Palette */
+  --primary-turquoise: #2CA6A4;
+  --primary-turquoise-hover: #26928F;
+  --secondary-gold: #C9A66B;
+  --accent-navy: #1C3C47;
+  
+  /* Background Neutrals */
+  --pure-white: #FFFFFF;
+  --light-sand: #F7F5F2;
+  --mist-gray: #E6E8EA;
+  --charcoal-text: #1F2937;
+  --cool-gray: #6B7280;
+  
+  /* Semantic Colors */
+  --success: #1F8F6B;
+  --warning: #D3A447;
+  --error: #C44545;
+  
+  /* UI States */
+  --disabled-bg: #E2E8EA;
+  --disabled-text: #94A3B8;
+  --border-neutral: #D1D5DB;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--pure-white);
+  --color-foreground: var(--charcoal-text);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--pure-white);
+  color: var(--charcoal-text);
+  font-family: var(--font-inter), system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, sans-serif;
+  line-height: 1.6;
+}
+
+/* Typography Utilities */
+.font-heading {
+  font-family: var(--font-playfair), Georgia, 'Times New Roman', serif;
+}
+
+.font-body {
+  font-family: var(--font-inter), system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, sans-serif;
+}
+
+/* Custom Heading Styles */
+h1, h2, h3 {
+  font-family: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  line-height: 1.15;
+}
+
+.hero-heading {
+  font-family: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--primary-turquoise);
+  color: white;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  transition: all 150ms ease-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-turquoise-hover);
+  box-shadow: 0 4px 12px -4px rgba(44, 166, 164, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--accent-navy);
+  border: 2px solid var(--accent-navy);
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  transition: all 150ms ease-out;
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-navy);
+  color: white;
 }
