@@ -1,12 +1,16 @@
 'use client';
 
 import Image from 'next/image';
-import Slider from 'react-slick';
+import HydrationSafeSlider from './components/HydrationSafeSlider';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
+import { useLocale } from './components/LocaleProvider';
+import { useTranslations } from './components/useTranslations';
 
 export default function Home() {
+  const locale = useLocale();
+  const { t } = useTranslations();
   // Hero slider settings
   const heroSliderSettings = {
     dots: true,
@@ -44,42 +48,47 @@ export default function Home() {
 
       {/* Hero Section with Image Slider */}
       <section className="relative">
-        <Slider {...heroSliderSettings}>
+        <HydrationSafeSlider settings={heroSliderSettings}>
           <div>
-            <Image src="/images/slider1.jpg" alt="Aestetic surgery" width={1920} height={600} className="w-full object-cover h-[600px]" />
+            <Image src="/images/slider1.jpg" alt={t('home.imageAlts.slider1')} width={1920} height={600} className="w-full object-cover h-[600px]" />
           </div>
           <div>
-            <Image src="/images/slider2.png" alt="High-Quality Healthcare" width={1920} height={600} className="w-full object-cover h-[600px]" />
+            <Image src="/images/slider2.png" alt={t('home.imageAlts.slider2')} width={1920} height={600} className="w-full object-cover h-[600px]" />
           </div>
           <div>
-            <Image src="/images/slider3.jpeg" alt="Tunisian Culture" width={1920} height={600} className="w-full object-cover h-[600px]" />
+            <Image src="/images/slider3.jpeg" alt={t('home.imageAlts.slider3')} width={1920} height={600} className="w-full object-cover h-[600px]" />
           </div>
           <div>
-            <Image src="/images/slider4.jpg" alt="Hammamet Hotels" width={1920} height={600} className="w-full object-cover h-[600px]" />
+            <Image src="/images/slider4.jpg" alt={t('home.imageAlts.slider4')} width={1920} height={600} className="w-full object-cover h-[600px]" />
           </div>
-        </Slider>
+        </HydrationSafeSlider>
 
         {/* Hero Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-r from-black/70 to-black/50 text-white text-center px-4">
           <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg uppercase tracking-wider leading-tight">
-            Premium Healthcare<br />in Tunisia
+            {t('home.hero.title').split('\\n').map((line, index) => (
+              <span key={index}>
+                {line}
+                {index === 0 && <br />}
+              </span>
+            ))}
           </h1>
           <p className="font-inter text-xl md:text-2xl mb-8 max-w-3xl font-light leading-relaxed">
-            World-class medical care at 30-70% less than European prices
+            {t('home.hero.subtitle')}
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Link href="/contact" className="px-8 py-4 bg-[#2CA6A4] text-white font-inter font-semibold text-sm uppercase tracking-wide rounded-lg hover:bg-[#26928F] transition-all duration-150 transform hover:-translate-y-1 hover:shadow-lg">
-              Get a Free Quote
+            <Link href={`/${locale}/contact`} className="px-8 py-4 bg-[#2CA6A4] text-white font-inter font-semibold text-sm uppercase tracking-wide rounded-lg hover:bg-[#26928F] transition-all duration-150 transform hover:-translate-y-1 hover:shadow-lg">
+              {t('home.hero.cta.quote')}
             </Link>
-            <Link href="/services" className="px-8 py-4 bg-white text-[#1C3C47] font-inter font-semibold text-sm uppercase tracking-wide rounded-lg hover:bg-gray-100 transition-all duration-150 transform hover:-translate-y-1 shadow-lg">
-              Browse Treatments
+            <Link href={`/${locale}/services`} className="px-8 py-4 bg-white text-[#1C3C47] font-inter font-semibold text-sm uppercase tracking-wide rounded-lg hover:bg-gray-100 transition-all duration-150 transform hover:-translate-y-1 shadow-lg">
+              {t('home.hero.cta.treatments')}
             </Link>
-            <Link href="/how" className="px-8 py-4 bg-transparent text-white border-2 border-white font-inter font-semibold text-sm uppercase tracking-wide rounded-lg hover:bg-white/20 transition-all duration-150">
-              How It Works
+            <Link href={`/${locale}/how`} className="px-8 py-4 bg-transparent text-white border-2 border-white font-inter font-semibold text-sm uppercase tracking-wide rounded-lg hover:bg-white/20 transition-all duration-150">
+              {t('home.hero.cta.howItWorks')}
             </Link>
           </div>
           <div className="py-3 px-6 bg-white/20 rounded-full backdrop-blur-sm font-inter text-sm">
-            Trusted by <span className="font-bold text-[#C9A66B]">2000+</span> patients from Europe and beyond
+            {t('home.hero.trust', { count: 2000 })}
           </div>
         </div>
       </section>
@@ -93,10 +102,10 @@ export default function Home() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 className="font-playfair text-2xl font-semibold mb-4 text-[#1C3C47]">Fast Appointments</h3>
-          <p className="font-inter text-gray-600 mb-6 text-center leading-relaxed">No long waiting lists like in Europe.</p>
-          <Link href="/about" className="mt-auto text-[#2CA6A4] hover:text-[#26928F] font-inter font-medium flex items-center transition-colors duration-150">
-            Learn more <span className="ml-1">→</span>
+          <h3 className="font-playfair text-2xl font-semibold mb-4 text-[#1C3C47]">{t('home.benefits.fastAppointments.title')}</h3>
+          <p className="font-inter text-gray-600 mb-6 text-center leading-relaxed">{t('home.benefits.fastAppointments.description')}</p>
+          <Link href={`/${locale}/about`} className="mt-auto text-[#2CA6A4] hover:text-[#26928F] font-inter font-medium flex items-center transition-colors duration-150">
+            {t('home.benefits.fastAppointments.link')} <span className="ml-1">→</span>
           </Link>
         </div>
 
@@ -107,10 +116,10 @@ export default function Home() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
-          <h3 className="font-playfair text-2xl font-semibold mb-4 text-[#1C3C47]">Accredited Clinics</h3>
-          <p className="font-inter text-gray-600 mb-6 text-center leading-relaxed">All hospitals are internationally certified.</p>
-          <Link href="/about" className="mt-auto text-[#2CA6A4] hover:text-[#26928F] font-inter font-medium flex items-center transition-colors duration-150">
-            See certifications <span className="ml-1">→</span>
+          <h3 className="font-playfair text-2xl font-semibold mb-4 text-[#1C3C47]">{t('home.benefits.accreditedClinics.title')}</h3>
+          <p className="font-inter text-gray-600 mb-6 text-center leading-relaxed">{t('home.benefits.accreditedClinics.description')}</p>
+          <Link href={`/${locale}/about`} className="mt-auto text-[#2CA6A4] hover:text-[#26928F] font-inter font-medium flex items-center transition-colors duration-150">
+            {t('home.benefits.accreditedClinics.link')} <span className="ml-1">→</span>
           </Link>
         </div>
 
@@ -121,10 +130,10 @@ export default function Home() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
             </svg>
           </div>
-          <h3 className="font-playfair text-2xl font-semibold mb-4 text-[#1C3C47]">All-Inclusive Packages</h3>
-          <p className="font-inter text-gray-600 mb-6 text-center leading-relaxed">Travel, treatment, and aftercare covered.</p>
-          <Link href="/about" className="mt-auto text-[#2CA6A4] hover:text-[#26928F] font-inter font-medium flex items-center transition-colors duration-150">
-            View packages <span className="ml-1">→</span>
+          <h3 className="font-playfair text-2xl font-semibold mb-4 text-[#1C3C47]">{t('home.benefits.allInclusive.title')}</h3>
+          <p className="font-inter text-gray-600 mb-6 text-center leading-relaxed">{t('home.benefits.allInclusive.description')}</p>
+          <Link href={`/${locale}/about`} className="mt-auto text-[#2CA6A4] hover:text-[#26928F] font-inter font-medium flex items-center transition-colors duration-150">
+            {t('home.benefits.allInclusive.link')} <span className="ml-1">→</span>
           </Link>
         </div>
       </section>
@@ -133,8 +142,8 @@ export default function Home() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-playfair text-4xl font-semibold mb-6 text-[#1C3C47]">Your Journey With Us</h2>
-            <p className="max-w-2xl mx-auto font-inter text-gray-600 text-lg leading-relaxed">Our streamlined process guides you from consultation to recovery with expert care at every step.</p>
+            <h2 className="font-playfair text-4xl font-semibold mb-6 text-[#1C3C47]">{t('home.journey.title')}</h2>
+            <p className="max-w-2xl mx-auto font-inter text-gray-600 text-lg leading-relaxed">{t('home.journey.subtitle')}</p>
           </div>
           
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -144,8 +153,8 @@ export default function Home() {
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-12 w-12 rounded-full bg-[#2CA6A4] flex items-center justify-center text-white font-inter font-bold text-lg">1</div>
                   <div className="ml-6">
-                    <h3 className="font-playfair font-semibold text-xl mb-2 text-[#1C3C47]">Initial Quote</h3>
-                    <p className="font-inter text-gray-600 leading-relaxed">Receive a tailored estimate within 24 hours of contacting us.</p>
+                    <h3 className="font-playfair font-semibold text-xl mb-2 text-[#1C3C47]">{t('home.journey.steps.quote.title')}</h3>
+                    <p className="font-inter text-gray-600 leading-relaxed">{t('home.journey.steps.quote.description')}</p>
                   </div>
                 </div>
                 
@@ -153,8 +162,8 @@ export default function Home() {
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-12 w-12 rounded-full bg-[#2CA6A4] flex items-center justify-center text-white font-inter font-bold text-lg">2</div>
                   <div className="ml-6">
-                    <h3 className="font-playfair font-semibold text-xl mb-2 text-[#1C3C47]">Medical Consultation</h3>
-                    <p className="font-inter text-gray-600 leading-relaxed">Speak with our specialists to customize your treatment plan.</p>
+                    <h3 className="font-playfair font-semibold text-xl mb-2 text-[#1C3C47]">{t('home.journey.steps.consultation.title')}</h3>
+                    <p className="font-inter text-gray-600 leading-relaxed">{t('home.journey.steps.consultation.description')}</p>
                   </div>
                 </div>
                 
@@ -162,37 +171,27 @@ export default function Home() {
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-12 w-12 rounded-full bg-[#2CA6A4] flex items-center justify-center text-white font-inter font-bold text-lg">3</div>
                   <div className="ml-6">
-                    <h3 className="font-playfair font-semibold text-xl mb-2 text-[#1C3C47]">Travel & Treatment</h3>
-                    <p className="font-inter text-gray-600 leading-relaxed">Experience seamless logistics and premium medical care.</p>
+                    <h3 className="font-playfair font-semibold text-xl mb-2 text-[#1C3C47]">{t('home.journey.steps.treatment.title')}</h3>
+                    <p className="font-inter text-gray-600 leading-relaxed">{t('home.journey.steps.treatment.description')}</p>
                   </div>
                 </div>
               </div>
             </div>
             
             <div className="w-full md:w-1/2 bg-[#F7F5F2] p-8 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-playfair text-2xl font-semibold mb-6 text-[#1C3C47]">Why Choose Our Process?</h3>
+              <h3 className="font-playfair text-2xl font-semibold mb-6 text-[#1C3C47]">{t('home.journey.whyChoose.title')}</h3>
               <ul className="space-y-4">
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-[#2CA6A4] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="font-inter text-gray-700 leading-relaxed">No middlemen, direct provider relationships</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-[#2CA6A4] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="font-inter text-gray-700 leading-relaxed">Multilingual support throughout</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-[#2CA6A4] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="font-inter text-gray-700 leading-relaxed">Comprehensive aftercare planning</span>
-                </li>
+                {t('home.journey.whyChoose.benefits').split('|').map((benefit, index) => (
+                  <li key={index} className="flex items-start">
+                    <svg className="w-6 h-6 text-[#2CA6A4] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="font-inter text-gray-700 leading-relaxed">{benefit}</span>
+                  </li>
+                ))}
               </ul>
-              <Link href="/how" className="mt-8 inline-block px-6 py-3 bg-[#2CA6A4] text-white font-inter font-semibold text-sm uppercase tracking-wide rounded-lg hover:bg-[#26928F] transition-all duration-150">
-                See How It Works
+              <Link href={`/${locale}/how`} className="mt-8 inline-block px-6 py-3 bg-[#2CA6A4] text-white font-inter font-semibold text-sm uppercase tracking-wide rounded-lg hover:bg-[#26928F] transition-all duration-150">
+                {t('home.journey.whyChoose.cta')}
               </Link>
             </div>
           </div>
@@ -202,8 +201,8 @@ export default function Home() {
       {/* Services teaser */}
       <section className="py-16 px-4 bg-[#F7F5F2]">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="font-playfair text-4xl font-semibold mb-6 text-[#1C3C47]">Popular Medical Services</h2>
-          <p className="max-w-2xl mx-auto font-inter text-gray-600 text-lg leading-relaxed mb-12">World-class treatments at competitive prices with Tunisia&apos;s leading specialists.</p>
+          <h2 className="font-playfair text-4xl font-semibold mb-6 text-[#1C3C47]">{t('home.services.title')}</h2>
+          <p className="max-w-2xl mx-auto font-inter text-gray-600 text-lg leading-relaxed mb-12">{t('home.services.subtitle')}</p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border-t-4 border-[#2CA6A4]">
@@ -212,8 +211,8 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
                 </svg>
               </div>
-              <h3 className="font-playfair font-semibold text-xl mb-3 text-[#1C3C47]">Plastic Surgery</h3>
-              <p className="font-inter text-gray-600 leading-relaxed">Face lifts, body contouring, and reconstructive procedures</p>
+              <h3 className="font-playfair font-semibold text-xl mb-3 text-[#1C3C47]">{t('home.services.categories.plasticSurgery.title')}</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">{t('home.services.categories.plasticSurgery.description')}</p>
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border-t-4 border-[#C9A66B]">
@@ -222,8 +221,8 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
                 </svg>
               </div>
-              <h3 className="font-playfair font-semibold text-xl mb-3 text-[#1C3C47]">Dental Care</h3>
-              <p className="font-inter text-gray-600 leading-relaxed">Implants, veneers, and full smile makeovers</p>
+              <h3 className="font-playfair font-semibold text-xl mb-3 text-[#1C3C47]">{t('home.services.categories.dentalCare.title')}</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">{t('home.services.categories.dentalCare.description')}</p>
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border-t-4 border-[#2CA6A4]">
@@ -232,21 +231,19 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="font-playfair font-semibold text-xl mb-3 text-[#1C3C47]">Orthopedics</h3>
-              <p className="font-inter text-gray-600 leading-relaxed">Joint replacements, spine surgery, and sports medicine</p>
+              <h3 className="font-playfair font-semibold text-xl mb-3 text-[#1C3C47]">{t('home.services.categories.orthopedics.title')}</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">{t('home.services.categories.orthopedics.description')}</p>
             </div>
           </div>
           
           <div className="flex flex-wrap justify-center gap-3 mb-8">
-            <span className="px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200 font-inter text-sm text-gray-700 hover:bg-[#F7F5F2] transition-colors duration-150">Fertility Treatments</span>
-            <span className="px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200 font-inter text-sm text-gray-700 hover:bg-[#F7F5F2] transition-colors duration-150">Eye Surgery</span>
-            <span className="px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200 font-inter text-sm text-gray-700 hover:bg-[#F7F5F2] transition-colors duration-150">Bariatric Surgery</span>
-            <span className="px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200 font-inter text-sm text-gray-700 hover:bg-[#F7F5F2] transition-colors duration-150">Hair Transplant</span>
-            <span className="px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200 font-inter text-sm text-gray-700 hover:bg-[#F7F5F2] transition-colors duration-150">Wellness Packages</span>
+            {t('home.services.additionalServices').split('|').map((service, index) => (
+              <span key={index} className="px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200 font-inter text-sm text-gray-700 hover:bg-[#F7F5F2] transition-colors duration-150">{service}</span>
+            ))}
           </div>
           
-          <Link href="/services" className="inline-block px-8 py-3 bg-[#2CA6A4] text-white font-inter font-semibold rounded-lg hover:bg-[#26928F] transition-all duration-300 transform hover:-translate-y-1 shadow-md">
-            Explore All Services →
+          <Link href={`/${locale}/services`} className="inline-block px-8 py-3 bg-[#2CA6A4] text-white font-inter font-semibold rounded-lg hover:bg-[#26928F] transition-all duration-300 transform hover:-translate-y-1 shadow-md">
+            {t('home.services.cta')}
           </Link>
         </div>
       </section>
@@ -255,24 +252,25 @@ export default function Home() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-playfair text-4xl font-semibold mb-6 text-[#1C3C47]">Our Trusted Partners</h2>
-            <p className="max-w-2xl mx-auto font-inter text-gray-600 text-lg leading-relaxed">We work with the best healthcare providers, hotels, and insurance companies to ensure you receive exceptional care and service.</p>
+            <h2 className="font-playfair text-4xl font-semibold mb-6 text-[#1C3C47]">{t('home.partners.title')}</h2>
+            <p className="max-w-2xl mx-auto font-inter text-gray-600 text-lg leading-relaxed">{t('home.partners.subtitle')}</p>
           </div>
           
           <div className="px-8 py-4 mb-8">
-            <Slider
-              dots={false}
-              infinite={true}
-              speed={1000}
-              slidesToShow={4}
-              slidesToScroll={1}
-              autoplay={true}
-              autoplaySpeed={3000}
-              pauseOnHover={true}
-              cssEase={"linear"}
-              responsive={[
-                {
-                  breakpoint: 1024,
+            <HydrationSafeSlider
+              settings={{
+                dots: false,
+                infinite: true,
+                speed: 1000,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                pauseOnHover: true,
+                cssEase: "linear",
+                responsive: [
+                  {
+                    breakpoint: 1024,
                   settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
@@ -293,7 +291,7 @@ export default function Home() {
                     arrows: false
                   }
                 }
-              ]}
+              ]}}
               className="partner-slider"
             >
               {/* Polyclinique hammamet */}
@@ -395,12 +393,12 @@ export default function Home() {
                   <span className="mt-2 text-xs text-gray-500 group-hover:text-[#2CA6A4] font-inter transition-colors duration-200">Uniqa Insurance</span>
                 </a>
               </div>
-            </Slider>
+            </HydrationSafeSlider>
           </div>
           
           <div className="text-center mt-4">
-            <Link href="/about#partners" className="text-[#2CA6A4] hover:text-[#26928F] font-inter font-medium inline-flex items-center transition-colors duration-150">
-              Learn about our partnerships <span className="ml-1">→</span>
+            <Link href={`/${locale}/about#partners`} className="text-[#2CA6A4] hover:text-[#26928F] font-inter font-medium inline-flex items-center transition-colors duration-150">
+              {t('home.partners.link')} <span className="ml-1">→</span>
             </Link>
           </div>
         </div>
@@ -410,32 +408,22 @@ export default function Home() {
       <section className="py-16 px-4 bg-gradient-to-r from-[#1C3C47] to-[#2CA6A4] text-white">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-2/3 text-center md:text-left mb-8 md:mb-0">
-            <h2 className="font-playfair text-4xl font-semibold mb-4">Ready to Begin Your Journey?</h2>
-            <p className="font-inter text-lg leading-relaxed mb-4">Get a personalized consultation and detailed cost estimate tailored to your needs.</p>
+            <h2 className="font-playfair text-4xl font-semibold mb-4">{t('home.contact.title')}</h2>
+            <p className="font-inter text-lg leading-relaxed mb-4">{t('home.contact.subtitle')}</p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-              <div className="flex items-center">
-                <svg className="w-5 h-5 text-[#C9A66B] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="font-inter">No obligation</span>
-              </div>
-              <div className="flex items-center">
-                <svg className="w-5 h-5 text-[#C9A66B] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="font-inter">Response within 24 hours</span>
-              </div>
-              <div className="flex items-center">
-                <svg className="w-5 h-5 text-[#C9A66B] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="font-inter">Free video consultation</span>
-              </div>
+              {t('home.contact.benefits').split('|').map((benefit, index) => (
+                <div key={index} className="flex items-center">
+                  <svg className="w-5 h-5 text-[#C9A66B] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="font-inter">{benefit}</span>
+                </div>
+              ))}
             </div>
           </div>
           <div className="md:w-1/3 flex justify-center md:justify-end">
-            <Link href="/contact" className="inline-block px-8 py-4 bg-white text-[#1C3C47] font-inter font-bold rounded-lg shadow-lg hover:bg-[#F7F5F2] transition-all duration-300 transform hover:-translate-y-1">
-              Contact Our Team
+            <Link href={`/${locale}/contact`} className="inline-block px-8 py-4 bg-white text-[#1C3C47] font-inter font-bold rounded-lg shadow-lg hover:bg-[#F7F5F2] transition-all duration-300 transform hover:-translate-y-1">
+              {t('home.contact.cta')}
             </Link>
           </div>
         </div>

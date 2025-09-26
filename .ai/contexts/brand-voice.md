@@ -1,7 +1,7 @@
 # Sanovias Brand Voice Guidelines
 
 ## Brand Identity
-- **Brand Name**: Sanovias (formerly Smart Journey)
+- **Brand Name**: Sanovias (Healthy pathways in english)
 - **Industry**: Medical Tourism in Tunisia
 - **Target Audience**: International patients seeking high-quality healthcare at affordable prices
 

@@ -6,10 +6,13 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "validate-translations": "node public/messages/validate.js",
+    "check-json-syntax": "node -e \"['en', 'de'].forEach(lang => { try { JSON.parse(require('fs').readFileSync('./public/messages/' + lang + '.json', 'utf8')); console.log('✅ ' + lang + '.json valid'); } catch(e) { console.log('❌ ' + lang + '.json error:', e.message); process.exit(1); } })\""
   },
   "dependencies": {
-    "next": "15.2.4",
+    "next": "^15.5.4",
+    "next-intl": "^4.3.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-slick": "^0.30.3",
