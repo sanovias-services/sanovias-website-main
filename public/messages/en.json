@@ -1,0 +1,122 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "how": "How It Works",
+    "contact": "Contact"
+  },
+  "common": {
+    "readMore": "Read More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More"
+  },
+  "home": {
+    "hero": {
+      "title": "Premium Healthcare\nin Tunisia",
+      "subtitle": "World-class medical care at 30-70% less than European prices",
+      "cta": {
+        "quote": "Get a Free Quote",
+        "treatments": "Browse Treatments",
+        "howItWorks": "How It Works"
+      },
+      "trust": "Trusted by {count}+ patients from Europe and beyond"
+    },
+    "benefits": {
+      "fastAppointments": {
+        "title": "Fast Appointments",
+        "description": "No long waiting lists like in Europe.",
+        "link": "Learn more"
+      },
+      "accreditedClinics": {
+        "title": "Accredited Clinics",
+        "description": "All hospitals are internationally certified.",
+        "link": "See certifications"
+      },
+      "allInclusive": {
+        "title": "All-Inclusive Packages",
+        "description": "Travel, treatment, and aftercare covered.",
+        "link": "View packages"
+      }
+    },
+    "journey": {
+      "title": "Your Journey With Us",
+      "subtitle": "Our streamlined process guides you from consultation to recovery with expert care at every step.",
+      "steps": {
+        "quote": {
+          "title": "Initial Quote",
+          "description": "Receive a tailored estimate within 24 hours of contacting us."
+        },
+        "consultation": {
+          "title": "Medical Consultation",
+          "description": "Speak with our specialists to customize your treatment plan."
+        },
+        "treatment": {
+          "title": "Travel & Treatment",
+          "description": "Experience seamless logistics and premium medical care."
+        }
+      },
+      "whyChoose": {
+        "title": "Why Choose Our Process?",
+        "benefits": "No middlemen, direct provider relationships|Multilingual support throughout|Comprehensive aftercare planning",
+        "cta": "See How It Works"
+      }
+    },
+    "services": {
+      "title": "Popular Medical Services",
+      "subtitle": "World-class treatments at competitive prices with Tunisia's leading specialists.",
+      "categories": {
+        "plasticSurgery": {
+          "title": "Plastic Surgery",
+          "description": "Face lifts, body contouring, and reconstructive procedures"
+        },
+        "dentalCare": {
+          "title": "Dental Care",
+          "description": "Implants, veneers, and full smile makeovers"
+        },
+        "orthopedics": {
+          "title": "Orthopedics",
+          "description": "Joint replacements, spine surgery, and sports medicine"
+        }
+      },
+      "additionalServices": "Fertility Treatments|Eye Surgery|Bariatric Surgery|Hair Transplant|Wellness Packages",
+      "cta": "Explore All Services →"
+    },
+    "partners": {
+      "title": "Our Trusted Partners",
+      "subtitle": "We work with the best healthcare providers, hotels, and insurance companies to ensure you receive exceptional care and service.",
+      "link": "Learn about our partnerships"
+    },
+    "contact": {
+      "title": "Ready to Begin Your Journey?",
+      "subtitle": "Get a personalized consultation and detailed cost estimate tailored to your needs.",
+      "benefits": "No obligation|Response within 24 hours|Free video consultation",
+      "cta": "Contact Our Team"
+    },
+    "imageAlts": {
+      "slider1": "Aesthetic surgery",
+      "slider2": "High-Quality Healthcare",
+      "slider3": "Tunisian Culture",
+      "slider4": "Hammamet Hotels"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Sanovias - Premium Medical Tourism in Tunisia",
+      "description": "Experience world-class healthcare in Tunisia with affordable prices. Comprehensive medical tourism packages including accommodation and care."
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Learn about Sanovias and our commitment to providing exceptional medical tourism services in Tunisia."
+    },
+    "services": {
+      "title": "Our Services",
+      "description": "Discover our comprehensive medical services including plastic surgery, dental care, and orthopedic treatments in Tunisia."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Get in touch with Sanovias for your medical tourism needs. We're here to help plan your healthcare journey."
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Dienstleistungen",
+    "how": "Wie es funktioniert",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "readMore": "Mehr lesen",
+    "getStarted": "Jetzt starten",
+    "contactUs": "Kontaktieren Sie uns",
+    "learnMore": "Mehr erfahren"
+  },
+  "home": {
+    "hero": {
+      "title": "Erstklassige Medizin\nin Tunesien",
+      "subtitle": "Weltklasse-medizinische Versorgung zu 30-70% weniger als europäische Preise",
+      "cta": {
+        "quote": "Kostenloses Angebot erhalten",
+        "treatments": "Behandlungen durchsuchen",
+        "howItWorks": "Wie es funktioniert"
+      },
+      "trust": "Vertrauen von {count}+ Patienten aus Europa und darüber hinaus",
+      "stats": {
+        "patients": {
+          "number": "2000+",
+          "label": "Patienten behandelt"
+        },
+        "satisfaction": {
+          "number": "98%",
+          "label": "Zufriedenheitsrate"
+        },
+        "experience": {
+          "number": "15+",
+          "label": "Jahre Erfahrung"
+        }
+      }
+    },
+    "benefits": {
+      "title": "Warum Sanovias wählen?",
+      "subtitle": "Wir bieten mehr als nur medizinische Behandlungen - wir bieten eine komplette Reise zu Ihrem Wohlbefinden mit unvergleichlicher Unterstützung.",
+      "savingsUpTo": {
+        "title": "Einsparungen bis zu 70%",
+        "description": "Hochwertige Behandlungen zu einem Bruchteil der europäischen Kosten.",
+        "link": "Preise vergleichen"
+      },
+      "accreditedClinics": {
+        "title": "Akkreditierte Kliniken",
+        "description": "Alle Krankenhäuser sind international zertifiziert.",
+        "link": "Zertifizierungen ansehen"
+      },
+      "allInclusive": {
+        "title": "All-Inclusive-Pakete",
+        "description": "Reise, Behandlung und Nachsorge abgedeckt.",
+        "link": "Pakete ansehen"
+      }
+    },
+    "journey": {
+      "title": "Ihre Reise mit uns",
+      "subtitle": "Unser optimierter Prozess führt Sie von der Beratung bis zur Genesung mit Expertenbetreuung bei jedem Schritt.",
+      "steps": {
+        "quote": {
+          "title": "Erstes Angebot",
+          "description": "Erhalten Sie eine maßgeschneiderte Schätzung innerhalb von 24 Stunden nach Ihrer Kontaktaufnahme."
+        },
+        "consultation": {
+          "title": "Medizinische Beratung",
+          "description": "Sprechen Sie mit unseren Spezialisten, um Ihren Behandlungsplan anzupassen."
+        },
+        "treatment": {
+          "title": "Reise & Behandlung",
+          "description": "Erleben Sie nahtlose Logistik und erstklassige medizinische Versorgung."
+        }
+      },
+      "whyChoose": {
+        "title": "Warum unseren Prozess wählen?",
+        "benefits": "Keine Zwischenhändler, direkte Anbieterbeziehungen|Mehrsprachige Unterstützung durchgängig|Umfassende Nachsorgeplanung",
+        "cta": "Erfahren Sie mehr über unseren Prozess"
+      }
+    },
+    "services": {
+      "title": "Beliebte medizinische Leistungen",
+      "subtitle": "Weltklasse-Behandlungen zu wettbewerbsfähigen Preisen mit Tunesiens führenden Spezialisten.",
+      "categories": {
+        "plasticSurgery": {
+          "title": "Plastische Chirurgie",
+          "description": "Facelifts, Körperformung und rekonstruktive Eingriffe"
+        },
+        "dentalCare": {
+          "title": "Zahnpflege",
+          "description": "Implantate, Veneers und komplette Lächeln-Makeovers"
+        },
+        "orthopedics": {
+          "title": "Orthopädie",
+          "description": "Gelenkersatz, Wirbelsäulenchirurgie und Sportmedizin"
+        }
+      },
+      "additionalServices": "Fruchtbarkeitsbehandlungen|Augenchirurgie|Bariatrische Chirurgie|Haartransplantation|Wellness-Pakete",
+      "cta": "Alle Dienstleistungen erkunden →"
+    },
+    "partners": {
+      "title": "Unsere vertrauenswürdigen Partner",
+      "subtitle": "Wir arbeiten mit den besten Gesundheitsdienstleistern, Hotels und Versicherungsunternehmen zusammen, um Ihnen außergewöhnliche Betreuung und Service zu gewährleisten.",
+      "link": "Erfahren Sie mehr über unsere Partnerschaften"
+    },
+    "contact": {
+      "title": "Bereit, Ihre Reise zu beginnen?",
+      "subtitle": "Erhalten Sie eine personalisierte Beratung und detaillierte Kostenschätzung, die auf Ihre Bedürfnisse zugeschnitten ist.",
+      "benefits": "Keine Verpflichtung|Antwort innerhalb von 24 Stunden|Kostenlose Video-Beratung",
+      "cta": "Kontaktieren Sie unser Team"
+    },
+    "imageAlts": {
+      "slider1": "Ästhetische Chirurgie",
+      "slider2": "Hochwertige Gesundheitsversorgung", 
+      "slider3": "Tunesische Kultur",
+      "slider4": "Hammamet Hotels"
+    }
+  }
+}
