@@ -112,7 +112,7 @@ export default function AboutPage() {
                     </svg>
                   </a>
                   <Link 
-                    href="/"
+                    href={`/${locale}`}
                     className="bg-pink-100 text-pink-700 p-2 rounded-full hover:bg-pink-700 hover:text-white transition-colors duration-300"
                     aria-label="Instagram Profile"
                   >

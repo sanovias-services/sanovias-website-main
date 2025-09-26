@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Locale Detection Debug</title>
+</head>
+<body>
+    <h1>Browser Language Detection Test</h1>
+    <div id="results"></div>
+    
+    <script>
+        const results = document.getElementById('results');
+        
+        results.innerHTML = `
+            <h3>Browser Language Settings:</h3>
+            <p><strong>navigator.language:</strong> ${navigator.language}</p>
+            <p><strong>navigator.languages:</strong> ${navigator.languages.join(', ')}</p>
+            <p><strong>Accept-Language (approximated):</strong> ${navigator.languages.join(',')}</p>
+            
+            <h3>Expected Behavior:</h3>
+            <ul>
+                <li>If your browser is set to German (de, de-DE, de-AT, etc.) → Should redirect to <strong>/de/</strong></li>
+                <li>If your browser is set to English (en, en-US, en-GB, etc.) → Should redirect to <strong>/en/</strong></li>
+                <li>If your browser is set to other languages → Should default to <strong>/en/</strong></li>
+            </ul>
+            
+            <h3>Test Links:</h3>
+            <p><a href="/">Test Root URL (should auto-redirect)</a></p>
+            <p><a href="/about">Test /about (should auto-redirect to /{locale}/about)</a></p>
+            
+            <h3>How to Use:</h3>
+            <ol>
+                <li>Open browser Developer Tools (F12)</li>
+                <li>Go to Console tab</li>
+                <li>Click the test links above</li>
+                <li>Watch for middleware debug messages in console</li>
+            </ol>
+        `;
+    </script>
+</body>
+</html>
