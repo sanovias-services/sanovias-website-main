@@ -19,15 +19,25 @@ function getLocale(request: NextRequest): string {
 
   // Get locale from Accept-Language header
   const acceptLanguage = request.headers.get('accept-language');
+  console.log('🌐 Accept-Language header:', acceptLanguage);
+  
   if (acceptLanguage) {
     const preferredLocale = acceptLanguage
       .split(',')[0]
       .split('-')[0]
       .toLowerCase();
     
+    console.log('🔍 Extracted preferred locale:', preferredLocale);
+    console.log('📋 Available locales:', locales);
+    
     if (locales.includes(preferredLocale)) {
+      console.log('✅ Using detected locale:', preferredLocale);
       return preferredLocale;
+    } else {
+      console.log('❌ Preferred locale not supported, falling back to:', defaultLocale);
     }
+  } else {
+    console.log('⚠️ No Accept-Language header found, falling back to:', defaultLocale);
   }
 
   return defaultLocale;
@@ -55,13 +65,16 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Redirect root path to default locale
+  // Use getLocale function to detect the best locale for the user
+  const locale = getLocale(request);
+
+  // Redirect root path to detected locale
   if (pathname === '/') {
-    return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url));
+    return NextResponse.redirect(new URL(`/${locale}`, request.url));
   }
 
-  // Add default locale to paths that don't have one
-  return NextResponse.redirect(new URL(`/${defaultLocale}${pathname}`, request.url));
+  // Add detected locale to paths that don't have one
+  return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url));
 }
 
 export const config = {
