@@ -10,6 +10,11 @@
     "logoAlt": "Sanovias Logo",
     "getQuote": "Angebot erhalten"
   },
+  "languageSwitcher": {
+    "changeLanguage": "Sprache wechseln",
+    "english": "English",
+    "german": "Deutsch"
+  },
   "footer": {
     "logoAlt": "Sanovias Logo",
     "description": "Wir verbinden internationale Patienten mit Tunesiens führenden Medizinanbietern für erschwingliche, hochwertige Gesundheitslösungen.",
@@ -40,7 +45,7 @@
     },
     "copyright": "&copy; {year} Sanovias Medical Tourism. Alle Rechte vorbehalten.",
     "legal": {
-      "privacyPolicy": "Datenschutzrichtlinie",
+      "privacyPolicy": "Datenschutz",
       "termsOfService": "AGB",
       "cookiePolicy": "Cookie-Richtlinie"
     }

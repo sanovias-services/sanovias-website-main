@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLocale } from "./LocaleProvider";
 import { useTranslations } from "./useTranslations";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useState, useEffect } from "react";
 
 const navItems = [
@@ -56,7 +57,8 @@ export function Header() {
           ))}
         </ul>
       </nav>
-      <div className="flex-shrink-0 ml-4">
+      <div className="flex items-center space-x-4">
+        <LanguageSwitcher />
         <Link 
           href={`/${locale}/contact`} 
           className="bg-[#2CA6A4] text-white px-6 py-2 rounded-lg font-inter font-semibold text-sm uppercase tracking-wide hover:bg-[#26928F] transition-all duration-150 hover:shadow-lg"

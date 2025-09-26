@@ -10,6 +10,11 @@
     "logoAlt": "Sanovias Logo",
     "getQuote": "Get Quote"
   },
+  "languageSwitcher": {
+    "changeLanguage": "Change language",
+    "english": "English",
+    "german": "Deutsch"
+  },
   "footer": {
     "logoAlt": "Sanovias Logo",
     "description": "Connecting international patients with Tunisia's top medical providers for affordable, high-quality healthcare solutions.",
