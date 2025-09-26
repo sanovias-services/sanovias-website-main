@@ -1,0 +1,33 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Leistungen",
+    "how": "Wie es funktioniert",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "readMore": "Mehr lesen",
+    "getStarted": "Jetzt starten",
+    "contactUs": "Kontaktieren Sie uns",
+    "learnMore": "Mehr erfahren"
+  },
+  "meta": {
+    "home": {
+      "title": "Sanovias - Premium Medizintourismus in Tunesien",
+      "description": "Erleben Sie erstklassige Gesundheitsversorgung in Tunesien zu erschwinglichen Preisen. Umfassende Medizintourismus-Pakete inklusive Unterkunft und Betreuung."
+    },
+    "about": {
+      "title": "Über uns",
+      "description": "Erfahren Sie mehr über Sanovias und unser Engagement für außergewöhnliche Medizintourismus-Dienstleistungen in Tunesien."
+    },
+    "services": {
+      "title": "Unsere Leistungen",
+      "description": "Entdecken Sie unsere umfassenden medizinischen Leistungen einschließlich plastischer Chirurgie, Zahnpflege und orthopädischer Behandlungen in Tunesien."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Nehmen Sie Kontakt mit Sanovias für Ihre Medizintourismus-Bedürfnisse auf. Wir helfen Ihnen gerne bei der Planung Ihrer Gesundheitsreise."
+    }
+  }
+}
