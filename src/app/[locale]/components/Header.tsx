@@ -3,19 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLocale } from "./LocaleProvider";
+import { useTranslations } from "./useTranslations";
 import { useState, useEffect } from "react";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/how", label: "How it works" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", key: "home" },
+  { href: "/about", key: "about" },
+  { href: "/services", key: "services" },
+  { href: "/how", key: "how" },
+  { href: "/contact", key: "contact" },
 ];
 
 export function Header() {
   const pathname = usePathname();
   const locale = useLocale();
+  const { t } = useTranslations();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -35,7 +37,7 @@ export function Header() {
     <header className="bg-white border-b border-gray-100 py-4 px-6 flex items-center sticky top-0 z-50">
       <div className="flex-shrink-0">
         <Link href={`/${locale}`}>
-          <Image src="/sanovias_logo.png" alt="Sanovias Logo" width={160} height={50} className="object-contain h-[60px] w-auto" />
+          <Image src="/sanovias_logo.png" alt={t('header.logoAlt')} width={160} height={50} className="object-contain h-[60px] w-auto" />
         </Link>
       </div>
       <nav className="flex-grow flex justify-center">
@@ -48,7 +50,7 @@ export function Header() {
                   currentPath === item.href ? 'text-[#2CA6A4] font-semibold border-b-2 border-[#2CA6A4] pb-1' : ''
                 }`}
               >
-                {item.label}
+                {t(`navigation.${item.key}`)}
               </Link>
             </li>
           ))}
@@ -59,7 +61,7 @@ export function Header() {
           href={`/${locale}/contact`} 
           className="bg-[#2CA6A4] text-white px-6 py-2 rounded-lg font-inter font-semibold text-sm uppercase tracking-wide hover:bg-[#26928F] transition-all duration-150 hover:shadow-lg"
         >
-          Get Quote
+          {t('header.getQuote')}
         </Link>
       </div>
     </header>

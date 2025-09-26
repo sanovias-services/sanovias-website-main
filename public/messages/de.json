@@ -6,6 +6,45 @@
     "how": "Wie es funktioniert",
     "contact": "Kontakt"
   },
+  "header": {
+    "logoAlt": "Sanovias Logo",
+    "getQuote": "Angebot erhalten"
+  },
+  "footer": {
+    "logoAlt": "Sanovias Logo",
+    "description": "Wir verbinden internationale Patienten mit Tunesiens führenden Medizinanbietern für erschwingliche, hochwertige Gesundheitslösungen.",
+    "socialMedia": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    },
+    "siteMap": {
+      "title": "Sitemap",
+      "ourPartners": "Unsere Partner",
+      "faqs": "Häufige Fragen",
+      "ourTeam": "Unser Team",
+      "dentalCare": "Zahnpflege",
+      "plasticSurgery": "Plastische Chirurgie"
+    },
+    "contactInfo": {
+      "title": "Kontaktieren Sie uns",
+      "address": "123 Medical Avenue, <br/>Tunis 1002, Tunesien",
+      "email": "info@sanovias.com",
+      "phone": "+216 123 456 789"
+    },
+    "newsletter": {
+      "title": "Bleiben Sie auf dem Laufenden",
+      "description": "Abonnieren Sie unseren Newsletter für die neuesten Nachrichten zum Medizintourismus und Sonderangebote.",
+      "emailPlaceholder": "Ihre E-Mail-Adresse",
+      "subscribe": "Abonnieren"
+    },
+    "copyright": "&copy; {year} Sanovias Medical Tourism. Alle Rechte vorbehalten.",
+    "legal": {
+      "privacyPolicy": "Datenschutzrichtlinie",
+      "termsOfService": "AGB",
+      "cookiePolicy": "Cookie-Richtlinie"
+    }
+  },
   "common": {
     "readMore": "Mehr lesen",
     "getStarted": "Jetzt starten",
@@ -21,29 +60,13 @@
         "treatments": "Behandlungen durchsuchen",
         "howItWorks": "Wie es funktioniert"
       },
-      "trust": "Vertrauen von {count}+ Patienten aus Europa und darüber hinaus",
-      "stats": {
-        "patients": {
-          "number": "2000+",
-          "label": "Patienten behandelt"
-        },
-        "satisfaction": {
-          "number": "98%",
-          "label": "Zufriedenheitsrate"
-        },
-        "experience": {
-          "number": "15+",
-          "label": "Jahre Erfahrung"
-        }
-      }
+      "trust": "Vertrauen von {count}+ Patienten aus Europa und darüber hinaus"
     },
     "benefits": {
-      "title": "Warum Sanovias wählen?",
-      "subtitle": "Wir bieten mehr als nur medizinische Behandlungen - wir bieten eine komplette Reise zu Ihrem Wohlbefinden mit unvergleichlicher Unterstützung.",
-      "savingsUpTo": {
-        "title": "Einsparungen bis zu 70%",
-        "description": "Hochwertige Behandlungen zu einem Bruchteil der europäischen Kosten.",
-        "link": "Preise vergleichen"
+      "fastAppointments": {
+        "title": "Schnelle Termine",
+        "description": "Keine langen Wartelisten wie in Europa.",
+        "link": "Mehr erfahren"
       },
       "accreditedClinics": {
         "title": "Akkreditierte Kliniken",
@@ -115,6 +138,364 @@
       "slider2": "Hochwertige Gesundheitsversorgung", 
       "slider3": "Tunesische Kultur",
       "slider4": "Hammamet Hotels"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Über Sanovias",
+      "description": "Sanovias verbindet internationale Patienten mit Tunesiens führenden akkreditierten Krankenhäusern, Kliniken und Spezialisten. Unsere Mission ist es, hochwertige medizinische Versorgung zugänglich, transparent und stressfrei zu gestalten."
+    },
+    "services": {
+      "title": "Unsere Leistungen",
+      "items": {
+        "fastAppointments": {
+          "title": "Schnelle Termine",
+          "description": "Überspringen Sie die Wartelisten und lassen Sie sich schnell bei Top-Spezialisten terminieren."
+        },
+        "accreditedClinics": {
+          "title": "Akkreditierte Kliniken",
+          "description": "Wir arbeiten nur mit Einrichtungen zusammen, die strenge internationale Standards und Zertifizierungen erfüllen."
+        },
+        "allInclusive": {
+          "title": "All-Inclusive-Pakete",
+          "description": "Vollständige Pakete, die Behandlung, Reisearrangements und umfassende Nachsorgebetreuung abdecken."
+        }
+      }
+    },
+    "approach": {
+      "title": "Unser Ansatz",
+      "description1": "Wir wählen vertrauenswürdige medizinische Anbieter aus und begleiten Patienten durch jede Phase: Beratung, Reiselogistik, Eingriff, Genesung und Nachsorge. Transparenz und Patientensicherheit haben für uns Priorität.",
+      "description2": "Jeder Fall wird von einem engagierten Koordinator betreut, der eine nahtlose Kommunikation zwischen Ihnen und Ihrem medizinischen Team gewährleistet."
+    },
+    "team": {
+      "title": "Unser Führungsteam",
+      "subtitle": "Lernen Sie die Experten hinter Sanovias kennen, die sich dafür einsetzen, Ihnen die höchste Qualität im Medizintourismus zu bieten.",
+      "members": {
+        "alain": {
+          "name": "Ing. Alain A. Selmi, MA",
+          "title": "Gründer & Geschäftsführer",
+          "bio": "Mit über 15 Jahren Erfahrung im Gesundheitsmanagement und der internationalen Geschäftsentwicklung bringt Alain Expertise bei der Schaffung nahtloser Medizintourismus-Erfahrungen mit. Sein Hintergrund in Ingenieurwesen und Betriebswirtschaft treibt Sanovias' Engagement für Effizienz, Qualität und Patientenzufriedenheit an."
+        },
+        "atef": {
+          "name": "Dr. Atef M. Souissi",
+          "title": "Medizinischer Direktor",
+          "bio": "Dr. Souissi ist ein erfahrener Mediziner mit umfassender Expertise in internationalen Gesundheitsstandards und Patientenversorgung. Mit seinem tiefen Wissen über medizinische Verfahren und Patientenbedürfnisse stellt er sicher, dass jeder Behandlungsplan den höchsten Qualitätsstandards entspricht und gleichzeitig individuell angepasst wird."
+        }
+      }
+    },
+    "commitment": {
+      "title": "Unser Engagement für Exzellenz",
+      "values": {
+        "patientSafety": {
+          "title": "Patientensicherheit",
+          "description": "Wir arbeiten nur mit akkreditierten Gesundheitseinrichtungen zusammen, die internationale Standards für Sicherheit und Qualität erfüllen."
+        },
+        "transparency": {
+          "title": "Transparenz",
+          "description": "Klare Kommunikation und keine versteckten Kosten. Wir bieten detaillierte Informationen über Verfahren, Risiken und Ergebnisse."
+        },
+        "personalizedCare": {
+          "title": "Personalisierte Betreuung",
+          "description": "Jeder Patient erhält einen maßgeschneiderten Behandlungsplan und Unterstützung während seiner gesamten medizinischen Reise."
+        }
+      }
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Medizinische Leistungen",
+      "subtitle": "Wir arbeiten mit akkreditierten Krankenhäusern und Spezialisten zusammen, um sichere, effektive und erschwingliche Behandlungen zu liefern. Alle Pläne werden auf Ihre medizinischen Bedürfnisse und Reisepräferenzen zugeschnitten."
+    },
+    "categories": {
+      "plasticSurgery": {
+        "title": "Plastische Chirurgie",
+        "description": "Kosmetische und rekonstruktive Eingriffe mit zertifizierten Chirurgen.",
+        "items": "Facelift|Nasenkorrektur|Brustvergrößerung|Fettabsaugung"
+      },
+      "dentalCare": {
+        "title": "Zahnpflege",
+        "description": "Fortgeschrittene restaurative und kosmetische Zahnheilkunde.",
+        "items": "Zahnimplantate|Hollywood Smile|Kieferorthopädie|Kronen & Brücken"
+      },
+      "complexTreatments": {
+        "title": "Komplexe Behandlungen",
+        "description": "Spezialisierte medizinische Eingriffe und Zweitmeinungen.",
+        "items": "Orthopädische Chirurgie|Kardiologie|Fruchtbarkeitsbehandlungen|Bariatrische Chirurgie"
+      }
+    },
+    "requestDetails": "Details anfordern",
+    "doctors": {
+      "title": "Unsere medizinischen Partnerexperten",
+      "subtitle": "Wir arbeiten mit Tunesiens angesehensten Spezialisten zusammen, um sicherzustellen, dass Sie erstklassige medizinische Versorgung von erfahrenen Fachkräften erhalten.",
+      "profiles": {
+        "atef": {
+          "name": "Dr. Atef M. Souissi",
+          "specialty": "Plastische & Kiefer-Gesichtschirurgie",
+          "quote": "Jeder Eingriff ist ein Kunstwerk. Ich glaube daran, die neuesten chirurgischen Techniken mit einem ästhetischen Auge zu kombinieren, um Ergebnisse zu liefern, die nicht nur heilen, sondern auch die natürliche Schönheit verstärken.",
+          "description": "Renommierter Spezialist für plastische und Kiefer-Gesichtschirurgie mit über 15 Jahren Erfahrung.",
+          "specialties": "Nasenkorrektur|Facelift|Kieferchirurgie"
+        },
+        "amira": {
+          "name": "Dr. Amira Ben Salem", 
+          "specialty": "Kosmetische & Restaurative Zahnheilkunde",
+          "quote": "Ein schönes Lächeln verändert nicht nur Ihr Aussehen, sondern auch Ihr Selbstvertrauen. Meine Mission ist es, natürliche, strahlende Lächeln zu schaffen, die meine Patienten stolz der Welt zeigen.",
+          "description": "Führende Zahnmedizin-Spezialistin mit Fokus auf kosmetische und restaurative Zahnheilkunde mit sanfter, patientenzentrierter Betreuung.",
+          "specialties": "Hollywood Smile|Implantate|Veneers"
+        },
+        "hedi": {
+          "name": "Dr. Hedi Antar",
+          "specialty": "Orthopädische Chirurgie",
+          "quote": "Mobilität ist Freiheit. Mein Ziel ist es, nicht nur die Funktion wiederherzustellen, sondern auch die Freude an der Bewegung, um Patienten zu helfen, zu den Aktivitäten zurückzukehren, die sie lieben, mit Vertrauen und Stärke.",
+          "description": "Erfahrener orthopädischer Chirurg, spezialisiert auf Gelenkersatz und Sportmedizin mit modernsten Techniken.",
+          "specialties": "Hüftersatz|Kniechirurgie|Sportmedizin"
+        }
+      },
+      "cta": "Beratung vereinbaren →"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen zu unseren Leistungen",
+      "questions": [
+        {
+          "question": "Was macht Ihre medizinischen Leistungen anders als lokale Anbieter?",
+          "answer": "Wir bieten die gleiche Pflegequalität wie europäische Krankenhäuser, aber zu deutlich reduzierten Kosten. Unsere Partnereinrichtungen sind international akkreditiert und unsere Spezialisten haben oft internationale Ausbildung, was erstklassige Versorgung in einer erschwinglicheren Umgebung bietet."
+        },
+        {
+          "question": "Wie wähle ich den richtigen Spezialisten für meinen Eingriff?",
+          "answer": "Nach Ihrer Erstberatung werden unsere medizinischen Koordinatoren Sie mit Spezialisten basierend auf Ihren spezifischen Bedürfnissen, Krankengeschichte und Präferenzen zusammenbringen. Wir bieten detaillierte Profile unserer Ärzte und können Video-Konsultationen vor Ihrem Besuch arrangieren."
+        },
+        {
+          "question": "Sind Ihre medizinischen Einrichtungen international akkreditiert?",
+          "answer": "Ja, alle unsere Partnerkrankenhäuser und -kliniken haben internationale Akkreditierungen wie JCI (Joint Commission International) oder gleichwertige Zertifizierungen. Dies stellt sicher, dass sie die höchsten globalen Standards für Patientensicherheit und Pflegequalität erfüllen."
+        },
+        {
+          "question": "Was passiert, wenn ich zusätzliche Eingriffe benötige oder Komplikationen auftreten?",
+          "answer": "Unsere umfassenden Pakete beinhalten Vorkehrungen für unvorhergesehene Umstände. Falls zusätzliche Eingriffe benötigt werden, besprechen wir Optionen und Kosten transparent. Alle unsere Partnereinrichtungen haben Notfallprotokolle und Spezialistenteams bereit, um Komplikationen zu behandeln."
+        }
+      ],
+      "moreQuestions": "Benötigen Sie spezifische Informationen über eine Behandlung? Kontaktieren Sie uns →"
+    }
+  },
+  "how": {
+    "hero": {
+      "title1": "Ihre medizinische Reise,",
+      "title2": "vereinfacht",
+      "subtitle": "Vom ersten Kontakt bis zur vollständigen Genesung begleiten wir Sie durch jeden Schritt Ihrer Medizintourismus-Erfahrung mit fachkundiger Betreuung und persönlicher Aufmerksamkeit."
+    },
+    "process": {
+      "steps": [
+        {
+          "title": "Erstkontakt & Personalisiertes Angebot",
+          "icon": "📝",
+          "description": {
+            "main": "Beginnen Sie Ihre medizinische Reise mit einer einfachen Kontaktformular-Übermittlung. Innerhalb von 24 Stunden stellt unser Team Ihnen ein maßgeschneidertes, unverbindliches Angebot basierend auf Ihren spezifischen Bedürfnissen zur Verfügung.",
+            "subtitle": "Ihr Erstpaket beinhaltet:",
+            "features": "Transparente Kostenaufschlüsselung|Empfohlene Behandlungsoptionen|Geschätzte Zeitplanung|Unterkunftsvorschläge"
+          }
+        },
+        {
+          "title": "Medizinische Expertenberatung",
+          "icon": "👨‍⚕️",
+          "description": {
+            "main": "Sobald Sie Interesse bekunden, arrangieren wir eine umfassende Telekonsultation mit einem unserer spezialisierten Medizinexperten, der Ihr engagierter Berater während des gesamten Prozesses wird.",
+            "subtitle": "Während dieser Beratung:",
+            "features": "Detaillierte Anamnese-Überprüfung|Anpassung des Behandlungsplans|Identifikation erforderlicher medizinischer Tests|Beantwortung all Ihrer Fragen"
+          }
+        },
+        {
+          "title": "Nahtloser Buchungsprozess",
+          "icon": "📋",
+          "description": {
+            "main": "Mit Ihrem personalisierten Plan fertiggestellt, handhaben wir alle Formalitäten und formalisieren die Vereinbarung mit flexiblen, auf Ihr Budget zugeschnittenen Zahlungsoptionen.",
+            "subtitle": "Ihr Vertrag beinhaltet:",
+            "features": "Detaillierte Behandlungsspezifikationen|All-inclusive-Preisgarantie|Bequeme Zahlungspläne|Stornierung- und Änderungsrichtlinien"
+          }
+        },
+        {
+          "title": "Mühelose Reisearrangements",
+          "icon": "✈️",
+          "description": {
+            "main": "Entspannen Sie sich, während wir jedes Detail Ihrer medizinischen Reise koordinieren. Unser Concierge-Team verwaltet alle logistischen Aspekte von Tür zu Tür und gewährleistet eine stressfreie Erfahrung.",
+            "subtitle": "Wir arrangieren:",
+            "features": "Flugbuchungen mit medizinischen Überlegungen|Premium-Unterkünfte nahe Ihrer Behandlungseinrichtung|Bodentransport|Vorbehandlungs-Vorbereitungsführung"
+          }
+        },
+        {
+          "title": "Premium-Betreuung & Umfassende Nachsorge",
+          "icon": "🏥",
+          "description": {
+            "main": "Erleben Sie medizinische Versorgung von Weltklasse mit kontinuierlicher Unterstützung von unserem mehrsprachigen Team, das während Ihrer Behandlung und Genesung an Ihrer Seite steht.",
+            "subtitle": "Ihr Betreuungspaket beinhaltet:",
+            "features": "24/7 persönlicher medizinischer Assistent|Übersetzungsdienste|Strukturierte Nachsorgetermine|Digitale Gesundheitsakten-Verwaltung|Fernkonsultationen nach der Rückkehr"
+          }
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, Ihre Reise zu beginnen?",
+      "subtitle": "Unsere medizinischen Experten sind bereit, Sie durch Ihre personalisierte Gesundheitsreise-Erfahrung zu führen.",
+      "button": "Holen Sie sich Ihre kostenlose Beratung"
+    },
+    "trust": {
+      "title": "Warum Reisende Sanovias vertrauen",
+      "indicators": [
+        {
+          "title": "International zertifiziert",
+          "description": "Alle unsere Partnerkliniken erfüllen strenge internationale Gesundheitsstandards und Akkreditierungen."
+        },
+        {
+          "title": "Transparente Preisgestaltung",
+          "description": "Keine versteckten Gebühren oder Überraschungskosten. Unsere All-inclusive-Pakete bieten Klarheit und Wert."
+        },
+        {
+          "title": "Mehrsprachiger Support",
+          "description": "Unser Team kommuniziert in mehreren Sprachen, um sicherzustellen, dass nichts in der Übersetzung verloren geht."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "questions": [
+        {
+          "question": "Wie schnell kann ich meinen Eingriff planen?",
+          "answer": "Die meisten Eingriffe können innerhalb von 2-4 Wochen nach Ihrer ersten Beratung geplant werden, deutlich schneller als Wartelisten in vielen europäischen Ländern."
+        },
+        {
+          "question": "Welche Qualifikationen haben Ihre Ärzte?",
+          "answer": "Unser Netzwerk umfasst board-zertifizierte Spezialisten, von denen viele international ausgebildet wurden und Mitgliedschaften in renommierten medizinischen Gesellschaften haben."
+        },
+        {
+          "question": "Was passiert, wenn ich nach meiner Rückkehr zusätzliche Betreuung benötige?",
+          "answer": "Ihr Paket beinhaltet Fernberatungen zur Nachsorge, und wir koordinieren bei Bedarf mit lokalen Gesundheitsdienstleistern für die fortlaufende Betreuung."
+        }
+      ],
+      "moreQuestions": "Haben Sie weitere Fragen? Kontaktieren Sie unser Team →"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Kontaktieren Sie uns",
+      "subtitle": "Wir sind hier, um Ihnen bei Ihrer medizinischen Tourismusreise zu helfen. Kontaktieren Sie uns für eine kostenlose Beratung."
+    },
+    "offices": {
+      "title": "Unsere Büros",
+      "tunisia": {
+        "title": "Tunesien Hauptsitz",
+        "address": "123 Medical Avenue,\nTunis 1002, Tunesien",
+        "phone": "+216 123 456 789",
+        "email": "tunisia@sanovias.com",
+        "hours": "Mo-Fr: 9:00 - 18:00 (GMT+1)\nSamstag: 9:00 - 13:00"
+      },
+      "europe": {
+        "title": "Europäisches Büro",
+        "address": "35 Health Street,\nFrankfurt 60311, Deutschland",
+        "phone": "+49 123 456 7890",
+        "email": "europe@sanovias.com"
+      }
+    },
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "subtitle": "Erzählen Sie uns von Ihren medizinischen Zielen. Ein Koordinator wird mit Behandlungsoptionen und einer Kostenschätzung antworten.",
+      "fields": {
+        "firstName": {
+          "label": "Vorname",
+          "placeholder": "Ihr Vorname",
+          "required": "Vorname ist erforderlich"
+        },
+        "lastName": {
+          "label": "Nachname",
+          "placeholder": "Ihr Nachname",
+          "required": "Nachname ist erforderlich"
+        },
+        "email": {
+          "label": "E-Mail-Adresse",
+          "placeholder": "Ihre E-Mail-Adresse",
+          "required": "E-Mail ist erforderlich",
+          "invalid": "Bitte geben Sie eine gültige E-Mail ein"
+        },
+        "phone": {
+          "label": "Telefonnummer",
+          "placeholder": "Ihre Telefonnummer",
+          "optional": "(optional)"
+        },
+        "service": {
+          "label": "Interessiert an Leistung",
+          "placeholder": "Wählen Sie eine Leistung",
+          "required": "Bitte wählen Sie eine Leistung",
+          "options": {
+            "plasticSurgery": "Plastische Chirurgie",
+            "dentalCare": "Zahnpflege",
+            "complexTreatments": "Komplexe Behandlungen",
+            "hairTransplant": "Haartransplantation", 
+            "weightLoss": "Gewichtsverlust-Chirurgie",
+            "other": "Andere medizinische Leistungen"
+          }
+        },
+        "message": {
+          "label": "Ihre Nachricht",
+          "placeholder": "Bitte beschreiben Sie Ihre medizinischen Bedürfnisse, Fragen oder spezifische Behandlungen, die Sie interessieren...",
+          "required": "Nachricht ist erforderlich"
+        }
+      },
+      "submit": {
+        "button": "Nachricht senden",
+        "submitting": "Wird gesendet..."
+      },
+      "success": {
+        "title": "Vielen Dank!",
+        "button": "Weitere Nachricht senden"
+      },
+      "error": {
+        "title": "Fehler"
+      },
+      "privacy": {
+        "consent": "Durch das Absenden stimmen Sie zu, bezüglich Ihrer Anfrage kontaktiert zu werden.",
+        "policy": "Ihre Daten werden gemäß unserer Datenschutzrichtlinie verarbeitet"
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "questions": [
+        {
+          "question": "Wie schnell erhalte ich eine Antwort nach Einreichung meiner Anfrage?",
+          "answer": "Unser Team antwortet normalerweise innerhalb von 24-48 Geschäftsstunden. Bei dringenden Angelegenheiten vermerken Sie dies bitte in Ihrer Nachricht, und wir werden Ihre Anfrage priorisieren."
+        },
+        {
+          "question": "Muss ich meine medizinischen Unterlagen bereitstellen, wenn ich Sie kontaktiere?",
+          "answer": "Nicht anfangs. Nach unserer ersten Beratung wird unser medizinisches Team beraten, welche Unterlagen für eine ordnungsgemäße Bewertung Ihres Falls und der Behandlungsoptionen benötigt werden."
+        },
+        {
+          "question": "Können Sie Videokonsultationen mit Ärzten vor meiner Reise arrangieren?",
+          "answer": "Ja, wir können virtuelle Konsultationen mit Ihrem gewählten Spezialisten arrangieren, bevor Sie sich zum Reisen verpflichten. Dies hilft sicherzustellen, dass Sie sich mit Ihrem Arzt und Behandlungsplan wohlfühlen."
+        },
+        {
+          "question": "Wie erhalte ich eine Kostenschätzung für meine Behandlung?",
+          "answer": "Nach Überprüfung Ihrer medizinischen Informationen stellen wir Ihnen eine detaillierte Kostenaufschlüsselung zur Verfügung, einschließlich des Eingriffs, Krankenhausaufenthalts, Medikamente, Nachsorge und aller zusätzlichen Leistungen, die Sie anfordern."
+        },
+        {
+          "question": "Gibt es eine Gebühr für Ihre Beratungsdienste?",
+          "answer": "Erstberatungen und Behandlungskoordination sind kostenlos. Unsere Gebühren sind im gesamten Behandlungspaket enthalten, sobald Sie sich entscheiden fortzufahren."
+        }
+      ],
+      "stillQuestions": "Haben Sie noch Fragen?",
+      "callUs": "Rufen Sie uns an unter +216 123 456 789"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Sanovias - Premium Medizintourismus in Tunesien",
+      "description": "Erleben Sie erstklassige Gesundheitsversorgung in Tunesien mit erschwinglichen Preisen. Umfassende Medizintourismus-Pakete inklusive Unterkunft und Betreuung."
+    },
+    "about": {
+      "title": "Über Uns",
+      "description": "Erfahren Sie mehr über Sanovias und unser Engagement für außergewöhnliche Medizintourismus-Dienstleistungen in Tunesien."
+    },
+    "services": {
+      "title": "Unsere Leistungen", 
+      "description": "Entdecken Sie unsere umfassenden medizinischen Leistungen einschließlich plastischer Chirurgie, Zahnpflege und orthopädischer Behandlungen in Tunesien."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Nehmen Sie Kontakt mit Sanovias für Ihre Medizintourismus-Bedürfnisse auf. Wir helfen Ihnen gerne bei der Planung Ihrer Gesundheitsreise."
     }
   }
 }

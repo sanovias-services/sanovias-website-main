@@ -2,39 +2,44 @@
 import Link from "next/link";
 import HydrationSafeSlider from '../components/HydrationSafeSlider';
 import { useLocale } from '../components/LocaleProvider';
+import { useTranslations } from '../components/useTranslations';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const services = [
-  {
-    title: "Plastic Surgery",
-    desc: "Cosmetic and reconstructive procedures with board-certified surgeons.",
-    items: ["Facelift", "Rhinoplasty", "Breast Augmentation", "Liposuction"],
-  },
-  {
-    title: "Dental Care",
-    desc: "Advanced restorative and cosmetic dentistry.",
-    items: ["Dental Implants", "Hollywood Smile", "Orthodontics", "Crowns & Bridges"],
-  },
-  {
-    title: "Complex Treatments",
-    desc: "Specialized medical interventions and second opinions.",
-    items: ["Orthopedic Surgery", "Cardiology", "Fertility Treatments", "Bariatric Surgery"],
-  },
-];
-
 export default function ServicesPage() {
   const locale = useLocale();
+  const { t } = useTranslations();
+  
+  const services = [
+    {
+      key: 'plasticSurgery',
+      title: t('services.categories.plasticSurgery.title'),
+      desc: t('services.categories.plasticSurgery.description'),
+      items: t('services.categories.plasticSurgery.items').split('|'),
+    },
+    {
+      key: 'dentalCare', 
+      title: t('services.categories.dentalCare.title'),
+      desc: t('services.categories.dentalCare.description'),
+      items: t('services.categories.dentalCare.items').split('|'),
+    },
+    {
+      key: 'complexTreatments',
+      title: t('services.categories.complexTreatments.title'),
+      desc: t('services.categories.complexTreatments.description'),
+      items: t('services.categories.complexTreatments.items').split('|'),
+    },
+  ];
   return (
     <div>
       <section className="max-w-6xl mx-auto px-4 py-16">
-        <h1 className="font-playfair text-5xl font-semibold mb-6 text-center text-[#1C3C47]">Medical Services</h1>
+        <h1 className="font-playfair text-5xl font-semibold mb-6 text-center text-[#1C3C47]">{t('services.hero.title')}</h1>
         <p className="font-inter text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto text-center mb-12">
-          We collaborate with accredited hospitals and specialists to deliver safe, effective, and affordable treatments. All plans are personalized to your medical needs and travel preferences.
+          {t('services.hero.subtitle')}
         </p>
         <div className="grid gap-8 md:grid-cols-3">
           {services.map((s, index) => (
-            <div key={s.title} className="bg-white p-8 rounded-xl shadow-md border border-gray-100 flex flex-col hover:shadow-lg transition-shadow duration-300">
+            <div key={s.key} className="bg-white p-8 rounded-xl shadow-md border border-gray-100 flex flex-col hover:shadow-lg transition-shadow duration-300">
               <div className={`w-12 h-12 rounded-full mb-6 flex items-center justify-center ${
                 index === 0 ? 'bg-[#2CA6A4]/10' : 
                 index === 1 ? 'bg-[#C9A66B]/10' : 
@@ -68,8 +73,8 @@ export default function ServicesPage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/contact" className="mt-auto inline-flex items-center text-[#2CA6A4] hover:text-[#26928F] font-inter font-medium transition-colors duration-150">
-                Request Details <span className="ml-1">→</span>
+              <Link href={`/${locale}/contact`} className="mt-auto inline-flex items-center text-[#2CA6A4] hover:text-[#26928F] font-inter font-medium transition-colors duration-150">
+                {t('services.requestDetails')} <span className="ml-1">→</span>
               </Link>
             </div>
           ))}
@@ -80,9 +85,9 @@ export default function ServicesPage() {
       <section className="py-16 px-4 bg-[#F7F5F2]">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl font-semibold mb-6 text-[#1C3C47]">Our Partner Medical Experts</h2>
+            <h2 className="font-playfair text-4xl font-semibold mb-6 text-[#1C3C47]">{t('services.doctors.title')}</h2>
             <p className="max-w-3xl mx-auto font-inter text-gray-600 text-lg leading-relaxed">
-              We collaborate with Tunisia&apos;s most respected specialists to ensure you receive world-class medical care from experienced professionals.
+              {t('services.doctors.subtitle')}
             </p>
           </div>
 
@@ -134,23 +139,23 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="md:w-2/3 p-8">
-                      <h3 className="font-playfair text-2xl font-semibold mb-1 text-[#1C3C47]">Dr. Atef M. Souissi</h3>
-                      <p className="text-[#2CA6A4] font-inter font-semibold mb-4">Plastic & Maxillo-Facial Surgery</p>
+                      <h3 className="font-playfair text-2xl font-semibold mb-1 text-[#1C3C47]">{t('services.doctors.profiles.atef.name')}</h3>
+                      <p className="text-[#2CA6A4] font-inter font-semibold mb-4">{t('services.doctors.profiles.atef.specialty')}</p>
                       
                       {/* Quote */}
                       <div className="mb-4 p-4 bg-[#2CA6A4]/5 rounded-lg border-l-4 border-[#2CA6A4]">
                         <p className="font-inter text-gray-700 italic text-sm leading-relaxed">
-                          &ldquo;Every procedure is a work of art. I believe in combining the latest surgical techniques with an aesthetic eye to deliver results that not only heal but also enhance natural beauty.&rdquo;
+                          &ldquo;{t('services.doctors.profiles.atef.quote')}&rdquo;
                         </p>
                       </div>
                       
                       <p className="font-inter text-gray-600 text-sm leading-relaxed mb-4">
-                        Renowned specialist in plastic and maxillo-facial surgery with over 15 years of experience.
+                        {t('services.doctors.profiles.atef.description')}
                       </p>
                       <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">Rhinoplasty</span>
-                        <span className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">Facelift</span>
-                        <span className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">Jaw Surgery</span>
+                        {t('services.doctors.profiles.atef.specialties').split('|').map((specialty, index) => (
+                          <span key={index} className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">{specialty}</span>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -169,23 +174,23 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="md:w-2/3 p-8">
-                      <h3 className="font-playfair text-2xl font-semibold mb-1 text-[#1C3C47]">Dr. Amira Ben Salem</h3>
-                      <p className="text-[#C9A66B] font-inter font-semibold mb-4">Cosmetic & Restorative Dentistry</p>
+                      <h3 className="font-playfair text-2xl font-semibold mb-1 text-[#1C3C47]">{t('services.doctors.profiles.amira.name')}</h3>
+                      <p className="text-[#C9A66B] font-inter font-semibold mb-4">{t('services.doctors.profiles.amira.specialty')}</p>
                       
                       {/* Quote */}
                       <div className="mb-4 p-4 bg-[#C9A66B]/5 rounded-lg border-l-4 border-[#C9A66B]">
                         <p className="font-inter text-gray-700 italic text-sm leading-relaxed">
-                          &ldquo;A beautiful smile transforms not just your appearance, but your confidence. My mission is to create natural, radiant smiles that my patients are proud to show the world.&rdquo;
+                          &ldquo;{t('services.doctors.profiles.amira.quote')}&rdquo;
                         </p>
                       </div>
                       
                       <p className="font-inter text-gray-600 text-sm leading-relaxed mb-4">
-                        Leading dental specialist focusing on cosmetic and restorative dentistry with gentle, patient-centered care.
+                        {t('services.doctors.profiles.amira.description')}
                       </p>
                       <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 bg-[#C9A66B]/10 text-[#C9A66B] text-xs font-inter rounded-full">Hollywood Smile</span>
-                        <span className="px-3 py-1 bg-[#C9A66B]/10 text-[#C9A66B] text-xs font-inter rounded-full">Implants</span>
-                        <span className="px-3 py-1 bg-[#C9A66B]/10 text-[#C9A66B] text-xs font-inter rounded-full">Veneers</span>
+                        {t('services.doctors.profiles.amira.specialties').split('|').map((specialty, index) => (
+                          <span key={index} className="px-3 py-1 bg-[#C9A66B]/10 text-[#C9A66B] text-xs font-inter rounded-full">{specialty}</span>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -204,23 +209,23 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="md:w-2/3 p-8">
-                      <h3 className="font-playfair text-2xl font-semibold mb-1 text-[#1C3C47]">Dr. Hedi Antar</h3>
-                      <p className="text-[#2CA6A4] font-inter font-semibold mb-4">Orthopedic Surgery</p>
+                      <h3 className="font-playfair text-2xl font-semibold mb-1 text-[#1C3C47]">{t('services.doctors.profiles.hedi.name')}</h3>
+                      <p className="text-[#2CA6A4] font-inter font-semibold mb-4">{t('services.doctors.profiles.hedi.specialty')}</p>
                       
                       {/* Quote */}
                       <div className="mb-4 p-4 bg-[#2CA6A4]/5 rounded-lg border-l-4 border-[#2CA6A4]">
                         <p className="font-inter text-gray-700 italic text-sm leading-relaxed">
-                          &ldquo;Mobility is freedom. My goal is to restore not just function, but the joy of movement, helping patients return to the activities they love with confidence and strength.&rdquo;
+                          &ldquo;{t('services.doctors.profiles.hedi.quote')}&rdquo;
                         </p>
                       </div>
                       
                       <p className="font-inter text-gray-600 text-sm leading-relaxed mb-4">
-                        Expert orthopedic surgeon specializing in joint replacement and sports medicine with cutting-edge techniques.
+                        {t('services.doctors.profiles.hedi.description')}
                       </p>
                       <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">Hip Replacement</span>
-                        <span className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">Knee Surgery</span>
-                        <span className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">Sports Medicine</span>
+                        {t('services.doctors.profiles.hedi.specialties').split('|').map((specialty, index) => (
+                          <span key={index} className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] text-xs font-inter rounded-full">{specialty}</span>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -230,8 +235,38 @@ export default function ServicesPage() {
           </div>
 
           <div className="text-center mt-16">
-            <Link href="/contact" className="inline-block px-8 py-4 bg-[#2CA6A4] text-white font-inter font-semibold rounded-lg hover:bg-[#26928F] transition-all duration-300 transform hover:-translate-y-1 shadow-md">
-              Schedule a Consultation →
+            <Link href={`/${locale}/contact`} className="inline-block px-8 py-4 bg-[#2CA6A4] text-white font-inter font-semibold rounded-lg hover:bg-[#26928F] transition-all duration-300 transform hover:-translate-y-1 shadow-md">
+              {t('services.doctors.cta')}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-playfair text-4xl font-semibold text-center mb-12 text-[#1C3C47]">{t('services.faq.title')}</h2>
+          <div className="space-y-6">
+            <div className="p-8 bg-[#F7F5F2] rounded-xl shadow-md border border-gray-100">
+              <h3 className="font-playfair text-xl font-semibold mb-4 text-[#1C3C47]">{t('services.faq.questions.0.question')}</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">{t('services.faq.questions.0.answer')}</p>
+            </div>
+            <div className="p-8 bg-[#F7F5F2] rounded-xl shadow-md border border-gray-100">
+              <h3 className="font-playfair text-xl font-semibold mb-4 text-[#1C3C47]">{t('services.faq.questions.1.question')}</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">{t('services.faq.questions.1.answer')}</p>
+            </div>
+            <div className="p-8 bg-[#F7F5F2] rounded-xl shadow-md border border-gray-100">
+              <h3 className="font-playfair text-xl font-semibold mb-4 text-[#1C3C47]">{t('services.faq.questions.2.question')}</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">{t('services.faq.questions.2.answer')}</p>
+            </div>
+            <div className="p-8 bg-[#F7F5F2] rounded-xl shadow-md border border-gray-100">
+              <h3 className="font-playfair text-xl font-semibold mb-4 text-[#1C3C47]">{t('services.faq.questions.3.question')}</h3>
+              <p className="font-inter text-gray-600 leading-relaxed">{t('services.faq.questions.3.answer')}</p>
+            </div>
+          </div>
+          <div className="text-center mt-10">
+            <Link href={`/${locale}/contact`} className="inline-block text-[#2CA6A4] font-inter font-semibold hover:text-[#26928F] transition-colors duration-150">
+              {t('services.faq.moreQuestions')}
             </Link>
           </div>
         </div>

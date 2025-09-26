@@ -6,6 +6,45 @@
     "how": "How It Works",
     "contact": "Contact"
   },
+  "header": {
+    "logoAlt": "Sanovias Logo",
+    "getQuote": "Get Quote"
+  },
+  "footer": {
+    "logoAlt": "Sanovias Logo",
+    "description": "Connecting international patients with Tunisia's top medical providers for affordable, high-quality healthcare solutions.",
+    "socialMedia": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    },
+    "siteMap": {
+      "title": "Site Map",
+      "ourPartners": "Our Partners",
+      "faqs": "FAQs",
+      "ourTeam": "Our Team",
+      "dentalCare": "Dental Care",
+      "plasticSurgery": "Plastic Surgery"
+    },
+    "contactInfo": {
+      "title": "Contact Us",
+      "address": "123 Medical Avenue, <br/>Tunis 1002, Tunisia",
+      "email": "info@sanovias.com",
+      "phone": "+216 123 456 789"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Subscribe to our newsletter for the latest medical tourism news and special offers.",
+      "emailPlaceholder": "Your email address",
+      "subscribe": "Subscribe"
+    },
+    "copyright": "&copy; {year} Sanovias Medical Tourism. All rights reserved.",
+    "legal": {
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "cookiePolicy": "Cookie Policy"
+    }
+  },
   "common": {
     "readMore": "Read More",
     "getStarted": "Get Started",
@@ -99,6 +138,346 @@
       "slider2": "High-Quality Healthcare",
       "slider3": "Tunisian Culture",
       "slider4": "Hammamet Hotels"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Sanovias",
+      "description": "Sanovias connects international patients with Tunisia's top accredited hospitals, clinics, and specialists. Our mission is to make high-quality medical care accessible, transparent, and stress-free."
+    },
+    "services": {
+      "title": "Our Services",
+      "items": {
+        "fastAppointments": {
+          "title": "Fast Appointments",
+          "description": "Skip the waiting lists and get scheduled quickly with top specialists."
+        },
+        "accreditedClinics": {
+          "title": "Accredited Clinics",
+          "description": "We only partner with facilities that meet strict international standards and certifications."
+        },
+        "allInclusive": {
+          "title": "All-Inclusive Packages",
+          "description": "Complete packages covering treatment, travel arrangements and comprehensive aftercare support."
+        }
+      }
+    },
+    "approach": {
+      "title": "Our Approach",
+      "description1": "We curate trusted medical providers and guide patients through every stage: consultation, travel logistics, procedure, recovery, and follow-ups. Transparency and patient safety are our priorities.",
+      "description2": "Each case is handled by a dedicated coordinator who ensures seamless communication between you and your medical team."
+    },
+    "team": {
+      "title": "Our Leadership Team",
+      "subtitle": "Meet the experts behind Sanovias who are dedicated to providing you with the highest quality medical tourism experience.",
+      "members": {
+        "alain": {
+          "name": "Ing. Alain A. Selmi, MA",
+          "title": "Founder & Managing Director",
+          "bio": "With over 15 years of experience in healthcare management and international business development, Alain brings expertise in creating seamless medical tourism experiences. His background in engineering and business administration drives Sanovias's commitment to efficiency, quality, and patient satisfaction."
+        },
+        "atef": {
+          "name": "Dr. Atef M. Souissi",
+          "title": "Medical Director",
+          "bio": "Dr. Souissi is an accomplished medical professional with extensive expertise in international healthcare standards and patient care. With his deep knowledge of medical procedures and patient needs, he ensures that each treatment plan meets the highest quality standards while being tailored to individual requirements."
+        }
+      }
+    },
+    "commitment": {
+      "title": "Our Commitment to Excellence",
+      "values": {
+        "patientSafety": {
+          "title": "Patient Safety",
+          "description": "We partner only with accredited healthcare facilities that meet international standards for safety and quality."
+        },
+        "transparency": {
+          "title": "Transparency",
+          "description": "Clear communication and no hidden costs. We provide detailed information about procedures, risks, and outcomes."
+        },
+        "personalizedCare": {
+          "title": "Personalized Care",
+          "description": "Every patient receives a customized treatment plan and support throughout their medical journey."
+        }
+      }
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Medical Services",
+      "subtitle": "We collaborate with accredited hospitals and specialists to deliver safe, effective, and affordable treatments. All plans are personalized to your medical needs and travel preferences."
+    },
+    "categories": {
+      "plasticSurgery": {
+        "title": "Plastic Surgery",
+        "description": "Cosmetic and reconstructive procedures with board-certified surgeons.",
+        "items": "Facelift|Rhinoplasty|Breast Augmentation|Liposuction"
+      },
+      "dentalCare": {
+        "title": "Dental Care", 
+        "description": "Advanced restorative and cosmetic dentistry.",
+        "items": "Dental Implants|Hollywood Smile|Orthodontics|Crowns & Bridges"
+      },
+      "complexTreatments": {
+        "title": "Complex Treatments",
+        "description": "Specialized medical interventions and second opinions.",
+        "items": "Orthopedic Surgery|Cardiology|Fertility Treatments|Bariatric Surgery"
+      }
+    },
+    "requestDetails": "Request Details",
+    "doctors": {
+      "title": "Our Partner Medical Experts",
+      "subtitle": "We collaborate with Tunisia's most respected specialists to ensure you receive world-class medical care from experienced professionals.",
+      "profiles": {
+        "atef": {
+          "name": "Dr. Atef M. Souissi",
+          "specialty": "Plastic & Maxillo-Facial Surgery",
+          "quote": "Every procedure is a work of art. I believe in combining the latest surgical techniques with an aesthetic eye to deliver results that not only heal but also enhance natural beauty.",
+          "description": "Renowned specialist in plastic and maxillo-facial surgery with over 15 years of experience.",
+          "specialties": "Rhinoplasty|Facelift|Jaw Surgery"
+        },
+        "amira": {
+          "name": "Dr. Amira Ben Salem",
+          "specialty": "Cosmetic & Restorative Dentistry",
+          "quote": "A beautiful smile transforms not just your appearance, but your confidence. My mission is to create natural, radiant smiles that my patients are proud to show the world.",
+          "description": "Leading dental specialist focusing on cosmetic and restorative dentistry with gentle, patient-centered care.",
+          "specialties": "Hollywood Smile|Implants|Veneers"
+        },
+        "hedi": {
+          "name": "Dr. Hedi Antar",
+          "specialty": "Orthopedic Surgery",
+          "quote": "Mobility is freedom. My goal is to restore not just function, but the joy of movement, helping patients return to the activities they love with confidence and strength.",
+          "description": "Expert orthopedic surgeon specializing in joint replacement and sports medicine with cutting-edge techniques.",
+          "specialties": "Hip Replacement|Knee Surgery|Sports Medicine"
+        }
+      },
+      "cta": "Schedule a Consultation →"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions About Our Services",
+      "questions": [
+        {
+          "question": "What makes your medical services different from local providers?",
+          "answer": "We offer the same quality of care as European hospitals but at significantly reduced costs. Our partner facilities are internationally accredited and our specialists often have international training, providing world-class care in a more affordable setting."
+        },
+        {
+          "question": "How do I choose the right specialist for my procedure?",
+          "answer": "After your initial consultation, our medical coordinators will match you with specialists based on your specific needs, medical history, and preferences. We provide detailed profiles of our doctors and can arrange video consultations before your visit."
+        },
+        {
+          "question": "Are your medical facilities internationally accredited?",
+          "answer": "Yes, all our partner hospitals and clinics hold international accreditations such as JCI (Joint Commission International) or equivalent certifications. This ensures they meet the highest global standards for patient safety and care quality."
+        },
+        {
+          "question": "What if I need additional procedures or complications arise?",
+          "answer": "Our comprehensive packages include provisions for unforeseen circumstances. If additional procedures are needed, we'll discuss options and costs transparently. All our partner facilities have emergency protocols and specialist teams ready to handle complications."
+        }
+      ],
+      "moreQuestions": "Need specific information about a treatment? Contact us →"
+    }
+  },
+  "how": {
+    "hero": {
+      "title1": "Your Medical Journey,",
+      "title2": "Simplified",
+      "subtitle": "From first contact to full recovery, we guide you through every step of your medical tourism experience with expert care and personalized attention."
+    },
+    "process": {
+      "steps": [
+        {
+          "title": "Initial Contact & Personalized Quote",
+          "icon": "📝",
+          "description": {
+            "main": "Begin your medical journey with a simple contact form submission. Within 24 hours, our team provides you with a tailored, no-obligation quote based on your specific needs.",
+            "subtitle": "Your initial package includes:",
+            "features": "Transparent cost breakdown|Recommended treatment options|Estimated timeline|Accommodation suggestions"
+          }
+        },
+        {
+          "title": "Expert Medical Consultation",
+          "icon": "👨‍⚕️", 
+          "description": {
+            "main": "Once you express interest, we arrange a comprehensive teleconsultation with one of our specialized medical experts who will become your dedicated advisor throughout the process.",
+            "subtitle": "During this consultation:",
+            "features": "Detailed medical history review|Treatment plan customization|Required medical tests identification|All your questions answered"
+          }
+        },
+        {
+          "title": "Seamless Booking Process",
+          "icon": "📋",
+          "description": {
+            "main": "With your personalized plan finalized, we handle all the paperwork and formalize the arrangement with flexible payment options tailored to your budget.",
+            "subtitle": "Your contract includes:",
+            "features": "Detailed treatment specifications|All-inclusive price guarantee|Convenient payment schedules|Cancellation and modification policies"
+          }
+        },
+        {
+          "title": "Effortless Travel Arrangements",
+          "icon": "✈️",
+          "description": {
+            "main": "Relax as we coordinate every detail of your medical journey. Our concierge team manages all logistics from door to door, ensuring a stress-free experience.",
+            "subtitle": "We arrange:",
+            "features": "Flight bookings with medical considerations|Premium accommodations near your treatment facility|Ground transportation|Pre-treatment preparation guidance"
+          }
+        },
+        {
+          "title": "Premium Care & Comprehensive Follow-up",
+          "icon": "🏥",
+          "description": {
+            "main": "Experience world-class medical care with continuous support from our multilingual team who will be by your side throughout your treatment and recovery.",
+            "subtitle": "Your care package includes:",
+            "features": "24/7 personal medical assistant|Translation services|Structured follow-up appointments|Digital health record management|Post-return remote consultations"
+          }
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Start Your Journey?",
+      "subtitle": "Our medical experts are ready to guide you through your personalized health travel experience.",
+      "button": "Get Your Free Consultation"
+    },
+    "trust": {
+      "title": "Why Travelers Trust Sanovias",
+      "indicators": [
+        {
+          "title": "Internationally Certified",
+          "description": "All our partner clinics meet rigorous international healthcare standards and accreditations."
+        },
+        {
+          "title": "Transparent Pricing", 
+          "description": "No hidden fees or surprise costs. Our all-inclusive packages offer clarity and value."
+        },
+        {
+          "title": "Multilingual Support",
+          "description": "Our team communicates in multiple languages to ensure nothing gets lost in translation."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "How soon can I schedule my procedure?",
+          "answer": "Most procedures can be scheduled within 2-4 weeks of your initial consultation, significantly faster than waiting lists in many European countries."
+        },
+        {
+          "question": "What qualifications do your doctors have?",
+          "answer": "Our network includes board-certified specialists, many of whom have trained internationally and hold memberships in prestigious medical societies."
+        },
+        {
+          "question": "What happens if I need additional care after returning home?",
+          "answer": "Your package includes remote follow-up consultations, and we coordinate with local healthcare providers if necessary for continued care."
+        }
+      ],
+      "moreQuestions": "Have more questions? Contact our team →"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Get in Touch", 
+      "subtitle": "We're here to help with your medical tourism journey. Contact us for a free consultation."
+    },
+    "offices": {
+      "title": "Our Offices",
+      "tunisia": {
+        "title": "Tunisia Headquarters",
+        "address": "123 Medical Avenue,\nTunis 1002, Tunisia",
+        "phone": "+216 123 456 789",
+        "email": "tunisia@sanovias.com", 
+        "hours": "Mon-Fri: 9:00 AM - 6:00 PM (GMT+1)\nSaturday: 9:00 AM - 1:00 PM"
+      },
+      "europe": {
+        "title": "European Office",
+        "address": "35 Health Street,\nFrankfurt 60311, Germany", 
+        "phone": "+49 123 456 7890",
+        "email": "europe@sanovias.com"
+      }
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Tell us about your medical goals. A coordinator will respond with treatment options and a cost estimate.",
+      "fields": {
+        "firstName": {
+          "label": "First Name",
+          "placeholder": "Your first name",
+          "required": "First name is required"
+        },
+        "lastName": {
+          "label": "Last Name", 
+          "placeholder": "Your last name",
+          "required": "Last name is required"
+        },
+        "email": {
+          "label": "Email Address",
+          "placeholder": "Your email address", 
+          "required": "Email is required",
+          "invalid": "Please enter a valid email"
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "Your phone number",
+          "optional": "(optional)"
+        },
+        "service": {
+          "label": "Service Interested In",
+          "placeholder": "Select a service",
+          "required": "Please select a service",
+          "options": {
+            "plasticSurgery": "Plastic Surgery",
+            "dentalCare": "Dental Care", 
+            "complexTreatments": "Complex Treatments",
+            "hairTransplant": "Hair Transplant",
+            "weightLoss": "Weight Loss Surgery",
+            "other": "Other Medical Services"
+          }
+        },
+        "message": {
+          "label": "Your Message",
+          "placeholder": "Please describe your medical needs, questions, or any specific treatments you're interested in...",
+          "required": "Message is required"
+        }
+      },
+      "submit": {
+        "button": "Send Message",
+        "submitting": "Sending..."
+      },
+      "success": {
+        "title": "Thank You!",
+        "button": "Send Another Message"
+      },
+      "error": {
+        "title": "Error"
+      },
+      "privacy": {
+        "consent": "By submitting, you agree to be contacted regarding your inquiry.",
+        "policy": "Your data will be processed according to our Privacy Policy"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": [
+        {
+          "question": "How quickly will I receive a response after submitting my inquiry?",
+          "answer": "Our team typically responds within 24-48 business hours. For urgent matters, please indicate so in your message, and we'll prioritize your inquiry."
+        },
+        {
+          "question": "Do I need to provide my medical records when contacting you?",
+          "answer": "Not initially. After our first consultation, our medical team will advise what records are needed for a proper assessment of your case and treatment options."
+        },
+        {
+          "question": "Can you arrange video consultations with doctors before I travel?", 
+          "answer": "Yes, we can arrange virtual consultations with your chosen specialist before you commit to traveling. This helps ensure you're comfortable with your doctor and treatment plan."
+        },
+        {
+          "question": "How do I get a cost estimate for my treatment?",
+          "answer": "After reviewing your medical information, we'll provide a detailed cost breakdown including the procedure, hospital stay, medications, follow-up care, and any additional services you request."
+        },
+        {
+          "question": "Is there a fee for your consultation services?",
+          "answer": "Initial consultations and treatment coordination services are complimentary. Our fees are included in the overall treatment package once you decide to proceed."
+        }
+      ],
+      "stillQuestions": "Still have questions?",
+      "callUs": "Call us at +216 123 456 789"
     }
   },
   "meta": {
