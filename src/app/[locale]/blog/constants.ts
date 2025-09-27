@@ -153,7 +153,7 @@ export const AUTHORS: Author[] = [
       en: 'Dr. Souissi is a board-certified plastic surgeon with over 15 years of experience in aesthetic and reconstructive surgery. He specializes in facial procedures, body contouring, and breast surgery.',
       de: 'Dr. Souissi ist ein staatlich geprüfter plastischer Chirurg mit über 15 Jahren Erfahrung in der ästhetischen und rekonstruktiven Chirurgie. Er spezialisiert sich auf Gesichtsbehandlungen, Körperformung und Brustchirurgie.'
     },
-    avatar: '/team/atef.jpg',
+    avatar: '/images/team/atef.jpg',
     linkedin: 'https://www.linkedin.com/in/mohamed-atef-souissi-a96742123',
     specialties: ['Plastic Surgery', 'Aesthetic Medicine', 'Reconstructive Surgery']
   },
@@ -168,7 +168,7 @@ export const AUTHORS: Author[] = [
       en: 'Alain Selmi is the founder and CEO of Sanovias, with extensive experience in international healthcare coordination and patient care management. He ensures seamless medical tourism experiences.',
       de: 'Alain Selmi ist Gründer und Geschäftsführer von Sanovias, mit umfangreicher Erfahrung in der internationalen Gesundheitskoordination und Patientenbetreuung. Er sorgt für nahtlose Medizintourismus-Erfahrungen.'
     },
-    avatar: '/team/ala.jpg',
+    avatar: '/images/team/ala.jpg',
     linkedin: 'https://www.linkedin.com/in/alain-a-selmi-70686825/',
     specialties: ['Medical Tourism', 'Patient Care', 'Healthcare Management']
   }

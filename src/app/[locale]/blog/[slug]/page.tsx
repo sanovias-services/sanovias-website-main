@@ -76,7 +76,7 @@ async function getBlogPost(slug: string, locale: 'en' | 'de'): Promise<BlogPost 
         en: 'Dr. Souissi is a board-certified plastic surgeon with over 15 years of experience.',
         de: 'Dr. Souissi ist ein staatlich geprüfter plastischer Chirurg mit über 15 Jahren Erfahrung.'
       },
-      avatar: '/team/atef.jpg',
+      avatar: '/images/team/atef.jpg',
       specialties: ['Plastic Surgery']
     },
     publishDate: '2024-09-20',

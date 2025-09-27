@@ -30,7 +30,7 @@ const MOCK_BLOG_POSTS: BlogPost[] = [
       name: 'Dr. Atef M. Souissi',
       title: { en: 'Chief Medical Officer', de: 'Ärztlicher Direktor' },
       bio: { en: '...', de: '...' },
-      avatar: '/team/atef.jpg',
+      avatar: '/images/team/atef.jpg',
       specialties: ['Plastic Surgery']
     },
     publishDate: '2024-09-20',
@@ -74,7 +74,7 @@ const MOCK_BLOG_POSTS: BlogPost[] = [
       name: 'Ing. Alain A. Selmi',
       title: { en: 'CEO', de: 'Geschäftsführer' },
       bio: { en: '...', de: '...' },
-      avatar: '/team/ala.jpg',
+      avatar: '/images/team/ala.jpg',
       specialties: ['Medical Tourism']
     },
     publishDate: '2024-09-18',
