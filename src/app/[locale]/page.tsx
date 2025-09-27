@@ -326,7 +326,9 @@ export default function Home() {
                   </div>
                   <span className="mt-2 text-xs text-gray-500 group-hover:text-[#2CA6A4] font-inter transition-colors duration-200">Hotel Sindbad Hammamet</span>
                 </a>
-              </div>              {/* Hotel Khayem garden */}
+              </div>
+              
+              {/* Hotel Khayem garden */}
               <div className="px-3">
                 <a href="https://www.khayamgarden.com/" target="_blank" rel="noopener noreferrer" 
                   className="flex flex-col items-center group">
