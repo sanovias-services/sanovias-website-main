@@ -86,7 +86,7 @@ export default function AboutPage() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden group transform transition duration-300 hover:-translate-y-2">
               <div className="relative h-64 w-full">
                 <Image 
-                  src="/team/ala.jpg" 
+                  src="/images/team/ala.jpg" 
                   alt="Ing. Alain A. Selmi" 
                   fill
                   className="object-cover object-center"
@@ -128,7 +128,7 @@ export default function AboutPage() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden group transform transition duration-300 hover:-translate-y-2">
               <div className="relative h-64 w-full">
                 <Image 
-                  src="/team/atef.jpg" 
+                  src="/images/team/atef.jpg" 
                   alt="Dr. Atef M. Souissi" 
                   fill
                   className="object-cover object-center"

@@ -50,16 +50,16 @@ export default function Home() {
       <section className="relative">
         <HydrationSafeSlider settings={heroSliderSettings}>
           <div>
-            <Image src="/images/slider1.jpg" alt={t('home.imageAlts.slider1')} width={1920} height={600} className="w-full object-cover h-[600px]" />
+            <Image src="/images/slider/slider1.jpg" alt={t('home.imageAlts.slider1')} width={1920} height={600} className="w-full object-cover h-[600px]" />
           </div>
           <div>
-            <Image src="/images/slider2.png" alt={t('home.imageAlts.slider2')} width={1920} height={600} className="w-full object-cover h-[600px]" />
+            <Image src="/images/slider/slider2.png" alt={t('home.imageAlts.slider2')} width={1920} height={600} className="w-full object-cover h-[600px]" />
           </div>
           <div>
-            <Image src="/images/slider3.jpeg" alt={t('home.imageAlts.slider3')} width={1920} height={600} className="w-full object-cover h-[600px]" />
+            <Image src="/images/slider/slider3.jpeg" alt={t('home.imageAlts.slider3')} width={1920} height={600} className="w-full object-cover h-[600px]" />
           </div>
           <div>
-            <Image src="/images/slider4.jpg" alt={t('home.imageAlts.slider4')} width={1920} height={600} className="w-full object-cover h-[600px]" />
+            <Image src="/images/slider/slider4.jpg" alt={t('home.imageAlts.slider4')} width={1920} height={600} className="w-full object-cover h-[600px]" />
           </div>
         </HydrationSafeSlider>
 
@@ -300,7 +300,7 @@ export default function Home() {
                   className="flex flex-col items-center group">
                   <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
                     <Image 
-                      src="/partners/polyclinic-logo.webp" 
+                      src="/images/partners/polyclinic-logo.webp" 
                       alt="Polyclinique Hammamet" 
                       width={120} 
                       height={60}
@@ -317,7 +317,7 @@ export default function Home() {
                   className="flex flex-col items-center group">
                   <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
                     <Image 
-                      src="/partners/sindbad-logo.jpg" 
+                      src="/images/partners/sindbad-logo.jpg" 
                       alt="Hotel Sindbad Hammamet" 
                       width={120} 
                       height={60}
@@ -334,7 +334,7 @@ export default function Home() {
                   className="flex flex-col items-center group">
                   <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
                     <Image 
-                      src="/partners/khayem-logo.svg" 
+                      src="/images/partners/khayem-logo.svg" 
                       alt="Hotel Khayem Garden" 
                       width={120} 
                       height={60}
@@ -351,7 +351,7 @@ export default function Home() {
                   className="flex flex-col items-center group">
                   <div className="bg-gray-800 p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-700">
                     <Image 
-                      src="/partners/stce-header3.png" 
+                      src="/images/partners/stce-header3.png" 
                       alt="STCE" 
                       width={120} 
                       height={60}
@@ -368,7 +368,7 @@ export default function Home() {
                   className="flex flex-col items-center group">
                   <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
                     <Image 
-                      src="/partners/allianz-logo.svg" 
+                      src="/images/partners/allianz-logo.svg" 
                       alt="Allianz Insurance" 
                       width={120} 
                       height={60}
@@ -385,7 +385,7 @@ export default function Home() {
                   className="flex flex-col items-center group">
                   <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 h-24 w-full flex items-center justify-center border border-gray-100">
                     <Image 
-                      src="/partners/uniqa-logo.svg" 
+                      src="/images/partners/uniqa-logo.svg" 
                       alt="Uniqa Insurance" 
                       width={120} 
                       height={60}
