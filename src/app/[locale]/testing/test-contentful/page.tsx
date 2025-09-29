@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { testConnection } from '@/lib/contentful/api';
 
 export default async function TestContentfulPage() {
@@ -43,12 +44,12 @@ export default async function TestContentfulPage() {
               <li>3. Test the dynamic blog pages</li>
             </ol>
           </div>
-          <a 
+          <Link 
             href="/en/blog" 
             className="inline-block bg-[#2CA6A4] text-white px-6 py-3 rounded-lg hover:bg-[#26928F] transition-colors"
           >
             Go to Blog →
-          </a>
+          </Link>
         </div>
       </div>
     </div>

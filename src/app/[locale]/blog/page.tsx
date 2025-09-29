@@ -1,25 +1,11 @@
 import { getAllBlogPosts, getAllCategories } from '@/lib/contentful/api';
+import { ContentfulEntry, getFieldValue, getDirectImageUrl } from '@/lib/contentful/utils';
 import Link from 'next/link';
 import Image from 'next/image';
 
 interface BlogPageProps {
   params: Promise<{ locale: string }>;
   searchParams: Promise<{ category?: string }>;
-}
-
-// Helper function to safely get field values
-function getFieldValue(field: any, fallback: string = ''): string {
-  if (typeof field === 'string') return field;
-  if (field && typeof field === 'object' && field.toString) return field.toString();
-  return fallback;
-}
-
-// Helper function to get image URL
-function getImageUrl(image: any): string {
-  if (image && image.fields && image.fields.file && image.fields.file.url) {
-    return `https:${image.fields.file.url}`;
-  }
-  return '';
 }
 
 export default async function BlogPage({ params, searchParams }: BlogPageProps) {
@@ -32,18 +18,23 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
     getAllCategories(locale)
   ]);
 
+  // Cast to our simple interface
+  const blogPosts = posts as ContentfulEntry[];
+  const blogCategories = categories as ContentfulEntry[];
+
   // Filter posts by category if selected
   const filteredPosts = selectedCategory 
-    ? posts.filter((post: any) => {
-        const postCategories = post.fields.category || [];
-        return postCategories.some((cat: any) => 
-          getFieldValue(cat.fields.slug) === selectedCategory
+    ? blogPosts.filter((post: ContentfulEntry) => {
+        const postCategories = post.fields.category as ContentfulEntry[] | ContentfulEntry | undefined;
+        const categoryArray = Array.isArray(postCategories) ? postCategories : postCategories ? [postCategories] : [];
+        return categoryArray.some((cat) => 
+          getFieldValue(cat, 'slug') === selectedCategory
         );
       })
-    : posts;
+    : blogPosts;
 
   // Get featured posts from filtered results
-  const featuredPosts = filteredPosts.filter((post: any) => post.fields.featured);
+  const featuredPosts = filteredPosts.filter((post: ContentfulEntry) => post.fields.featured);
   const featuredPost = featuredPosts.length > 0 ? featuredPosts[0] : filteredPosts[0];
 
   return (
@@ -63,7 +54,7 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
           </div>
 
           {/* Category Filter Tags */}
-          {categories.length > 0 && (
+          {blogCategories.length > 0 && (
             <div className="text-center">
               <div className="flex flex-wrap justify-center gap-3">
                 {/* All Categories Tag */}
@@ -79,9 +70,9 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
                 </Link>
                 
                 {/* Individual Category Tags */}
-                {categories.slice(0, 8).map((category: any) => {
-                  const categoryName = getFieldValue(category.fields.name);
-                  const categorySlug = getFieldValue(category.fields.slug);
+                {blogCategories.slice(0, 8).map((category: ContentfulEntry) => {
+                  const categoryName = getFieldValue(category, 'name');
+                  const categorySlug = getFieldValue(category, 'slug');
                   const isActive = selectedCategory === categorySlug;
                   
                   return (
@@ -111,11 +102,11 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Featured Post Image */}
               <div className="order-2 lg:order-1">
-                {getImageUrl(featuredPost.fields.featuredImage) && (
+                {getDirectImageUrl(featuredPost.fields.featuredImage) && (
                   <div className="relative h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden">
                     <Image
-                      src={getImageUrl(featuredPost.fields.featuredImage)}
-                      alt={getFieldValue(featuredPost.fields.title)}
+                      src={getDirectImageUrl(featuredPost.fields.featuredImage)}
+                      alt={getFieldValue(featuredPost, 'title')}
                       fill
                       className="object-cover"
                     />
@@ -131,13 +122,13 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
                   </span>
                 </div>
                 <h2 className="font-playfair text-2xl md:text-3xl font-bold text-[#1C3C47] mb-4">
-                  {getFieldValue(featuredPost.fields.title)}
+                                    {getFieldValue(featuredPost, 'title')}
                 </h2>
-                <p className="text-lg text-[#6B7280] mb-6 leading-relaxed">
-                  {getFieldValue(featuredPost.fields.excerpt)}
+                <p className="text-gray-600 mb-4">
+                  {getFieldValue(featuredPost, 'excerpt')}
                 </p>
                 <Link
-                  href={`/${locale}/blog/${getFieldValue(featuredPost.fields.slug)}`}
+                  href={`/${locale}/blog/${getFieldValue(featuredPost, 'slug')}`}
                   className="inline-block bg-[#2CA6A4] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#26928F] transition-colors"
                 >
                   {locale === 'de' ? 'Weiterlesen' : 'Read More'} →
@@ -158,23 +149,25 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.slice(0, 6).map((post: any) => {
-              const postTitle = getFieldValue(post.fields.title);
-              const postSlug = getFieldValue(post.fields.slug);
-              const postExcerpt = getFieldValue(post.fields.excerpt);
+            {filteredPosts.slice(0, 6).map((post: ContentfulEntry) => {
+              const postTitle = getFieldValue(post, 'title');
+              const postSlug = getFieldValue(post, 'slug');
+              const postExcerpt = getFieldValue(post, 'excerpt');
               const postReadingTime = getFieldValue(post.fields.readingTime, '5');
-              const featuredImageUrl = getImageUrl(post.fields.featuredImage);
+              const featuredImageUrl = getDirectImageUrl(post.fields.featuredImage);
               
-              // Category info (category is an array)
-              const categories = post.fields.category || [];
-              const firstCategory = categories[0];
-              const categoryName = firstCategory ? getFieldValue(firstCategory.fields.name) : '';
+              // Category info (category can be array or single entry)
+              const categories = post.fields.category as ContentfulEntry[] | ContentfulEntry | undefined;
+              const categoryArray = Array.isArray(categories) ? categories : categories ? [categories] : [];
+              const firstCategory = categoryArray[0];
+              const categoryName = firstCategory ? getFieldValue(firstCategory, 'name') : '';
               
-              // Author info (author is also an array)
-              const authors = post.fields.author || [];
-              const firstAuthor = authors[0];
-              const authorName = firstAuthor ? getFieldValue(firstAuthor.fields.name, 'Anonymous') : 'Anonymous';
-              const authorAvatarUrl = firstAuthor ? getImageUrl(firstAuthor.fields.avatar) : '';
+              // Author info (author can be array or single entry)
+              const authors = post.fields.author as ContentfulEntry[] | ContentfulEntry | undefined;
+              const authorArray = Array.isArray(authors) ? authors : authors ? [authors] : [];
+              const firstAuthor = authorArray[0];
+              const authorName = firstAuthor ? getFieldValue(firstAuthor, 'name') || 'Anonymous' : 'Anonymous';
+              const authorAvatarUrl = firstAuthor ? getDirectImageUrl(firstAuthor.fields.avatar) : '';
               
               return (
                 <article key={post.sys.id} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">

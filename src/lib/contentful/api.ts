@@ -12,8 +12,6 @@ export async function getAllBlogPosts(
     // Try common German locale codes first, then fallback to en-US
     const contentfulLocale = locale === 'de' ? 'de-DE' : 'en-US';
     
-    console.log(`🌍 Fetching blog posts with locale: ${contentfulLocale}`);
-    
     const entries = await contentfulClient.getEntries({
       content_type: 'blogPost',
       locale: contentfulLocale,
@@ -39,12 +37,28 @@ export async function getBlogPostBySlug(
 ) {
   try {
     const contentfulClient = preview ? previewClient : client;
-    const contentfulLocale = locale === 'de' ? 'de' : 'en-US';
+    const contentfulLocale = locale === 'de' ? 'de-DE' : 'en-US';
     
-    const entries = await contentfulClient.getEntries({
+    // First, try to find the post in the requested locale
+    let entries = await contentfulClient.getEntries({
       content_type: 'blogPost',
       'fields.slug': slug,
       locale: contentfulLocale,
+      include: 2,
+      limit: 1,
+      ...(preview ? {} : { 'fields.status': 'published' }),
+    });
+    
+    if (entries.items.length > 0) {
+      return entries.items[0];
+    }
+    
+    // If not found in requested locale, try the other locale
+    const fallbackLocale = contentfulLocale === 'de-DE' ? 'en-US' : 'de-DE';
+    entries = await contentfulClient.getEntries({
+      content_type: 'blogPost',
+      'fields.slug': slug,
+      locale: fallbackLocale,
       include: 2,
       limit: 1,
       ...(preview ? {} : { 'fields.status': 'published' }),
@@ -67,7 +81,7 @@ export async function getBlogPostsByCategory(
 ) {
   try {
     const contentfulClient = preview ? previewClient : client;
-    const contentfulLocale = locale === 'de' ? 'de' : 'en-US';
+    const contentfulLocale = locale === 'de' ? 'de-DE' : 'en-US';
     
     const entries = await contentfulClient.getEntries({
       content_type: 'blogPost',
@@ -95,7 +109,7 @@ export async function getFeaturedBlogPosts(
 ) {
   try {
     const contentfulClient = preview ? previewClient : client;
-    const contentfulLocale = locale === 'de' ? 'de' : 'en-US';
+    const contentfulLocale = locale === 'de' ? 'de-DE' : 'en-US';
     
     const entries = await contentfulClient.getEntries({
       content_type: 'blogPost',
@@ -124,8 +138,6 @@ export async function getAllCategories(
     // Try common German locale codes first, then fallback to en-US  
     const contentfulLocale = locale === 'de' ? 'de-DE' : 'en-US';
     
-    console.log(`🌍 Fetching categories with locale: ${contentfulLocale}`);
-    
     const entries = await client.getEntries({
       content_type: 'category',
       locale: contentfulLocale,
@@ -147,7 +159,7 @@ export async function getCategoryBySlug(
   locale: string = 'en-US'
 ) {
   try {
-    const contentfulLocale = locale === 'de' ? 'de' : 'en-US';
+    const contentfulLocale = locale === 'de' ? 'de-DE' : 'en-US';
     
     const entries = await client.getEntries({
       content_type: 'category',
@@ -170,7 +182,7 @@ export async function getAllAuthors(
   locale: string = 'en-US'
 ) {
   try {
-    const contentfulLocale = locale === 'de' ? 'de' : 'en-US';
+    const contentfulLocale = locale === 'de' ? 'de-DE' : 'en-US';
     
     const entries = await client.getEntries({
       content_type: 'author',
@@ -195,7 +207,7 @@ export async function searchBlogPosts(
 ) {
   try {
     const contentfulClient = preview ? previewClient : client;
-    const contentfulLocale = locale === 'de' ? 'de' : 'en-US';
+    const contentfulLocale = locale === 'de' ? 'de-DE' : 'en-US';
     
     const entries = await contentfulClient.getEntries({
       content_type: 'blogPost',
