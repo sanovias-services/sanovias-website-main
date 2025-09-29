@@ -11,6 +11,9 @@
     "check-json-syntax": "node -e \"['en', 'de'].forEach(lang => { try { JSON.parse(require('fs').readFileSync('./public/messages/' + lang + '.json', 'utf8')); console.log('✅ ' + lang + '.json valid'); } catch(e) { console.log('❌ ' + lang + '.json error:', e.message); process.exit(1); } })\""
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^16.1.5",
+    "@contentful/rich-text-types": "^17.2.4",
+    "contentful": "^11.8.1",
     "next": "^15.5.4",
     "next-intl": "^4.3.9",
     "react": "^19.0.0",
