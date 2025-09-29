@@ -1,318 +1,282 @@
-'use client';
-
-import { useState, useEffect } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { BlogPost } from '../types';
+import { getBlogPostBySlug, getAllBlogPosts } from '@/lib/contentful/api';
+import { getFieldValue, getImageUrl, formatPublishDate, getLocalizedContent } from '@/lib/contentful/utils';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, INLINES, MARKS, Document } from '@contentful/rich-text-types';
 
-// Mock function to fetch blog post by slug - will be replaced with CMS integration
-async function getBlogPost(slug: string, locale: 'en' | 'de'): Promise<BlogPost | null> {
-  // Mock data - replace with actual API call to CMS
-  const mockPost: BlogPost = {
-    id: '1',
-    title: {
-      en: 'Complete Guide to Plastic Surgery in Tunisia',
-      de: 'Vollständiger Leitfaden für plastische Chirurgie in Tunesien'
+// Rich text renderer options
+const richTextOptions = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node: unknown, children: React.ReactNode) => (
+      <p className="mb-4 leading-relaxed text-gray-700">{children}</p>
+    ),
+    [BLOCKS.HEADING_1]: (node: unknown, children: React.ReactNode) => (
+      <h1 className="text-3xl md:text-4xl font-bold mb-6 mt-10 text-[#1C3C47] font-playfair">{children}</h1>
+    ),
+    [BLOCKS.HEADING_2]: (node: unknown, children: React.ReactNode) => (
+      <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-8 text-[#1C3C47] font-playfair">{children}</h2>
+    ),
+    [BLOCKS.HEADING_3]: (node: unknown, children: React.ReactNode) => (
+      <h3 className="text-xl md:text-2xl font-semibold mb-3 mt-6 text-[#1C3C47] font-playfair">{children}</h3>
+    ),
+    [BLOCKS.HEADING_4]: (node: unknown, children: React.ReactNode) => (
+      <h4 className="text-lg md:text-xl font-semibold mb-2 mt-4 text-[#2CA6A4]">{children}</h4>
+    ),
+    [BLOCKS.HEADING_5]: (node: unknown, children: React.ReactNode) => (
+      <h5 className="text-base md:text-lg font-medium mb-2 mt-4 text-[#2CA6A4]">{children}</h5>
+    ),
+    [BLOCKS.HEADING_6]: (node: unknown, children: React.ReactNode) => (
+      <h6 className="text-sm md:text-base font-medium mb-2 mt-3 text-gray-600 uppercase tracking-wider">{children}</h6>
+    ),
+    [BLOCKS.UL_LIST]: (node: unknown, children: React.ReactNode) => (
+      <ul className="mb-4 list-disc list-outside ml-6 space-y-1 text-gray-700">{children}</ul>
+    ),
+    [BLOCKS.OL_LIST]: (node: unknown, children: React.ReactNode) => (
+      <ol className="mb-4 list-decimal list-outside ml-6 space-y-1 text-gray-700">{children}</ol>
+    ),
+    [BLOCKS.LIST_ITEM]: (node: unknown, children: React.ReactNode) => (
+      <li className="leading-relaxed pl-2">{children}</li>
+    ),
+    [INLINES.HYPERLINK]: (node: unknown, children: React.ReactNode) => {
+      const uri = node && typeof node === 'object' && 'data' in node && node.data && typeof node.data === 'object' && 'uri' in node.data
+        ? (node.data as { uri: string }).uri
+        : '#';
+      return (
+        <a 
+          href={uri} 
+          className="text-[#2CA6A4] hover:text-[#1C3C47] underline transition-colors font-medium"
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          {children}
+        </a>
+      );
     },
-    slug: {
-      en: 'complete-guide-plastic-surgery-tunisia',
-      de: 'vollstaendiger-leitfaden-plastische-chirurgie-tunesien'
-    },
-    excerpt: {
-      en: 'Discover why Tunisia has become a leading destination for plastic surgery.',
-      de: 'Entdecken Sie, warum Tunesien ein führendes Ziel für plastische Chirurgie geworden ist.'
-    },
-    content: {
-      en: `
-        <h2>Why Choose Tunisia for Plastic Surgery?</h2>
-        <p>Tunisia has emerged as one of the world's leading destinations for medical tourism, particularly for plastic surgery procedures. Here's why thousands of international patients choose Tunisia for their aesthetic needs:</p>
-        
-        <h3>1. World-Class Medical Expertise</h3>
-        <p>Tunisian plastic surgeons are internationally trained and certified, with many having completed their studies in France, Germany, and the United States. Our surgeons at Sanovias maintain the highest standards of medical excellence.</p>
-        
-        <h3>2. Affordable Quality Care</h3>
-        <p>Patients can save up to 70% on plastic surgery costs compared to Europe or North America, without compromising on quality. Our transparent pricing includes all medical procedures, accommodation, and aftercare.</p>
-        
-        <h3>3. State-of-the-Art Facilities</h3>
-        <p>Tunisia's private healthcare sector boasts modern, internationally accredited facilities equipped with the latest medical technology and adhering to strict hygiene and safety protocols.</p>
-        
-        <h3>4. Beautiful Recovery Environment</h3>
-        <p>What better place to recover than the beautiful Mediterranean coast? Tunisia offers a peaceful, warm climate that's ideal for post-surgery recovery, combined with rich cultural experiences.</p>
-      `,
-      de: `
-        <h2>Warum Tunesien für plastische Chirurgie wählen?</h2>
-        <p>Tunesien hat sich zu einem der weltweit führenden Ziele für Medizintourismus entwickelt, insbesondere für plastische Chirurgie. Hier ist der Grund, warum Tausende von internationalen Patienten Tunesien für ihre ästhetischen Bedürfnisse wählen:</p>
-        
-        <h3>1. Weltklasse medizinische Expertise</h3>
-        <p>Tunesische plastische Chirurgen sind international ausgebildet und zertifiziert, viele haben ihre Studien in Frankreich, Deutschland und den USA abgeschlossen. Unsere Chirurgen bei Sanovias halten die höchsten Standards medizinischer Exzellenz ein.</p>
-        
-        <h3>2. Erschwingliche Qualitätspflege</h3>
-        <p>Patienten können bis zu 70% der Kosten für plastische Chirurgie im Vergleich zu Europa oder Nordamerika sparen, ohne Kompromisse bei der Qualität einzugehen. Unsere transparente Preisgestaltung umfasst alle medizinischen Verfahren, Unterbringung und Nachsorge.</p>
-        
-        <h3>3. Hochmoderne Einrichtungen</h3>
-        <p>Tunesiens privater Gesundheitssektor verfügt über moderne, international akkreditierte Einrichtungen, die mit der neuesten Medizintechnik ausgestattet sind und strenge Hygiene- und Sicherheitsprotokolle einhalten.</p>
-        
-        <h3>4. Schöne Erholungsumgebung</h3>
-        <p>Welcher Ort ist besser zur Erholung geeignet als die wunderschöne Mittelmeerküste? Tunesien bietet ein friedliches, warmes Klima, das ideal für die Genesung nach der Operation ist, kombiniert mit reichen kulturellen Erfahrungen.</p>
-      `
-    },
-    category: {
-      id: 'plastic-surgery',
-      name: { en: 'Plastic Surgery', de: 'Plastische Chirurgie' },
-      slug: { en: 'plastic-surgery', de: 'plastische-chirurgie' },
-      description: { en: '', de: '' },
-      color: '#2CA6A4',
-      icon: 'scalpel'
-    },
-    author: {
-      id: 'dr-atef-souissi',
-      name: 'Dr. Atef M. Souissi',
-      title: {
-        en: 'Chief Medical Officer & Plastic Surgeon',
-        de: 'Ärztlicher Direktor & Plastischer Chirurg'
-      },
-      bio: {
-        en: 'Dr. Souissi is a board-certified plastic surgeon with over 15 years of experience.',
-        de: 'Dr. Souissi ist ein staatlich geprüfter plastischer Chirurg mit über 15 Jahren Erfahrung.'
-      },
-      avatar: '/images/team/atef.jpg',
-      specialties: ['Plastic Surgery']
-    },
-    publishDate: '2024-09-20',
-    lastModified: '2024-09-20',
-    featuredImage: {
-      url: '/images/blog/plastic-surgery-guide.jpg',
-      alt: {
-        en: 'Plastic surgery consultation in Tunisia',
-        de: 'Beratung für plastische Chirurgie in Tunesien'
-      },
-      width: 1200,
-      height: 600
-    },
-    tags: ['plastic-surgery', 'tunisia', 'medical-tourism'],
-    metaDescription: {
-      en: 'Complete guide to plastic surgery in Tunisia - procedures, costs, best surgeons.',
-      de: 'Vollständiger Leitfaden für plastische Chirurgie in Tunesien - Verfahren, Kosten, beste Chirurgen.'
-    },
-    readingTime: 8,
-    featured: true,
-    status: 'published'
-  };
+    [BLOCKS.QUOTE]: (node: unknown, children: React.ReactNode) => (
+      <blockquote className="border-l-4 border-[#2CA6A4] pl-4 py-2 mb-4 italic text-gray-600 bg-gray-50 rounded-r">
+        {children}
+      </blockquote>
+    ),
+    [BLOCKS.HR]: () => (
+      <hr className="my-8 border-t-2 border-gray-200" />
+    ),
+  },
+  renderMark: {
+    [MARKS.BOLD]: (text: React.ReactNode) => <strong className="font-semibold text-[#1C3C47]">{text}</strong>,
+    [MARKS.ITALIC]: (text: React.ReactNode) => <em className="italic">{text}</em>,
+    [MARKS.UNDERLINE]: (text: React.ReactNode) => <span className="underline">{text}</span>,
+    [MARKS.CODE]: (text: React.ReactNode) => (
+      <code className="bg-gray-100 text-[#2CA6A4] px-2 py-1 rounded text-sm font-mono">{text}</code>
+    ),
+  },
+};
 
-  // Check if slug matches
-  if (mockPost.slug[locale] === slug) {
-    return mockPost;
-  }
-  
-  return null;
+interface BlogPostPageProps {
+  params: Promise<{
+    locale: string;
+    slug: string;
+  }>;
 }
 
-export default function BlogPostPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
-  const [post, setPost] = useState<BlogPost | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [resolvedParams, setResolvedParams] = useState<{ slug: string; locale: 'en' | 'de' } | null>(null);
-
-  useEffect(() => {
-    async function resolveParams() {
-      const resolvedParamsData = await params;
-      setResolvedParams({
-        slug: resolvedParamsData.slug,
-        locale: resolvedParamsData.locale as 'en' | 'de'
-      });
-    }
-    resolveParams();
-  }, [params]);
-
-  useEffect(() => {
-    if (!resolvedParams) return;
-
-    async function fetchPost() {
-      if (!resolvedParams) return;
+// Generate static params for all blog posts
+export async function generateStaticParams() {
+  try {
+    const posts = await getAllBlogPosts('en-US');
+    const paths = [];
+    
+    for (const post of posts) {
+      const enSlug = getFieldValue(post, 'slug', 'en-US');
+      const deSlug = getFieldValue(post, 'slug', 'de-DE');
       
-      try {
-        const blogPost = await getBlogPost(resolvedParams.slug, resolvedParams.locale);
-        if (!blogPost) {
-          notFound();
-          return;
-        }
-        setPost(blogPost);
-      } catch (error) {
-        console.error('Error fetching blog post:', error);
-        notFound();
-      } finally {
-        setLoading(false);
-      }
+      if (enSlug) paths.push({ locale: 'en', slug: enSlug });
+      if (deSlug) paths.push({ locale: 'de', slug: deSlug });
+    }
+    
+    return paths;
+  } catch (error) {
+    console.error('Error generating static params:', error);
+    return [];
+  }
+}
+
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { locale, slug } = await params;
+  
+  try {
+    const post = await getBlogPostBySlug(slug, locale);
+    
+    if (!post) {
+      notFound();
     }
 
-    fetchPost();
-  }, [resolvedParams]);
-
-  if (loading || !resolvedParams) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#2CA6A4] mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading article...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (!post) {
-    notFound();
-  }
+    const contentfulLocale = locale === 'de' ? 'de-DE' : 'en-US';
+    const title = getFieldValue(post, 'title', contentfulLocale);
+    const excerpt = getFieldValue(post, 'excerpt', contentfulLocale);
+    const publishDate = getFieldValue(post, 'publishDate', contentfulLocale);
+    const featuredImageUrl = getImageUrl(post, 'featuredImage');
+    
+    // Get rich text content
+    const content = getLocalizedContent(post.fields.content, locale);
+    
+    // Get author info
+    const author = getLocalizedContent(post.fields.author, locale);
+    const authorName = author ? getFieldValue(author, 'name', contentfulLocale) : '';
+    const authorBio = author ? getFieldValue(author, 'bio', contentfulLocale) : '';
+    
+    // Get categories
+    const categories = getLocalizedContent(post.fields.categories, locale) as unknown[] || [];
+    
+    // Format publish date
+    const formattedDate = formatPublishDate(publishDate, locale);
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Breadcrumb */}
-      <nav className="bg-gray-50 py-4">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="flex items-center text-sm text-gray-600">
-            <Link href={`/${resolvedParams.locale}`} className="hover:text-[#2CA6A4] transition-colors">
-              {resolvedParams.locale === 'de' ? 'Startseite' : 'Home'}
+    <div className="min-h-screen bg-[#F7F5F2]">
+      {/* Navigation */}
+      <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <Link 
+              href={`/${locale}`}
+              className="flex items-center space-x-2"
+            >
+              <Image
+                src="/sanovias_logo.png"
+                alt="Sanovias"
+                width={120}
+                height={40}
+                className="h-8 w-auto"
+              />
             </Link>
-            <span className="mx-2">→</span>
-            <Link href={`/${resolvedParams.locale}/blog`} className="hover:text-[#2CA6A4] transition-colors">
-              Blog
+            <Link
+              href={`/${locale}/blog`}
+              className="text-[#2CA6A4] hover:text-[#1C3C47] font-medium transition-colors"
+            >
+              {locale === 'de' ? '← Zurück zum Blog' : '← Back to Blog'}
             </Link>
-            <span className="mx-2">→</span>
-            <span className="text-[#2CA6A4]">{post.category.name[resolvedParams.locale]}</span>
           </div>
         </div>
       </nav>
 
-      {/* Article Header */}
-      <header className="py-12 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center mb-6">
-              <span 
-                className="px-4 py-2 rounded-full text-sm font-medium text-white"
-                style={{ backgroundColor: post.category.color }}
-              >
-                {post.category.name[resolvedParams.locale]}
-              </span>
+      {/* Article */}
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <header className="mb-8">
+          {/* Breadcrumb */}
+          <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
+            <Link href={`/${locale}`} className="hover:text-[#2CA6A4]">
+              {locale === 'de' ? 'Startseite' : 'Home'}
+            </Link>
+            <span>/</span>
+            <Link href={`/${locale}/blog`} className="hover:text-[#2CA6A4]">
+              Blog
+            </Link>
+            <span>/</span>
+            <span className="text-gray-900">{title}</span>
+          </nav>
+
+          {/* Categories */}
+          {Array.isArray(categories) && categories.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-4">
+              {categories.map((category: unknown, index: number) => {
+                const categoryName = getFieldValue(category, 'name', contentfulLocale);
+                return (
+                  <span
+                    key={index}
+                    className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#2CA6A4] text-white"
+                  >
+                    {categoryName}
+                  </span>
+                );
+              })}
             </div>
-            <h1 className="font-playfair text-4xl md:text-5xl font-bold text-[#1C3C47] mb-6">
-              {post.title[resolvedParams.locale]}
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              {post.excerpt[resolvedParams.locale]}
+          )}
+
+          {/* Title */}
+          <h1 className="text-4xl md:text-5xl font-bold text-[#1C3C47] mb-4 leading-tight">
+            {title}
+          </h1>
+
+          {/* Excerpt */}
+          {excerpt && (
+            <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+              {excerpt}
             </p>
-            
-            {/* Author and Meta Info */}
-            <div className="flex items-center justify-center space-x-6 text-gray-600">
-              <div className="flex items-center">
-                <Image
-                  src={post.author.avatar}
-                  alt={post.author.name}
-                  width={48}
-                  height={48}
-                  className="rounded-full"
-                />
-                <div className="ml-3 text-left">
-                  <p className="font-medium text-[#1C3C47]">{post.author.name}</p>
-                  <p className="text-sm">{post.author.title[resolvedParams.locale]}</p>
-                </div>
+          )}
+
+          {/* Meta info */}
+          <div className="flex items-center space-x-6 text-sm text-gray-500 mb-8">
+            {authorName && (
+              <div className="flex items-center space-x-2">
+                <span className="font-medium text-gray-700">{authorName}</span>
               </div>
-              <div className="text-sm">
-                <p>{new Date(post.publishDate).toLocaleDateString(resolvedParams.locale === 'de' ? 'de-DE' : 'en-US')}</p>
-                <p>{post.readingTime} {resolvedParams.locale === 'de' ? 'Min. Lesezeit' : 'min read'}</p>
-              </div>
-            </div>
+            )}
+            {formattedDate && (
+              <time dateTime={publishDate}>
+                {formattedDate}
+              </time>
+            )}
           </div>
-        </div>
-      </header>
+        </header>
 
-      {/* Featured Image */}
-      <div className="relative h-96 mb-12">
-        <Image
-          src={post.featuredImage.url}
-          alt={post.featuredImage.alt[resolvedParams.locale]}
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
+        {/* Featured Image */}
+        {featuredImageUrl && (
+          <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src={featuredImageUrl}
+              alt={title}
+              width={1200}
+              height={600}
+              className="w-full h-auto object-cover"
+              priority
+            />
+          </div>
+        )}
 
-      {/* Article Content */}
-      <article className="max-w-4xl mx-auto px-4 pb-16">
-        <div 
-          className="prose prose-lg max-w-none prose-headings:text-[#1C3C47] prose-headings:font-playfair prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-[#2CA6A4] prose-a:hover:text-[#26928F]"
-          dangerouslySetInnerHTML={{ __html: post.content[resolvedParams.locale] }}
-        />
-
-        {/* Tags */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <h3 className="font-semibold text-[#1C3C47] mb-4">
-            {resolvedParams.locale === 'de' ? 'Schlagwörter:' : 'Tags:'}
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            {post.tags.map(tag => (
-              <span
-                key={tag}
-                className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition-colors"
-              >
-                #{tag}
-              </span>
-            ))}
+        {/* Article Content */}
+        <div className="prose prose-lg max-w-none">
+          <div className="text-gray-700 leading-relaxed">
+            {content && 
+             typeof content === 'object' && 
+             'nodeType' in content && 
+             'content' in content ? 
+               documentToReactComponents(content as Document, richTextOptions) : (
+              <p className="text-gray-500 italic">
+                {locale === 'de' ? 'Kein Inhalt verfügbar.' : 'No content available.'}
+              </p>
+            )}
           </div>
         </div>
 
         {/* Author Bio */}
-        <div className="mt-12 p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl">
-          <div className="flex items-start">
-            <Image
-              src={post.author.avatar}
-              alt={post.author.name}
-              width={80}
-              height={80}
-              className="rounded-full"
-            />
-            <div className="ml-6">
-              <h3 className="font-playfair text-2xl font-semibold text-[#1C3C47] mb-2">
-                {post.author.name}
-              </h3>
-              <p className="text-[#2CA6A4] font-medium mb-3">
-                {post.author.title[resolvedParams.locale]}
-              </p>
-              <p className="text-gray-700 mb-4">
-                {post.author.bio[resolvedParams.locale]}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {post.author.specialties.map(specialty => (
-                  <span
-                    key={specialty}
-                    className="px-3 py-1 bg-[#2CA6A4]/10 text-[#2CA6A4] rounded-full text-sm font-medium"
-                  >
-                    {specialty}
-                  </span>
-                ))}
+        {authorName && authorBio && (
+          <div className="mt-12 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
+            <h3 className="text-lg font-semibold text-[#1C3C47] mb-3">
+              {locale === 'de' ? 'Über den Autor' : 'About the Author'}
+            </h3>
+            <div className="flex items-start space-x-4">
+              <div className="flex-1">
+                <p className="font-medium text-gray-900 mb-2">{authorName}</p>
+                <p className="text-gray-600">{authorBio}</p>
               </div>
             </div>
           </div>
-        </div>
+        )}
 
-        {/* CTA Section */}
-        <div className="mt-16 text-center bg-gradient-to-br from-[#1C3C47] to-[#2CA6A4] text-white p-12 rounded-2xl">
-          <h3 className="font-playfair text-3xl font-semibold mb-4">
-            {resolvedParams.locale === 'de' ? 'Bereit für Ihre Transformation?' : 'Ready for Your Transformation?'}
-          </h3>
-          <p className="text-xl mb-8 opacity-90">
-            {resolvedParams.locale === 'de' 
-              ? 'Kontaktieren Sie uns für eine persönliche Beratung zu Ihren medizinischen Bedürfnissen.'
-              : 'Contact us for a personalized consultation about your medical needs.'
-            }
-          </p>
+        {/* Back to Blog */}
+        <div className="mt-12 text-center">
           <Link
-            href={`/${resolvedParams.locale}/contact`}
-            className="inline-block bg-white text-[#1C3C47] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+            href={`/${locale}/blog`}
+            className="inline-flex items-center px-6 py-3 border border-[#2CA6A4] text-[#2CA6A4] font-medium rounded-lg hover:bg-[#2CA6A4] hover:text-white transition-colors"
           >
-            {resolvedParams.locale === 'de' ? 'Kostenlose Beratung anfordern' : 'Get Free Consultation'}
+            {locale === 'de' ? 'Zurück zum Blog' : 'Back to Blog'}
           </Link>
         </div>
       </article>
     </div>
   );
+  } catch (error) {
+    console.error('Error fetching blog post:', error);
+    notFound();
+  }
 }

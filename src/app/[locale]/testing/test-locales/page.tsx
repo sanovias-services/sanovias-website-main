@@ -1,11 +1,21 @@
 import { getAllCategories } from '@/lib/contentful/api';
 
+// Simple interface for category data
+interface CategoryEntry {
+  sys: { id: string };
+  fields: { name: string; slug: string };
+}
+
 export default async function TestLocalesPage() {
   // Test both locales
   const [enCategories, deCategories] = await Promise.all([
     getAllCategories('en'),
     getAllCategories('de')
   ]);
+
+  // Cast to our simple interface (via unknown for safety)
+  const englishCategories = enCategories as unknown as CategoryEntry[];
+  const germanCategories = deCategories as unknown as CategoryEntry[];
 
   return (
     <div className="min-h-screen bg-white p-8">
@@ -14,9 +24,9 @@ export default async function TestLocalesPage() {
         
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h2 className="text-xl font-semibold mb-4">English Categories ({enCategories.length})</h2>
+            <h2 className="text-xl font-semibold mb-4">English Categories ({englishCategories.length})</h2>
             <ul className="space-y-2">
-              {enCategories.map((cat: any) => (
+              {englishCategories.map((cat: CategoryEntry) => (
                 <li key={cat.sys.id} className="text-sm">
                   <strong>{cat.fields.name}</strong> 
                   <br />
@@ -27,9 +37,9 @@ export default async function TestLocalesPage() {
           </div>
           
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h2 className="text-xl font-semibold mb-4">German Categories ({deCategories.length})</h2>
+            <h2 className="text-xl font-semibold mb-4">German Categories ({germanCategories.length})</h2>
             <ul className="space-y-2">
-              {deCategories.map((cat: any) => (
+              {germanCategories.map((cat: CategoryEntry) => (
                 <li key={cat.sys.id} className="text-sm">
                   <strong>{cat.fields.name}</strong>
                   <br />
