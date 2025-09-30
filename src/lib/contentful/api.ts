@@ -1,4 +1,5 @@
 import client, { previewClient } from './client';
+import { getContentfulLocale } from '../locale-config';
 
 /**
  * Get all published blog posts
@@ -9,8 +10,8 @@ export async function getAllBlogPosts(
 ) {
   try {
     const contentfulClient = preview ? previewClient : client;
-    // Try common German locale codes first, then fallback to en-US
-    const contentfulLocale = locale === 'de' ? 'de-DE' : 'en-US';
+    // Use dynamic locale mapping
+    const contentfulLocale = locale.includes('-') ? locale : getContentfulLocale(locale);
     
     const entries = await contentfulClient.getEntries({
       content_type: 'blogPost',
@@ -37,7 +38,7 @@ export async function getBlogPostBySlug(
 ) {
   try {
     const contentfulClient = preview ? previewClient : client;
-    const contentfulLocale = locale === 'de' ? 'de-DE' : 'en-US';
+    const contentfulLocale = locale.includes('-') ? locale : getContentfulLocale(locale);
     
     // First, try to find the post in the requested locale
     let entries = await contentfulClient.getEntries({
@@ -53,8 +54,8 @@ export async function getBlogPostBySlug(
       return entries.items[0];
     }
     
-    // If not found in requested locale, try the other locale
-    const fallbackLocale = contentfulLocale === 'de-DE' ? 'en-US' : 'de-DE';
+    // If not found in requested locale, try fallback (default to en-US)
+    const fallbackLocale = getContentfulLocale('en'); // Always fallback to English
     entries = await contentfulClient.getEntries({
       content_type: 'blogPost',
       'fields.slug': slug,
@@ -81,7 +82,7 @@ export async function getBlogPostsByCategory(
 ) {
   try {
     const contentfulClient = preview ? previewClient : client;
-    const contentfulLocale = locale === 'de' ? 'de-DE' : 'en-US';
+    const contentfulLocale = locale.includes('-') ? locale : getContentfulLocale(locale);
     
     const entries = await contentfulClient.getEntries({
       content_type: 'blogPost',
@@ -257,5 +258,65 @@ export async function testConnection() {
   } catch (error) {
     console.error('❌ Contentful connection failed:', error);
     return false;
+  }
+}
+
+/**
+ * Get blog post slug in target language by finding the same entry
+ */
+export async function getBlogPostSlugInLanguage(
+  currentSlug: string,
+  currentLocale: string,
+  targetLocale: string,
+  preview: boolean = false
+): Promise<string | null> {
+  try {
+    const contentfulClient = preview ? previewClient : client;
+    const currentContentfulLocale = getContentfulLocale(currentLocale);
+    const targetContentfulLocale = getContentfulLocale(targetLocale);
+    
+    // First, find the blog post in the current language to get its entry ID
+    const currentEntries = await contentfulClient.getEntries({
+      content_type: 'blogPost',
+      'fields.slug': currentSlug,
+      locale: currentContentfulLocale,
+      limit: 1,
+      ...(preview ? {} : { 'fields.status': 'published' }),
+    });
+    
+    if (currentEntries.items.length === 0) {
+      console.warn(`Blog post with slug "${currentSlug}" not found in locale "${currentContentfulLocale}"`);
+      return null;
+    }
+    
+    const entryId = currentEntries.items[0].sys.id;
+    
+    // Now get the same entry in the target language
+    try {
+      const targetEntry = await contentfulClient.getEntry(entryId, {
+        locale: targetContentfulLocale,
+        include: 1,
+      });
+      
+      if (targetEntry && targetEntry.fields) {
+        const fields = targetEntry.fields as { slug?: string; status?: string };
+        
+        // Check if the entry is published in the target language (if not preview mode)
+        if (!preview && fields.status !== 'published') {
+          console.warn(`Entry ${entryId} exists in ${targetContentfulLocale} but is not published`);
+          return null;
+        }
+        
+        return fields.slug || null;
+      }
+    } catch (entryError) {
+      console.warn(`Entry ${entryId} not found in locale "${targetContentfulLocale}":`, entryError);
+      return null;
+    }
+    
+    return null;
+  } catch (error) {
+    console.error('Error getting blog post slug in target language:', error);
+    return null;
   }
 }

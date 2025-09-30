@@ -5,6 +5,7 @@ import { getBlogPostBySlug, getAllBlogPosts } from '@/lib/contentful/api';
 import { getFieldValue, getImageUrl, formatPublishDate, getLocalizedContent } from '@/lib/contentful/utils';
 import RichTextRenderer from '../components/RichTextRenderer';
 import { Document } from '@contentful/rich-text-types';
+import { getAllLocales, getContentfulLocale } from '@/lib/locale-config';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -13,18 +14,23 @@ interface BlogPostPageProps {
   }>;
 }
 
-// Generate static params for all blog posts
+// Generate static params for all blog posts across all locales
 export async function generateStaticParams() {
   try {
-    const posts = await getAllBlogPosts('en-US');
+    const posts = await getAllBlogPosts('en-US'); // Get all posts from default locale
     const paths = [];
+    const locales = getAllLocales();
     
     for (const post of posts) {
-      const enSlug = getFieldValue(post, 'slug', 'en-US');
-      const deSlug = getFieldValue(post, 'slug', 'de-DE');
-      
-      if (enSlug) paths.push({ locale: 'en', slug: enSlug });
-      if (deSlug) paths.push({ locale: 'de', slug: deSlug });
+      // Generate paths for each supported locale
+      for (const localeConfig of locales) {
+        const contentfulLocale = localeConfig.contentful;
+        const slug = getFieldValue(post, 'slug', contentfulLocale);
+        
+        if (slug) {
+          paths.push({ locale: localeConfig.code, slug });
+        }
+      }
     }
     
     return paths;
@@ -44,7 +50,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       notFound();
     }
 
-    const contentfulLocale = locale === 'de' ? 'de-DE' : 'en-US';
+    const contentfulLocale = getContentfulLocale(locale);
     const title = getFieldValue(post, 'title', contentfulLocale);
     const excerpt = getFieldValue(post, 'excerpt', contentfulLocale);
     const publishDate = getFieldValue(post, 'publishDate', contentfulLocale);
