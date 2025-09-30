@@ -3,75 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getBlogPostBySlug, getAllBlogPosts } from '@/lib/contentful/api';
 import { getFieldValue, getImageUrl, formatPublishDate, getLocalizedContent } from '@/lib/contentful/utils';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, INLINES, MARKS, Document } from '@contentful/rich-text-types';
-
-// Rich text renderer options
-const richTextOptions = {
-  renderNode: {
-    [BLOCKS.PARAGRAPH]: (node: unknown, children: React.ReactNode) => (
-      <p className="mb-4 leading-relaxed text-gray-700">{children}</p>
-    ),
-    [BLOCKS.HEADING_1]: (node: unknown, children: React.ReactNode) => (
-      <h1 className="text-3xl md:text-4xl font-bold mb-6 mt-10 text-[#1C3C47] font-playfair">{children}</h1>
-    ),
-    [BLOCKS.HEADING_2]: (node: unknown, children: React.ReactNode) => (
-      <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-8 text-[#1C3C47] font-playfair">{children}</h2>
-    ),
-    [BLOCKS.HEADING_3]: (node: unknown, children: React.ReactNode) => (
-      <h3 className="text-xl md:text-2xl font-semibold mb-3 mt-6 text-[#1C3C47] font-playfair">{children}</h3>
-    ),
-    [BLOCKS.HEADING_4]: (node: unknown, children: React.ReactNode) => (
-      <h4 className="text-lg md:text-xl font-semibold mb-2 mt-4 text-[#2CA6A4]">{children}</h4>
-    ),
-    [BLOCKS.HEADING_5]: (node: unknown, children: React.ReactNode) => (
-      <h5 className="text-base md:text-lg font-medium mb-2 mt-4 text-[#2CA6A4]">{children}</h5>
-    ),
-    [BLOCKS.HEADING_6]: (node: unknown, children: React.ReactNode) => (
-      <h6 className="text-sm md:text-base font-medium mb-2 mt-3 text-gray-600 uppercase tracking-wider">{children}</h6>
-    ),
-    [BLOCKS.UL_LIST]: (node: unknown, children: React.ReactNode) => (
-      <ul className="mb-4 list-disc list-outside ml-6 space-y-1 text-gray-700">{children}</ul>
-    ),
-    [BLOCKS.OL_LIST]: (node: unknown, children: React.ReactNode) => (
-      <ol className="mb-4 list-decimal list-outside ml-6 space-y-1 text-gray-700">{children}</ol>
-    ),
-    [BLOCKS.LIST_ITEM]: (node: unknown, children: React.ReactNode) => (
-      <li className="leading-relaxed pl-2">{children}</li>
-    ),
-    [INLINES.HYPERLINK]: (node: unknown, children: React.ReactNode) => {
-      const uri = node && typeof node === 'object' && 'data' in node && node.data && typeof node.data === 'object' && 'uri' in node.data
-        ? (node.data as { uri: string }).uri
-        : '#';
-      return (
-        <a 
-          href={uri} 
-          className="text-[#2CA6A4] hover:text-[#1C3C47] underline transition-colors font-medium"
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          {children}
-        </a>
-      );
-    },
-    [BLOCKS.QUOTE]: (node: unknown, children: React.ReactNode) => (
-      <blockquote className="border-l-4 border-[#2CA6A4] pl-4 py-2 mb-4 italic text-gray-600 bg-gray-50 rounded-r">
-        {children}
-      </blockquote>
-    ),
-    [BLOCKS.HR]: () => (
-      <hr className="my-8 border-t-2 border-gray-200" />
-    ),
-  },
-  renderMark: {
-    [MARKS.BOLD]: (text: React.ReactNode) => <strong className="font-semibold text-[#1C3C47]">{text}</strong>,
-    [MARKS.ITALIC]: (text: React.ReactNode) => <em className="italic">{text}</em>,
-    [MARKS.UNDERLINE]: (text: React.ReactNode) => <span className="underline">{text}</span>,
-    [MARKS.CODE]: (text: React.ReactNode) => (
-      <code className="bg-gray-100 text-[#2CA6A4] px-2 py-1 rounded text-sm font-mono">{text}</code>
-    ),
-  },
-};
+import RichTextRenderer from '../components/RichTextRenderer';
+import { Document } from '@contentful/rich-text-types';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -234,19 +167,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         )}
 
         {/* Article Content */}
-        <div className="prose prose-lg max-w-none">
-          <div className="text-gray-700 leading-relaxed">
-            {content && 
-             typeof content === 'object' && 
-             'nodeType' in content && 
-             'content' in content ? 
-               documentToReactComponents(content as Document, richTextOptions) : (
-              <p className="text-gray-500 italic">
-                {locale === 'de' ? 'Kein Inhalt verfügbar.' : 'No content available.'}
-              </p>
-            )}
-          </div>
-        </div>
+        <RichTextRenderer 
+          content={content && typeof content === 'object' && 'nodeType' in content && 'content' in content ? content as unknown as Document : null}
+          locale={locale}
+        />
 
         {/* Author Bio */}
         {authorName && authorBio && (
