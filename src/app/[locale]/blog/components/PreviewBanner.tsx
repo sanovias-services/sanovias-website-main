@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { getPreviewModeFromCookies, PreviewInfo } from '@/lib/contentful/preview-utils';
+import { getPreviewModeFromCookies, PreviewInfo } from '@/lib/contentful/preview-client';
 
 /**
  * Preview Mode Banner
