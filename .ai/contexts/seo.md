@@ -31,6 +31,12 @@
 - Maintain a responsive design that works well on all devices
 - Optimize page speed (aim for <3 second load time)
 
+### Core Web Vitals Optimization
+- **Largest Contentful Paint (LCP)**: Use `priority` prop on above-the-fold images
+- **First Input Delay (FID)**: Minimize JavaScript execution time
+- **Cumulative Layout Shift (CLS)**: Always specify image dimensions and use `sizes` prop
+- **Image Performance**: Implement responsive `sizes` attribute for optimal loading across devices
+
 ## Content Guidelines
 - Create in-depth content about specific medical procedures (1500+ words)
 - Include patient testimonials and success stories with proper consent

@@ -112,6 +112,8 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
                       src={getDirectImageUrl(featuredPost.fields.featuredImage)}
                       alt={getFieldValue(featuredPost, 'title')}
                       fill
+                      priority
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover"
                     />
                   </div>
@@ -185,6 +187,7 @@ export default async function BlogPage({ params, searchParams }: BlogPageProps) 
                         src={featuredImageUrl}
                         alt={postTitle}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover"
                       />
                     </div>
