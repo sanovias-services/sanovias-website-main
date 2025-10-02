@@ -8,6 +8,7 @@ export async function GET(request: NextRequest) {
     const currentSlug = searchParams.get('currentSlug');
     const currentLocale = searchParams.get('currentLocale');
     const targetLocale = searchParams.get('targetLocale');
+    const preview = searchParams.get('preview') === 'true';
 
     if (!currentSlug || !currentLocale || !targetLocale) {
       return NextResponse.json(
@@ -37,7 +38,8 @@ export async function GET(request: NextRequest) {
     const targetSlug = await getBlogPostSlugInLanguage(
       currentSlug,
       currentLocale,
-      targetLocale
+      targetLocale,
+      preview
     );
 
     if (targetSlug) {

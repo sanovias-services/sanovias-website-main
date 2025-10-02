@@ -133,3 +133,13 @@ Component styling should visually reinforce trust, clarity, and premium care wit
 - Use high-quality medical and location images
 - Prefer images showing patient care and professional medical settings
 - Use the Sanovias logo consistently without modification
+
+### Performance Optimization
+- **Next.js Image Component**: Always use Next.js `Image` component for optimized loading
+- **Priority Images**: Add `priority` prop to above-the-fold images (hero images, featured content)
+- **Responsive Sizes**: Always include `sizes` prop for images with `fill` attribute
+  - Standard responsive sizes: `"(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"`
+  - Full-width images: `"100vw"`
+  - Half-width layouts: `"(max-width: 768px) 100vw, 50vw"`
+- **LCP Optimization**: Ensure Largest Contentful Paint images have `priority` and appropriate `sizes`
+- **Alt Text**: Always provide descriptive alt text for accessibility and SEO
