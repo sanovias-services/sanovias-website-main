@@ -150,18 +150,56 @@ export default async function PreviewTestPage() {
         <div className="bg-white rounded-lg shadow-sm p-6">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Sample Preview URLs</h2>
           
-          <div className="space-y-2">
-            <p className="text-gray-600 mb-4">
-              Use these example URLs to test preview mode (replace YOUR_SECRET with actual secret):
-            </p>
-            
-            <div className="space-y-2">
-              <code className="block bg-gray-100 p-2 rounded text-sm font-mono">
-                /api/blog/preview?secret=YOUR_SECRET&slug=sample-blog-post&locale=en
-              </code>
-              <code className="block bg-gray-100 p-2 rounded text-sm font-mono">
-                /api/blog/preview?secret=YOUR_SECRET&slug=beispiel-blog-post&locale=de
-              </code>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-medium text-gray-900 mb-2">Quick Test Links</h3>
+              <p className="text-gray-600 mb-3">
+                Click these links to test preview mode with draft content:
+              </p>
+              
+              <div className="space-y-2">
+                <div className="flex items-center space-x-3">
+                  <a 
+                    href="http://localhost:3000/api/blog/preview?secret=preview-token-super-secret-123!&slug=draft-support-test-en&locale=en"
+                    className="inline-flex items-center px-3 py-2 bg-[#2CA6A4] text-white rounded-md hover:bg-[#26928F] transition-colors text-sm"
+                  >
+                    Test English Draft Post
+                  </a>
+                  <code className="text-xs text-gray-500">draft-support-test-en</code>
+                </div>
+                
+                <div className="flex items-center space-x-3">
+                  <a 
+                    href="http://localhost:3000/api/blog/preview?secret=preview-token-super-secret-123!&slug=draft-support-test-de&locale=de"
+                    className="inline-flex items-center px-3 py-2 bg-[#2CA6A4] text-white rounded-md hover:bg-[#26928F] transition-colors text-sm"
+                  >
+                    Test German Draft Post
+                  </a>
+                  <code className="text-xs text-gray-500">draft-support-test-de</code>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-medium text-gray-900 mb-2">URL Templates</h3>
+              <p className="text-gray-600 mb-3">
+                Use these example URLs to test preview mode (replace YOUR_SECRET with actual secret):
+              </p>
+              
+              <div className="space-y-2">
+                <code className="block bg-gray-100 p-2 rounded text-sm font-mono">
+                  /api/blog/preview?secret=YOUR_SECRET&slug=draft-support-test-en&locale=en
+                </code>
+                <code className="block bg-gray-100 p-2 rounded text-sm font-mono">
+                  /api/blog/preview?secret=YOUR_SECRET&slug=draft-support-test-de&locale=de
+                </code>
+                <code className="block bg-gray-100 p-2 rounded text-sm font-mono">
+                  /api/blog/preview?secret=YOUR_SECRET&slug=sample-blog-post&locale=en
+                </code>
+                <code className="block bg-gray-100 p-2 rounded text-sm font-mono">
+                  /api/blog/preview?secret=YOUR_SECRET&slug=beispiel-blog-post&locale=de
+                </code>
+              </div>
             </div>
           </div>
         </div>
