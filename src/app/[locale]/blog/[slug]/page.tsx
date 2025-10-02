@@ -6,6 +6,7 @@ import { getFieldValue, getImageUrl, formatPublishDate, getLocalizedContent } fr
 import RichTextRenderer from '../components/RichTextRenderer';
 import { Document } from '@contentful/rich-text-types';
 import { getAllLocales, getContentfulLocale } from '@/lib/locale-config';
+import { isPreviewMode } from '@/lib/contentful/preview-server';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -43,8 +44,11 @@ export async function generateStaticParams() {
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { locale, slug } = await params;
   
+  // Check if preview mode is enabled
+  const preview = await isPreviewMode();
+  
   try {
-    const post = await getBlogPostBySlug(slug, locale);
+    const post = await getBlogPostBySlug(slug, locale, preview);
     
     if (!post) {
       notFound();
@@ -66,6 +70,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     
     // Get categories
     const categories = getLocalizedContent(post.fields.categories, locale) as unknown[] || [];
+    
+    // Get status for draft indicator
+    const status = getFieldValue(post, 'status', contentfulLocale) || 'published';
+    const isDraft = status !== 'published';
     
     // Format publish date
     const formattedDate = formatPublishDate(publishDate, locale);
@@ -135,6 +143,28 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <h1 className="text-4xl md:text-5xl font-bold text-[#1C3C47] mb-4 leading-tight">
             {title}
           </h1>
+
+          {/* Draft Status Indicator */}
+          {preview && isDraft && (
+            <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
+              <div className="flex items-center">
+                <svg className="w-5 h-5 text-yellow-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                </svg>
+                <div>
+                  <p className="text-sm font-medium text-yellow-800">
+                    {locale === 'de' ? 'Entwurf-Vorschau' : 'Draft Preview'}
+                  </p>
+                  <p className="text-xs text-yellow-600">
+                    {locale === 'de' 
+                      ? 'Dieser Inhalt ist noch nicht veröffentlicht und nur im Vorschaumodus sichtbar.' 
+                      : 'This content is not yet published and is only visible in preview mode.'
+                    }
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Excerpt */}
           {excerpt && (

@@ -4,6 +4,7 @@ import { useLocale } from "./LocaleProvider";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { getAllLocales, getDefaultLocale } from "@/lib/locale-config";
+import { usePreview } from "./PreviewProvider";
 
 // Get all available languages dynamically
 const languages = getAllLocales().map(config => ({
@@ -19,6 +20,7 @@ export function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const { isPreview } = usePreview();
 
   const currentLanguage = languages.find(lang => lang.code === locale) || 
                           languages.find(lang => lang.code === getDefaultLocale()) || 
@@ -39,26 +41,36 @@ export function LanguageSwitcher() {
   const switchLanguage = async (newLocale: string) => {
     const currentPathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
     
+    // Use preview mode from React context
+    
     // Check if we're on a blog post page
     const blogPostMatch = currentPathWithoutLocale.match(/^\/blog\/(.+)$/);
     
     if (blogPostMatch) {
       const currentSlug = blogPostMatch[1];
+      console.log('📝 Blog post detected - Slug:', currentSlug);
       setIsLoading(true);
       
       try {
-        // Call API to get the equivalent slug in the target language
-        const response = await fetch(
-          `/api/blog/slug-switch?currentSlug=${encodeURIComponent(currentSlug)}&currentLocale=${locale}&targetLocale=${newLocale}`
-        );
+        // Call API to get the equivalent slug in the target language (with preview support)
+        const apiUrl = `/api/blog/slug-switch?currentSlug=${encodeURIComponent(currentSlug)}&currentLocale=${locale}&targetLocale=${newLocale}&preview=${isPreview}`;
+        
+        const response = await fetch(apiUrl);
         
         if (response.ok) {
           const data = await response.json();
           
           if (data.success && data.targetSlug) {
-            // Blog post exists in target language, redirect to it
-            const newPath = `/${newLocale}/blog/${data.targetSlug}`;
-            router.push(newPath);
+            // Blog post exists in target language
+            if (isPreview) {
+              // In preview mode, redirect via preview API to maintain preview state
+              const previewUrl = `/api/blog/preview?secret=${process.env.NEXT_PUBLIC_CONTENTFUL_PREVIEW_SECRET || 'preview-token-super-secret-123!'}&slug=${data.targetSlug}&locale=${newLocale}`;
+              window.location.href = previewUrl;
+            } else {
+              // Normal mode, direct redirect
+              const newPath = `/${newLocale}/blog/${data.targetSlug}`;
+              router.push(newPath);
+            }
           } else {
             // Blog post doesn't exist in target language, redirect to blog index
             const newPath = `/${newLocale}/blog`;
@@ -66,11 +78,12 @@ export function LanguageSwitcher() {
           }
         } else {
           // API error, fallback to blog index
+          console.error('Language switching API error:', response.status);
           const newPath = `/${newLocale}/blog`;
           router.push(newPath);
         }
       } catch (error) {
-        console.error('Error switching blog post language:', error);
+        console.error('Network error switching blog post language:', error);
         // Network error, fallback to blog index
         const newPath = `/${newLocale}/blog`;
         router.push(newPath);

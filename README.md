@@ -33,8 +33,11 @@
 📁 Contentful Integration
 ├── /src/lib/contentful/               # CMS API layer
 │   ├── api.ts                        # Core API functions
+│   ├── client.ts                     # Contentful client setup
 │   ├── types.ts                      # TypeScript definitions
-│   └── client.ts                     # Contentful client setup
+│   ├── utils.ts                      # Shared utility functions
+│   ├── preview-server.ts             # Server-side preview utilities
+│   └── preview.ts                    # Client-side preview utilities
 ├── Rich Text Rendering               # Comprehensive content display
 └── Dynamic Content Types            # Blog posts, pages, media
 ```
@@ -107,6 +110,7 @@ CONTENTFUL_SPACE_ID=your_space_id
 CONTENTFUL_ACCESS_TOKEN=your_access_token
 CONTENTFUL_PREVIEW_ACCESS_TOKEN=your_preview_token
 CONTENTFUL_ENVIRONMENT=master
+CONTENTFUL_PREVIEW_SECRET=your_secret_key_for_preview
 ```
 
 ## 🚀 **Development Workflow**
@@ -225,6 +229,44 @@ Navigation: Dynamic menu structure
 - **Interactive Elements**: Accordions, CTAs, galleries
 - **Code Blocks**: Syntax highlighting ready
 - **Custom Components**: Service cards, team profiles
+
+### **Preview Mode & Draft Support**
+- **Draft Content**: View unpublished content in preview mode
+- **Content Editor Integration**: Direct preview from Contentful
+- **Status Indicators**: Visual draft badges and warnings
+- **Secure Access**: Token-based preview authentication
+- **Cross-Language Support**: Preview drafts in all locales
+
+## 🔍 **Preview Mode System**
+
+### **How It Works**
+1. **Contentful Integration**: Content editors can preview drafts directly from Contentful
+2. **Secure Authentication**: Token-based system prevents unauthorized access
+3. **Visual Indicators**: Draft content is clearly marked with warning banners
+4. **Cross-Language Support**: Preview works across all supported locales
+
+### **Preview URL Format**
+```
+/api/blog/preview?secret=YOUR_SECRET&slug=blog-post-slug&locale=en&contentType=blogPost
+```
+
+### **Contentful Configuration**
+In your Contentful space settings, configure the preview URL as:
+```
+https://your-domain.com/api/blog/preview?secret=YOUR_SECRET&slug={entry.fields.slug}&locale=en
+```
+
+### **Environment Variables**
+```bash
+CONTENTFUL_PREVIEW_SECRET=your_secure_secret_key
+```
+
+### **Features**
+- **Draft Visualization**: Unpublished content with clear draft indicators
+- **Exit Preview**: Easy preview mode exit with banner controls
+- **Debug Information**: Detailed preview status for content editors
+- **Error Handling**: Graceful fallbacks for missing or invalid content
+- **Security**: Secret token validation and secure cookie management
 
 ## 🔒 **Security & Performance**
 
