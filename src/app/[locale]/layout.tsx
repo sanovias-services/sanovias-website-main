@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { LocaleProvider } from "./components/LocaleProvider";
-import { PreviewProvider } from "./components/PreviewProvider";
+import { PreviewProvider } from "./blog/components/PreviewProvider";
 import PreviewBanner from "./blog/components/PreviewBanner";
 import { isPreviewMode } from "@/lib/contentful/preview-server";
 

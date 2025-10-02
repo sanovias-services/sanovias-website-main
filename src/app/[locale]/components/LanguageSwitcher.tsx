@@ -4,7 +4,7 @@ import { useLocale } from "./LocaleProvider";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { getAllLocales, getDefaultLocale } from "@/lib/locale-config";
-import { usePreview } from "./PreviewProvider";
+import { usePreview } from "../blog/components/PreviewProvider";
 
 // Get all available languages dynamically
 const languages = getAllLocales().map(config => ({
