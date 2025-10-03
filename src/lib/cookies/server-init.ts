@@ -35,11 +35,8 @@ export async function initializeServerCookies(): Promise<{
     }
     
     // Determine if consent banner should be shown
-    const needsConsentBanner = !hasExistingConsent || (
-      !initialConsentState.functional &&
-      !initialConsentState.analytics &&
-      !initialConsentState.marketing
-    );
+    // Show banner if no consent has been given yet
+    const needsConsentBanner = !hasExistingConsent;
     
     return {
       initialConsentState,

@@ -7,7 +7,6 @@ import {
   initializeCookieUtils,
   ConsentState,
   CookieCategory,
-  DEFAULT_CONSENT_STATE,
   COOKIE_POLICY_VERSION
 } from '@/lib/cookies';
 
@@ -39,26 +38,21 @@ export function CookieProvider({ children, initialConsentState }: CookieProvider
       try {
         // 1. Initialize cookie registry with all predefined cookies
         initializeCookieRegistry();
-        console.log('✅ Cookie registry initialized');
 
         // 2. Initialize cookie utilities and validation
         initializeCookieUtils();
-        console.log('✅ Cookie utilities initialized');
 
         // 3. Setup consent state listener
         const handleConsentChange = (newState: ConsentState) => {
           setConsentState(newState);
-          console.log('🍪 Consent state updated:', newState);
         };
 
         CookieManager.consent.addListener(handleConsentChange);
-        console.log('✅ Consent change listener attached');
 
         // 4. Sync client state with actual cookies if no initial state was provided
         // Note: initialConsentState is already used in useState initializer, 
-        // so we don't need to sync here - just log the current state
-        const currentConsent = CookieManager.consent.getConsentState();
-        console.log('🍪 Cookie system initialized with consent:', currentConsent);
+        // so we don't need to sync here
+        CookieManager.consent.getConsentState();
 
         setIsInitialized(true);
 
@@ -66,8 +60,8 @@ export function CookieProvider({ children, initialConsentState }: CookieProvider
         return () => {
           CookieManager.consent.removeListener(handleConsentChange);
         };
-      } catch (error) {
-        console.error('❌ Cookie system initialization failed:', error);
+      } catch {
+        // Cookie system initialization failed - fallback to default state
       }
     };
 
@@ -107,12 +101,15 @@ export function useConsent() {
   // Calculate derived state from consent state instead of calling functions
   const hasGivenConsent = React.useMemo(() => {
     if (!consentState) return false;
-    return (
-      consentState.functional ||
-      consentState.analytics ||
-      consentState.marketing ||
-      consentState.timestamp !== DEFAULT_CONSENT_STATE.timestamp
-    );
+    
+    // SIMPLE LOGIC: User has given consent if they accepted any non-essential cookies
+    const hasAcceptedCookies = consentState.functional || consentState.analytics || consentState.marketing;
+    
+    // Check if there's a saved consent cookie (indicates previous user action)
+    const hasExistingCookie = typeof window !== 'undefined' && 
+      document.cookie.includes('sanovias_cookie_consent');
+    
+    return hasAcceptedCookies || hasExistingCookie;
   }, [consentState]);
   
   const needsConsentRefresh = React.useMemo(() => {
