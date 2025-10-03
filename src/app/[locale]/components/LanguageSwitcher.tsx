@@ -3,20 +3,28 @@
 import { useLocale } from "./LocaleProvider";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
+import { getAllLocales, getDefaultLocale } from "@/lib/locale-config";
+import { usePreview } from "../blog/components/PreviewProvider";
 
-const languages = [
-  { code: "en", name: "English", flag: "🇺🇸" },
-  { code: "de", name: "Deutsch", flag: "🇩🇪" }
-];
+// Get all available languages dynamically
+const languages = getAllLocales().map(config => ({
+  code: config.code,
+  name: config.nativeName, // Use native name for better UX
+  flag: config.flag
+}));
 
 export function LanguageSwitcher() {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const { isPreview } = usePreview();
 
-  const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];
+  const currentLanguage = languages.find(lang => lang.code === locale) || 
+                          languages.find(lang => lang.code === getDefaultLocale()) || 
+                          languages[0];
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -30,10 +38,64 @@ export function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const switchLanguage = (newLocale: string) => {
+  const switchLanguage = async (newLocale: string) => {
     const currentPathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
-    const newPath = `/${newLocale}${currentPathWithoutLocale === '/' ? '' : currentPathWithoutLocale}`;
-    router.push(newPath);
+    
+    // Use preview mode from React context
+    
+    // Check if we're on a blog post page
+    const blogPostMatch = currentPathWithoutLocale.match(/^\/blog\/(.+)$/);
+    
+    if (blogPostMatch) {
+      const currentSlug = blogPostMatch[1];
+      console.log('📝 Blog post detected - Slug:', currentSlug);
+      setIsLoading(true);
+      
+      try {
+        // Call API to get the equivalent slug in the target language (with preview support)
+        const apiUrl = `/api/blog/slug-switch?currentSlug=${encodeURIComponent(currentSlug)}&currentLocale=${locale}&targetLocale=${newLocale}&preview=${isPreview}`;
+        
+        const response = await fetch(apiUrl);
+        
+        if (response.ok) {
+          const data = await response.json();
+          
+          if (data.success && data.targetSlug) {
+            // Blog post exists in target language
+            if (isPreview) {
+              // In preview mode, redirect via preview API to maintain preview state
+              const previewUrl = `/api/blog/preview?secret=${process.env.NEXT_PUBLIC_CONTENTFUL_PREVIEW_SECRET || 'preview-token-super-secret-123!'}&slug=${data.targetSlug}&locale=${newLocale}`;
+              window.location.href = previewUrl;
+            } else {
+              // Normal mode, direct redirect
+              const newPath = `/${newLocale}/blog/${data.targetSlug}`;
+              router.push(newPath);
+            }
+          } else {
+            // Blog post doesn't exist in target language, redirect to blog index
+            const newPath = `/${newLocale}/blog`;
+            router.push(newPath);
+          }
+        } else {
+          // API error, fallback to blog index
+          console.error('Language switching API error:', response.status);
+          const newPath = `/${newLocale}/blog`;
+          router.push(newPath);
+        }
+      } catch (error) {
+        console.error('Network error switching blog post language:', error);
+        // Network error, fallback to blog index
+        const newPath = `/${newLocale}/blog`;
+        router.push(newPath);
+      } finally {
+        setIsLoading(false);
+      }
+    } else {
+      // Not a blog post, use regular path switching
+      const newPath = `/${newLocale}${currentPathWithoutLocale === '/' ? '' : currentPathWithoutLocale}`;
+      router.push(newPath);
+    }
+    
     setIsOpen(false);
   };
 
@@ -67,11 +129,12 @@ export function LanguageSwitcher() {
             <button
               key={language.code}
               onClick={() => switchLanguage(language.code)}
+              disabled={isLoading}
               className={`w-full flex items-center space-x-3 px-4 py-2 text-sm hover:bg-gray-50 transition-colors duration-150 ${
                 locale === language.code 
                   ? 'text-[#2CA6A4] bg-[#2CA6A4]/5 font-semibold' 
                   : 'text-gray-700'
-              }`}
+              } ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
               role="option"
               aria-selected={locale === language.code}
             >
@@ -80,7 +143,12 @@ export function LanguageSwitcher() {
                 <span className="font-medium">{language.name}</span>
                 <span className="text-xs text-gray-500">{language.code.toUpperCase()}</span>
               </div>
-              {locale === language.code && (
+              {isLoading && locale !== language.code ? (
+                <svg className="w-4 h-4 text-[#2CA6A4] ml-auto animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              ) : locale === language.code && (
                 <svg className="w-4 h-4 text-[#2CA6A4] ml-auto" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
