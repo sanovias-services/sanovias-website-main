@@ -95,6 +95,9 @@ export {
   initializeCookieUtils
 } from './utils';
 
+// Note: Server-side initialization functions are available in './server-init'
+// They are not re-exported here to avoid Next.js build issues with client components
+
 // Convenience re-exports for easy access
 export const cookies = {
   manager: CookieManager,
