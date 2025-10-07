@@ -27,7 +27,6 @@ src/lib/cookies/
 ├── csrf-client.ts    # 🌐 Client-safe CSRF utilities (browser)
 ├── session.ts        # 🔑 Server-side session management
 ├── server-init.ts    # 🚀 Server-side initialization functions
-├── test.ts           # 🧪 Test utilities and validation
 └── README.md         # 📚 This comprehensive documentation
 ```
 

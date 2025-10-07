@@ -1,12 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from '../components/useTranslations';
+import { useCSRFToken } from '@/hooks/useCSRFToken';
+import { FormCookies } from '@/lib/cookies';
 
 export default function ContactPage() {
   const { t } = useTranslations();
+  const { addToJSON, getHeaders, loading: csrfLoading } = useCSRFToken();
+  
   const [formState, setFormState] = useState({
     firstName: "",
     lastName: "",
@@ -19,6 +23,23 @@ export default function ContactPage() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [statusMessage, setStatusMessage] = useState("");
+
+  // Load saved form data on component mount
+  useEffect(() => {
+    const savedForm = FormCookies.getContactForm();
+    if (savedForm) {
+      setFormState(prev => ({
+        ...prev,
+        // Convert potential numbers/booleans back to strings for form inputs
+        firstName: String(savedForm.firstName || ''),
+        lastName: String(savedForm.lastName || ''),
+        email: String(savedForm.email || ''),
+        phone: String(savedForm.phone || ''),
+        service: String(savedForm.service || ''),
+        message: String(savedForm.message || ''),
+      }));
+    }
+  }, []);
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
@@ -44,7 +65,14 @@ export default function ContactPage() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormState(prev => ({ ...prev, [name]: value }));
+    const newFormState = { ...formState, [name]: value };
+    setFormState(newFormState);
+    
+    // Auto-save form data to cookie (debounced)
+    setTimeout(() => {
+      FormCookies.saveContactForm(newFormState);
+    }, 1000);
+    
     // Clear error when user types
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: "" }));
@@ -56,13 +84,20 @@ export default function ContactPage() {
     
     if (!validateForm()) return;
     
+    // Check if CSRF token is still loading
+    if (csrfLoading) {
+      setStatus("error");
+      setStatusMessage("Security token loading. Please wait a moment and try again.");
+      return;
+    }
+    
     setStatus("submitting");
     
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formState),
+        headers: getHeaders(), // Includes CSRF token
+        body: JSON.stringify(addToJSON(formState)), // Includes CSRF token in body
       });
       
       const data = await response.json();
@@ -70,6 +105,10 @@ export default function ContactPage() {
       if (response.ok) {
         setStatus("success");
         setStatusMessage(data.message);
+        
+        // Clear saved form data since submission was successful
+        FormCookies.clearContactForm();
+        
         // Reset the form
         setFormState({
           firstName: "",
@@ -200,7 +239,17 @@ export default function ContactPage() {
           />
         </div>
         <h2 className="font-playfair text-4xl font-semibold mb-6 text-center text-[#1C3C47]">{t('contact.form.title')}</h2>
-        <p className="font-inter text-gray-600 text-center text-lg leading-relaxed max-w-2xl mx-auto mb-10">{t('contact.form.subtitle')}</p>
+        <p className="font-inter text-gray-600 text-center text-lg leading-relaxed max-w-2xl mx-auto mb-6">{t('contact.form.subtitle')}</p>
+        
+        {/* Auto-save indicator */}
+        <div className="text-center mb-8">
+          <p className="text-sm text-gray-500 flex items-center justify-center gap-2">
+            <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Form data is automatically saved as you type
+          </p>
+        </div>
         
         {status === "success" ? (
           <div className="bg-gradient-to-r from-teal-50 to-green-50 border border-green-200 rounded-xl p-10 text-center max-w-xl mx-auto shadow-lg">
@@ -333,14 +382,14 @@ export default function ContactPage() {
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
-                  {t('contact.form.submitting')}
+                  {t('contact.form.submit.submitting')}
                 </>
               ) : (
                 <>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  {t('contact.form.submit')}
+                  {t('contact.form.submit.button')}
                 </>
               )}
             </button>

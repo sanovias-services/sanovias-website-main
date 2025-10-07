@@ -39,12 +39,13 @@ const locales = ['en', 'de'];
 const defaultLocale = 'en';
 
 /**
- * Detect user's preferred language from browser headers
+ * Detect user's preferred language from multiple sources
  * 
  * DETECTION PRIORITY:
  * 1. If URL already has locale (/en/contact) → use that locale
- * 2. Check Accept-Language header → parse preferred language
- * 3. Fallback to default locale (English)
+ * 2. Check saved language cookie (sanovias_language) → use saved preference
+ * 3. Check Accept-Language header → parse preferred language
+ * 4. Fallback to default locale (English)
  * 
  * @param request - Incoming HTTP request
  * @returns Detected locale code ('en' or 'de')
@@ -60,6 +61,13 @@ function getLocale(request: NextRequest): string {
     // Extract locale from pathname
     const segments = pathname.split('/');
     return segments[1];
+  }
+
+  // Check for saved language preference cookie
+  const savedLanguage = request.cookies.get('sanovias_language')?.value;
+  if (savedLanguage && locales.includes(savedLanguage)) {
+    console.log('🍪 Using saved language preference:', savedLanguage);
+    return savedLanguage;
   }
 
   // Get locale from Accept-Language header
