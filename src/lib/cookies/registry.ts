@@ -13,11 +13,11 @@ import { CookieManager } from './manager';
  * Essential Cookies - No consent required
  * These cookies are necessary for the website to function properly
  */
-export const ESSENTIAL_COOKIES: CookieDefinition[] = [
+const ESSENTIAL_COOKIES: CookieDefinition[] = [
   {
     name: '__prerender_bypass',
     category: CookieCategory.ESSENTIAL,
-    purpose: 'Enable preview mode for content editors to view draft content',
+    purpose: 'Enable preview mode for content editors to view draft content (by skipping the prerendered static content and execute the page on-demand to fetch content from contentful)',
     duration: '24 hours',
     thirdParty: false,
     gdprBasis: 'necessary'
@@ -25,7 +25,7 @@ export const ESSENTIAL_COOKIES: CookieDefinition[] = [
   {
     name: '__next_preview_data',
     category: CookieCategory.ESSENTIAL,
-    purpose: 'Store preview mode data for Contentful CMS integration',
+    purpose: 'Store preview mode data/token for Contentful CMS integration.',
     duration: '24 hours',
     thirdParty: false,
     gdprBasis: 'necessary'
@@ -41,7 +41,7 @@ export const ESSENTIAL_COOKIES: CookieDefinition[] = [
   {
     name: 'sanovias_session',
     category: CookieCategory.ESSENTIAL,
-    purpose: 'Maintain user session for form submissions and security',
+    purpose: 'Maintain user session for form submissions, security, authentication state, and user preferences across page reloads',
     duration: 'Session',
     thirdParty: false,
     gdprBasis: 'necessary'
@@ -49,7 +49,7 @@ export const ESSENTIAL_COOKIES: CookieDefinition[] = [
   {
     name: 'csrf_token',
     category: CookieCategory.ESSENTIAL,
-    purpose: 'Prevent cross-site request forgery attacks',
+    purpose: 'Prevent cross-site request forgery attacks e.g. on contact form submissions',
     duration: 'Session',
     thirdParty: false,
     gdprBasis: 'necessary'
@@ -60,7 +60,7 @@ export const ESSENTIAL_COOKIES: CookieDefinition[] = [
  * Functional Cookies - Enhance user experience
  * These cookies improve website functionality and user experience
  */
-export const FUNCTIONAL_COOKIES: CookieDefinition[] = [
+const FUNCTIONAL_COOKIES: CookieDefinition[] = [
   {
     name: 'sanovias_language',
     category: CookieCategory.FUNCTIONAL,
@@ -107,7 +107,7 @@ export const FUNCTIONAL_COOKIES: CookieDefinition[] = [
  * Analytics Cookies - Track website usage
  * These cookies help us understand how visitors use our website
  */
-export const ANALYTICS_COOKIES: CookieDefinition[] = [
+const ANALYTICS_COOKIES: CookieDefinition[] = [
   {
     name: 'sanovias_visitor_id',
     category: CookieCategory.ANALYTICS,
@@ -152,9 +152,9 @@ export const ANALYTICS_COOKIES: CookieDefinition[] = [
 
 /**
  * Marketing Cookies - Advertising and marketing
- * These cookies are used for marketing and advertising purposes
+ * These cookies are used for marketing and marketing purposes
  */
-export const MARKETING_COOKIES: CookieDefinition[] = [
+const MARKETING_COOKIES: CookieDefinition[] = [
   {
     name: 'sanovias_utm_source',
     category: CookieCategory.MARKETING,
@@ -233,12 +233,20 @@ export function getCookieDefinition(name: string): CookieDefinition | undefined 
 
 /**
  * Get cookie categories with counts
+ * Optimized to use single iteration over ALL_COOKIES
  */
 export function getCategorySummary(): Record<CookieCategory, number> {
-  return {
-    [CookieCategory.ESSENTIAL]: ESSENTIAL_COOKIES.length,
-    [CookieCategory.FUNCTIONAL]: FUNCTIONAL_COOKIES.length,
-    [CookieCategory.ANALYTICS]: ANALYTICS_COOKIES.length,
-    [CookieCategory.MARKETING]: MARKETING_COOKIES.length
+  const counts = {
+    [CookieCategory.ESSENTIAL]: 0,
+    [CookieCategory.FUNCTIONAL]: 0,
+    [CookieCategory.ANALYTICS]: 0,
+    [CookieCategory.MARKETING]: 0
   };
+  
+  // Single iteration instead of accessing separate arrays
+  ALL_COOKIES.forEach(cookie => {
+    counts[cookie.category]++;
+  });
+  
+  return counts;
 }

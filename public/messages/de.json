@@ -503,5 +503,36 @@
       "title": "Kontakt",
       "description": "Nehmen Sie Kontakt mit Sanovias für Ihre Medizintourismus-Bedürfnisse auf. Wir helfen Ihnen gerne bei der Planung Ihrer Gesundheitsreise."
     }
+  },
+  "cookies": {
+    "banner": {
+      "title": "Cookie-Einstellungen",
+      "description": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Essentielle Cookies sind für die Grundfunktionalität erforderlich, während andere uns helfen, die Nutzung zu analysieren und personalisierte Inhalte bereitzustellen. Ein Cookie wird gesetzt, um Ihre Entscheidung zu speichern. Weitere Details finden Sie in unserer Datenschutz- und Cookie-Richtlinie.",
+      "essentialInfo": "Essentielle Cookies gewährleisten die grundlegende Website-Funktionalität und können nicht deaktiviert werden.",
+      "acceptAll": "Alle akzeptieren",
+      "rejectAll": "Alle ablehnen",
+      "customize": "Anpassen",
+      "save": "Einstellungen speichern",
+      "back": "Zurück",
+      "alwaysActive": "IMMER AKTIV"
+    },
+    "categories": {
+      "essential": {
+        "title": "Essentielle Cookies",
+        "description": "Erforderlich für grundlegende Website-Funktionalität einschließlich Navigation, Authentifizierung und Sicherheit."
+      },
+      "functional": {
+        "title": "Funktionale Cookies",
+        "description": "Ermöglichen erweiterte Funktionen wie Spracheinstellungen, Chat-Support und personalisierte Inhalte."
+      },
+      "analytics": {
+        "title": "Analyse-Cookies",
+        "description": "Helfen uns zu verstehen, wie Besucher unsere Website nutzen, um Leistung und Benutzererfahrung zu verbessern."
+      },
+      "marketing": {
+        "title": "Marketing-Cookies",
+        "description": "Werden verwendet, um relevante Werbung zu liefern und die Wirksamkeit von Marketingkampagnen zu verfolgen."
+      }
+    }
   }
 }

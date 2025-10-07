@@ -16,6 +16,10 @@ import { ConsentManager } from './consent';
 export class CookieManager {
   static consent = ConsentManager.getInstance();
   private static cookieRegistry: Map<string, CookieDefinition> = new Map();
+  
+  // Cache for parsed cookies to avoid repeated parsing
+  private static cookieCache: Map<string, { value: string | null; timestamp: number }> = new Map();
+  private static readonly CACHE_TTL = 5000; // 5 seconds cache TTL
 
   /**
    * Register a cookie definition for compliance tracking
@@ -77,6 +81,10 @@ export class CookieManager {
       }
 
       document.cookie = cookieString;
+      
+      // Clear cache for this cookie since we just set it
+      this.cookieCache.delete(name);
+      
       return true;
     } catch (error) {
       console.error(`Failed to set cookie "${name}":`, error);
@@ -85,19 +93,28 @@ export class CookieManager {
   }
 
   /**
-   * Get a cookie value
+   * Get a cookie value (optimized parsing with caching)
    */
   static get(name: string): string | null {
     if (typeof document === 'undefined') return null;
 
     try {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) {
-        const cookieValue = parts.pop()?.split(';').shift();
-        return cookieValue ? decodeURIComponent(cookieValue) : null;
+      // Check cache first
+      const cached = this.cookieCache.get(name);
+      const now = Date.now();
+      
+      if (cached && (now - cached.timestamp) < this.CACHE_TTL) {
+        return cached.value;
       }
-      return null;
+
+      // Parse cookie if not cached or cache expired
+      const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+      const value = match ? decodeURIComponent(match[2]) : null;
+      
+      // Cache the result
+      this.cookieCache.set(name, { value, timestamp: now });
+      
+      return value;
     } catch (error) {
       console.error(`Failed to get cookie "${name}":`, error);
       return null;
@@ -113,6 +130,9 @@ export class CookieManager {
       expires: new Date(0),
       maxAge: 0
     });
+    
+    // Clear cache for this cookie since we just removed it
+    this.cookieCache.delete(name);
   }
 
   /**

@@ -80,17 +80,13 @@ export class ConsentManager {
   }
 
   /**
-   * Get cookie value by name
+   * Get cookie value by name (optimized parsing)
    */
   private getCookieValue(name: string): string | null {
     if (typeof document === 'undefined') return null;
     
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) {
-      return parts.pop()?.split(';').shift() || null;
-    }
-    return null;
+    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
   }
 
   /**

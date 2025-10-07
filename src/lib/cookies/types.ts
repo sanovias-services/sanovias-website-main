@@ -26,9 +26,9 @@ export interface CookieOptions {
   maxAge?: number;
   domain?: string;
   path?: string;
-  secure?: boolean;
-  httpOnly?: boolean;
-  sameSite?: 'strict' | 'lax' | 'none';
+  secure?: boolean; // if true, only sent over HTTPS. Means that if the site is HTTP, the cookie won't be sent at all.
+  httpOnly?: boolean; // if true, it prevents client-side JavaScript from accessing the cookie (protection against XSS attacks)
+  sameSite?: 'strict' | 'lax' | 'none'; // controls when cookies are sent with cross-site requests/navigations. Strict is the most secure i.e. never sent on cross-site requests, Lax is a good balance (default), None means always sent cross-site but requires Secure flag.
 }
 
 export interface ConsentState {
