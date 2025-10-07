@@ -13,7 +13,7 @@ import { CookieManager } from './manager';
  * Essential Cookies - No consent required
  * These cookies are necessary for the website to function properly
  */
-export const ESSENTIAL_COOKIES: CookieDefinition[] = [
+const ESSENTIAL_COOKIES: CookieDefinition[] = [
   {
     name: '__prerender_bypass',
     category: CookieCategory.ESSENTIAL,
@@ -60,7 +60,7 @@ export const ESSENTIAL_COOKIES: CookieDefinition[] = [
  * Functional Cookies - Enhance user experience
  * These cookies improve website functionality and user experience
  */
-export const FUNCTIONAL_COOKIES: CookieDefinition[] = [
+const FUNCTIONAL_COOKIES: CookieDefinition[] = [
   {
     name: 'sanovias_language',
     category: CookieCategory.FUNCTIONAL,
@@ -107,7 +107,7 @@ export const FUNCTIONAL_COOKIES: CookieDefinition[] = [
  * Analytics Cookies - Track website usage
  * These cookies help us understand how visitors use our website
  */
-export const ANALYTICS_COOKIES: CookieDefinition[] = [
+const ANALYTICS_COOKIES: CookieDefinition[] = [
   {
     name: 'sanovias_visitor_id',
     category: CookieCategory.ANALYTICS,
@@ -152,9 +152,9 @@ export const ANALYTICS_COOKIES: CookieDefinition[] = [
 
 /**
  * Marketing Cookies - Advertising and marketing
- * These cookies are used for marketing and advertising purposes
+ * These cookies are used for marketing and marketing purposes
  */
-export const MARKETING_COOKIES: CookieDefinition[] = [
+const MARKETING_COOKIES: CookieDefinition[] = [
   {
     name: 'sanovias_utm_source',
     category: CookieCategory.MARKETING,
@@ -233,12 +233,20 @@ export function getCookieDefinition(name: string): CookieDefinition | undefined 
 
 /**
  * Get cookie categories with counts
+ * Optimized to use single iteration over ALL_COOKIES
  */
 export function getCategorySummary(): Record<CookieCategory, number> {
-  return {
-    [CookieCategory.ESSENTIAL]: ESSENTIAL_COOKIES.length,
-    [CookieCategory.FUNCTIONAL]: FUNCTIONAL_COOKIES.length,
-    [CookieCategory.ANALYTICS]: ANALYTICS_COOKIES.length,
-    [CookieCategory.MARKETING]: MARKETING_COOKIES.length
+  const counts = {
+    [CookieCategory.ESSENTIAL]: 0,
+    [CookieCategory.FUNCTIONAL]: 0,
+    [CookieCategory.ANALYTICS]: 0,
+    [CookieCategory.MARKETING]: 0
   };
+  
+  // Single iteration instead of accessing separate arrays
+  ALL_COOKIES.forEach(cookie => {
+    counts[cookie.category]++;
+  });
+  
+  return counts;
 }

@@ -62,10 +62,6 @@ export { ConsentManager } from './consent';
 
 // Cookie registry and definitions
 export {
-  ESSENTIAL_COOKIES,
-  FUNCTIONAL_COOKIES,
-  ANALYTICS_COOKIES,
-  MARKETING_COOKIES,
   ALL_COOKIES,
   initializeCookieRegistry,
   getCookiesByCategory,
@@ -94,6 +90,22 @@ export {
   clearCategoryData,
   initializeCookieUtils
 } from './utils';
+
+// Client-safe CSRF utilities (no server dependencies)
+export {
+  generateCSRFToken,
+  getClientCSRFToken,
+  CSRF_TOKEN_NAME,
+  CSRF_HEADER_NAME,
+  CSRF_FORM_FIELD
+} from './csrf-client';
+
+// Note: Server-only CSRF functions (setCSRFToken, getCSRFToken, validateCSRFToken, 
+// withCSRFProtection, initializeCSRFToken) should be imported directly from './csrf'
+// when used in server components or API routes
+
+// Note: Session utilities require server context and should be imported directly 
+// from './session' when used in server components or API routes
 
 // Note: Server-side initialization functions are available in './server-init'
 // They are not re-exported here to avoid Next.js build issues with client components
