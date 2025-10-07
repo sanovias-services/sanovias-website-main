@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale } from '../components/LocaleProvider';
-import { useTranslations } from '../components/useTranslations';
+import { useTranslations } from '../../../hooks/useTranslations';
 
 export default function AboutPage() {
   const locale = useLocale();

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useCookies, useConsent } from './CookieProvider';
-import { useTranslations } from './useTranslations';
+import { useTranslations } from '../../../hooks/useTranslations';
 
 /**
  * Cookie Consent Banner Component - Compact Corner Version

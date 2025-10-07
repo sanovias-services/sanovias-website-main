@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useTranslations } from '../components/useTranslations';
+import { useTranslations } from '../../../hooks/useTranslations';
 import { useCSRFToken } from '@/hooks/useCSRFToken';
 import { FormCookies } from '@/lib/cookies';
 
