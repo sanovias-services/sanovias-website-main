@@ -17,7 +17,7 @@ export const ESSENTIAL_COOKIES: CookieDefinition[] = [
   {
     name: '__prerender_bypass',
     category: CookieCategory.ESSENTIAL,
-    purpose: 'Enable preview mode for content editors to view draft content',
+    purpose: 'Enable preview mode for content editors to view draft content (by skipping the prerendered static content and execute the page on-demand to fetch content from contentful)',
     duration: '24 hours',
     thirdParty: false,
     gdprBasis: 'necessary'
@@ -25,7 +25,7 @@ export const ESSENTIAL_COOKIES: CookieDefinition[] = [
   {
     name: '__next_preview_data',
     category: CookieCategory.ESSENTIAL,
-    purpose: 'Store preview mode data for Contentful CMS integration',
+    purpose: 'Store preview mode data/token for Contentful CMS integration.',
     duration: '24 hours',
     thirdParty: false,
     gdprBasis: 'necessary'
@@ -41,7 +41,7 @@ export const ESSENTIAL_COOKIES: CookieDefinition[] = [
   {
     name: 'sanovias_session',
     category: CookieCategory.ESSENTIAL,
-    purpose: 'Maintain user session for form submissions and security',
+    purpose: 'Maintain user session for form submissions, security, authentication state, and user preferences across page reloads',
     duration: 'Session',
     thirdParty: false,
     gdprBasis: 'necessary'
@@ -49,7 +49,7 @@ export const ESSENTIAL_COOKIES: CookieDefinition[] = [
   {
     name: 'csrf_token',
     category: CookieCategory.ESSENTIAL,
-    purpose: 'Prevent cross-site request forgery attacks',
+    purpose: 'Prevent cross-site request forgery attacks e.g. on contact form submissions',
     duration: 'Session',
     thirdParty: false,
     gdprBasis: 'necessary'
