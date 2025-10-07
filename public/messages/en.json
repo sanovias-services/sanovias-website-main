@@ -536,5 +536,105 @@
         "description": "Used to deliver relevant advertisements and track the effectiveness of marketing campaigns."
       }
     }
+  },
+  "cookiePolicy": {
+    "title": "Cookie Policy",
+    "lastUpdated": "Last updated:",
+    "lastUpdatedDate": "October 7, 2025",
+    "introduction": {
+      "title": "Introduction",
+      "paragraph1": "This Cookie Policy explains how Sanovias Medical Tourism (\"we\", \"us\", or \"our\") uses cookies and similar technologies when you visit our website sanovias.com (\"Service\").",
+      "paragraph2": "This policy complies with the European Union's General Data Protection Regulation (GDPR), Austrian Data Protection Act (DSG), and ePrivacy Directive requirements for cookie consent and transparency.",
+      "paragraph3": "By using our Service, you consent to the use of cookies as described in this policy, subject to your cookie preferences which you can manage at any time."
+    },
+    "whatAreCookies": {
+      "title": "What Are Cookies?",
+      "paragraph1": "Cookies are small text files that are placed on your device (computer, smartphone, or tablet) when you visit our website. They help us provide you with a better experience by remembering your preferences and understanding how you use our site.",
+      "paragraph2": "Cookies contain information that is transferred to your device's hard drive and stored there. They cannot run programs or deliver viruses to your device, and they cannot access your personal files."
+    },
+    "howWeUseCookies": {
+      "title": "How We Use Cookies",
+      "introduction": "We use cookies for several purposes to improve your experience and ensure our website functions properly. Our cookies are categorized as follows:"
+    },
+    "categories": {
+      "essential": {
+        "title": "Essential Cookies (Always Active)",
+        "description": "These cookies are strictly necessary for our website to function properly. They enable basic functionality such as page navigation, form submissions, and security features. You cannot opt out of these cookies as they are essential for the service you requested.",
+        "legal": "Legal basis: Article 6(1)(b) GDPR - performance of contract and Article 6(1)(f) GDPR - legitimate interests in website security and functionality."
+      },
+      "functional": {
+        "title": "Functional Cookies (Requires Consent)",
+        "description": "These cookies enhance your experience by remembering your preferences and settings. They enable features like language selection and form auto-save functionality.",
+        "legal": "Legal basis: Article 6(1)(a) GDPR - consent. You can withdraw your consent at any time through our cookie settings."
+      }
+    },
+    "table": {
+      "name": "Cookie Name",
+      "purpose": "Purpose",
+      "duration": "Duration"
+    },
+    "cookies": {
+      "prerender_bypass": "Enables content preview mode for editors to view draft content before publication",
+      "next_preview_data": "Stores preview authentication tokens for content management system",
+      "cookie_consent": "Stores your cookie preferences to remember your choices on future visits",
+      "session": "Maintains your session for form submissions, security, and user preferences across page reloads",
+      "csrf_token": "Prevents cross-site request forgery attacks on form submissions to protect your data",
+      "language": "Remembers your preferred language (English/German) for future visits",
+      "contact_form": "Saves your contact form progress to prevent data loss if you navigate away"
+    },
+    "durations": {
+      "session": "Session (deleted when browser closes)",
+      "hours2": "2 hours",
+      "hours24": "24 hours",
+      "days7": "7 days",
+      "year1": "1 year"
+    },
+    "management": {
+      "title": "Managing Your Cookie Preferences",
+      "paragraph1": "You have full control over which cookies we set on your device. You can manage your preferences through our cookie banner that appears when you first visit our site, or by adjusting your browser settings.",
+      "paragraph2": "Please note that disabling certain cookies may impact the functionality of our website. Essential cookies cannot be disabled as they are necessary for basic website operation and security.",
+      "paragraph3": "To update your cookie preferences on our website, you can access the cookie settings through the cookie banner or contact us directly."
+    },
+    "browserSettings": {
+      "title": "Browser Cookie Settings",
+      "introduction": "You can also control cookies through your browser settings. Here's how to manage cookies in popular browsers:",
+      "chrome": "Settings > Privacy and Security > Cookies and other site data",
+      "firefox": "Settings > Privacy & Security > Cookies and Site Data",
+      "safari": "Preferences > Privacy > Manage Website Data",
+      "edge": "Settings > Privacy, search, and services > Cookies and site permissions"
+    },
+    "legalBasis": {
+      "title": "Legal Basis for Processing",
+      "paragraph1": "Under the GDPR and Austrian Data Protection Act, we process your data based on the following legal grounds:",
+      "paragraph2": "Essential cookies: Processed based on our legitimate interests (Article 6(1)(f) GDPR) in providing website functionality and security, and for performance of our services (Article 6(1)(b) GDPR).",
+      "paragraph3": "Functional cookies: Processed based on your explicit consent (Article 6(1)(a) GDPR), which you can withdraw at any time without affecting the lawfulness of processing based on consent before its withdrawal."
+    },
+    "dataRights": {
+      "title": "Your Data Protection Rights",
+      "introduction": "Under GDPR and Austrian law, you have the following rights regarding your personal data:",
+      "access": "Right to access: Request copies of your personal data stored in cookies",
+      "rectification": "Right to rectification: Request correction of inaccurate personal data",
+      "erasure": "Right to erasure: Request deletion of your personal data in certain circumstances",
+      "portability": "Right to data portability: Request transfer of your data in a structured format",
+      "objection": "Right to object: Object to processing based on legitimate interests",
+      "restriction": "Right to restriction: Request limitation of processing in certain circumstances",
+      "contact": "To exercise these rights, please contact us at info@sanovias.com or use the contact information provided below."
+    },
+    "thirdParty": {
+      "title": "Third-Party Cookies",
+      "paragraph1": "Currently, we do not use third-party cookies on our website. All cookies are set and controlled directly by Sanovias Medical Tourism.",
+      "paragraph2": "If we implement third-party services in the future (such as analytics or marketing tools), we will update this policy and obtain your consent where required by law."
+    },
+    "updates": {
+      "title": "Updates to This Policy",
+      "paragraph1": "We may update this Cookie Policy from time to time to reflect changes in our practices, technology, legal requirements, or for other operational reasons.",
+      "paragraph2": "When we make material changes, we will notify you by updating the \"Last updated\" date at the top of this policy and, where appropriate, provide additional notice through our website or email."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "paragraph1": "If you have any questions about this Cookie Policy, our use of cookies, or wish to exercise your data protection rights, please contact us:",
+      "email": "Email:",
+      "phone": "Phone:"
+    }
   }
 }

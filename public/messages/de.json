@@ -536,5 +536,105 @@
         "description": "Werden verwendet, um relevante Werbung zu liefern und die Wirksamkeit von Marketingkampagnen zu verfolgen."
       }
     }
+  },
+  "cookiePolicy": {
+    "title": "Cookie-Richtlinie",
+    "lastUpdated": "Zuletzt aktualisiert:",
+    "lastUpdatedDate": "7. Oktober 2025",
+    "introduction": {
+      "title": "Einführung",
+      "paragraph1": "Diese Cookie-Richtlinie erklärt, wie Sanovias Medical Tourism (\"wir\", \"uns\" oder \"unser\") Cookies und ähnliche Technologien verwendet, wenn Sie unsere Website sanovias.com (\"Service\") besuchen.",
+      "paragraph2": "Diese Richtlinie entspricht den Anforderungen der Datenschutz-Grundverordnung (DSGVO) der Europäischen Union, des österreichischen Datenschutzgesetzes (DSG) und der ePrivacy-Richtlinie für Cookie-Einwilligung und Transparenz.",
+      "paragraph3": "Durch die Nutzung unseres Services stimmen Sie der Verwendung von Cookies zu, wie in dieser Richtlinie beschrieben, vorbehaltlich Ihrer Cookie-Präferenzen, die Sie jederzeit verwalten können."
+    },
+    "whatAreCookies": {
+      "title": "Was sind Cookies?",
+      "paragraph1": "Cookies sind kleine Textdateien, die auf Ihrem Gerät (Computer, Smartphone oder Tablet) platziert werden, wenn Sie unsere Website besuchen. Sie helfen uns, Ihnen eine bessere Erfahrung zu bieten, indem sie sich an Ihre Präferenzen erinnern und verstehen, wie Sie unsere Website nutzen.",
+      "paragraph2": "Cookies enthalten Informationen, die auf die Festplatte Ihres Geräts übertragen und dort gespeichert werden. Sie können keine Programme ausführen oder Viren an Ihr Gerät übertragen und können nicht auf Ihre persönlichen Dateien zugreifen."
+    },
+    "howWeUseCookies": {
+      "title": "Wie wir Cookies verwenden",
+      "introduction": "Wir verwenden Cookies für verschiedene Zwecke, um Ihre Erfahrung zu verbessern und sicherzustellen, dass unsere Website ordnungsgemäß funktioniert. Unsere Cookies sind wie folgt kategorisiert:"
+    },
+    "categories": {
+      "essential": {
+        "title": "Essentielle Cookies (Immer aktiv)",
+        "description": "Diese Cookies sind unbedingt erforderlich, damit unsere Website ordnungsgemäß funktioniert. Sie ermöglichen grundlegende Funktionen wie Seitennavigation, Formularübermittlungen und Sicherheitsfeatures. Sie können diese Cookies nicht deaktivieren, da sie für den von Ihnen angeforderten Service unerlässlich sind.",
+        "legal": "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO - Vertragserfüllung und Art. 6 Abs. 1 lit. f DSGVO - berechtigte Interessen an Website-Sicherheit und -Funktionalität."
+      },
+      "functional": {
+        "title": "Funktionale Cookies (Erfordert Einwilligung)",
+        "description": "Diese Cookies verbessern Ihre Erfahrung, indem sie sich an Ihre Präferenzen und Einstellungen erinnern. Sie ermöglichen Funktionen wie Sprachauswahl und automatisches Speichern von Formularen.",
+        "legal": "Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO - Einwilligung. Sie können Ihre Einwilligung jederzeit über unsere Cookie-Einstellungen widerrufen."
+      }
+    },
+    "table": {
+      "name": "Cookie-Name",
+      "purpose": "Zweck",
+      "duration": "Dauer"
+    },
+    "cookies": {
+      "prerender_bypass": "Ermöglicht den Inhaltsvorschau-Modus für Redakteure, um Entwurfsinhalte vor der Veröffentlichung anzuzeigen",
+      "next_preview_data": "Speichert Vorschau-Authentifizierungstoken für das Content-Management-System",
+      "cookie_consent": "Speichert Ihre Cookie-Präferenzen, um sich an Ihre Entscheidungen bei zukünftigen Besuchen zu erinnern",
+      "session": "Behält Ihre Sitzung für Formularübermittlungen, Sicherheit und Benutzerpräferenzen beim Neuladen von Seiten bei",
+      "csrf_token": "Verhindert Cross-Site-Request-Forgery-Angriffe auf Formularübermittlungen zum Schutz Ihrer Daten",
+      "language": "Merkt sich Ihre bevorzugte Sprache (Englisch/Deutsch) für zukünftige Besuche",
+      "contact_form": "Speichert Ihren Kontaktformular-Fortschritt, um Datenverlust zu verhindern, wenn Sie wegnavigieren"
+    },
+    "durations": {
+      "session": "Sitzung (wird beim Schließen des Browsers gelöscht)",
+      "hours2": "2 Stunden",
+      "hours24": "24 Stunden",
+      "days7": "7 Tage",
+      "year1": "1 Jahr"
+    },
+    "management": {
+      "title": "Verwaltung Ihrer Cookie-Präferenzen",
+      "paragraph1": "Sie haben die volle Kontrolle darüber, welche Cookies wir auf Ihrem Gerät setzen. Sie können Ihre Präferenzen über unser Cookie-Banner verwalten, das beim ersten Besuch unserer Website erscheint, oder durch Anpassung Ihrer Browser-Einstellungen.",
+      "paragraph2": "Bitte beachten Sie, dass das Deaktivieren bestimmter Cookies die Funktionalität unserer Website beeinträchtigen kann. Essentielle Cookies können nicht deaktiviert werden, da sie für den grundlegenden Website-Betrieb und die Sicherheit erforderlich sind.",
+      "paragraph3": "Um Ihre Cookie-Präferenzen auf unserer Website zu aktualisieren, können Sie über das Cookie-Banner auf die Cookie-Einstellungen zugreifen oder uns direkt kontaktieren."
+    },
+    "browserSettings": {
+      "title": "Browser-Cookie-Einstellungen",
+      "introduction": "Sie können Cookies auch über Ihre Browser-Einstellungen steuern. So verwalten Sie Cookies in gängigen Browsern:",
+      "chrome": "Einstellungen > Datenschutz und Sicherheit > Cookies und andere Website-Daten",
+      "firefox": "Einstellungen > Datenschutz & Sicherheit > Cookies und Website-Daten",
+      "safari": "Einstellungen > Datenschutz > Website-Daten verwalten",
+      "edge": "Einstellungen > Datenschutz, Suche und Dienste > Cookies und Website-Berechtigungen"
+    },
+    "legalBasis": {
+      "title": "Rechtsgrundlage für die Verarbeitung",
+      "paragraph1": "Unter der DSGVO und dem österreichischen Datenschutzgesetz verarbeiten wir Ihre Daten auf folgenden Rechtsgrundlagen:",
+      "paragraph2": "Essentielle Cookies: Verarbeitet basierend auf unseren berechtigten Interessen (Art. 6 Abs. 1 lit. f DSGVO) zur Bereitstellung von Website-Funktionalität und -Sicherheit sowie zur Erfüllung unserer Dienstleistungen (Art. 6 Abs. 1 lit. b DSGVO).",
+      "paragraph3": "Funktionale Cookies: Verarbeitet basierend auf Ihrer ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie jederzeit widerrufen können, ohne dass dies die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung berührt."
+    },
+    "dataRights": {
+      "title": "Ihre Datenschutzrechte",
+      "introduction": "Unter der DSGVO und österreichischem Recht haben Sie folgende Rechte bezüglich Ihrer personenbezogenen Daten:",
+      "access": "Recht auf Auskunft: Kopien Ihrer in Cookies gespeicherten personenbezogenen Daten anfordern",
+      "rectification": "Recht auf Berichtigung: Korrektur unrichtiger personenbezogener Daten anfordern",
+      "erasure": "Recht auf Löschung: Löschung Ihrer personenbezogenen Daten unter bestimmten Umständen anfordern",
+      "portability": "Recht auf Datenübertragbarkeit: Übertragung Ihrer Daten in einem strukturierten Format anfordern",
+      "objection": "Widerspruchsrecht: Widerspruch gegen Verarbeitung aufgrund berechtigter Interessen",
+      "restriction": "Recht auf Einschränkung: Einschränkung der Verarbeitung unter bestimmten Umständen anfordern",
+      "contact": "Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter info@sanovias.com oder nutzen Sie die unten angegebenen Kontaktinformationen."
+    },
+    "thirdParty": {
+      "title": "Drittanbieter-Cookies",
+      "paragraph1": "Derzeit verwenden wir keine Drittanbieter-Cookies auf unserer Website. Alle Cookies werden direkt von Sanovias Medical Tourism gesetzt und kontrolliert.",
+      "paragraph2": "Falls wir in Zukunft Drittanbieter-Services implementieren (wie Analytics- oder Marketing-Tools), werden wir diese Richtlinie aktualisieren und gegebenenfalls Ihre Einwilligung gemäß geltendem Recht einholen."
+    },
+    "updates": {
+      "title": "Aktualisierungen dieser Richtlinie",
+      "paragraph1": "Wir können diese Cookie-Richtlinie von Zeit zu Zeit aktualisieren, um Änderungen in unseren Praktiken, Technologie, rechtlichen Anforderungen oder aus anderen betrieblichen Gründen zu reflektieren.",
+      "paragraph2": "Bei wesentlichen Änderungen werden wir Sie benachrichtigen, indem wir das Datum \"Zuletzt aktualisiert\" oben in dieser Richtlinie aktualisieren und gegebenenfalls zusätzliche Hinweise über unsere Website oder E-Mail bereitstellen."
+    },
+    "contact": {
+      "title": "Kontaktinformationen",
+      "paragraph1": "Wenn Sie Fragen zu dieser Cookie-Richtlinie, unserer Verwendung von Cookies haben oder Ihre Datenschutzrechte ausüben möchten, kontaktieren Sie uns bitte:",
+      "email": "E-Mail:",
+      "phone": "Telefon:"
+    }
   }
 }
