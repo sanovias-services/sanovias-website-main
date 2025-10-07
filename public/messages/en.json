@@ -454,8 +454,10 @@
         "title": "Error"
       },
       "privacy": {
-        "consent": "By submitting, you agree to be contacted regarding your inquiry.",
-        "policy": "Your data will be processed according to our Privacy Policy"
+        "notice": "By submitting, you agree to be contacted regarding your inquiry.",
+        "policy": "Your data will be processed according to our",
+        "link": "Privacy Policy",
+        "consent": "By submitting, you agree to be contacted regarding your inquiry."
       }
     },
     "faq": {

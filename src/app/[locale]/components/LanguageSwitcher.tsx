@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { getAllLocales, getDefaultLocale } from "@/lib/locale-config";
 import { usePreview } from "../blog/components/PreviewProvider";
+import { LanguageCookies } from "@/lib/cookies";
 
 // Get all available languages dynamically
 const languages = getAllLocales().map(config => ({
@@ -40,6 +41,9 @@ export function LanguageSwitcher() {
 
   const switchLanguage = async (newLocale: string) => {
     const currentPathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
+    
+    // Save language preference to cookie
+    LanguageCookies.setLanguage(newLocale as 'en' | 'de');
     
     // Use preview mode from React context
     

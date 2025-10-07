@@ -454,8 +454,10 @@
         "title": "Fehler"
       },
       "privacy": {
-        "consent": "Durch das Absenden stimmen Sie zu, bezüglich Ihrer Anfrage kontaktiert zu werden.",
-        "policy": "Ihre Daten werden gemäß unserer Datenschutzrichtlinie verarbeitet"
+        "notice": "Durch das Absenden stimmen Sie zu, bezüglich Ihrer Anfrage kontaktiert zu werden.",
+        "policy": "Ihre Daten werden gemäß unserer",
+        "link": "Datenschutzrichtlinie",
+        "consent": "Durch das Absenden stimmen Sie zu, bezüglich Ihrer Anfrage kontaktiert zu werden."
       }
     },
     "faq": {
