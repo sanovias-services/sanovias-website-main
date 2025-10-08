@@ -508,6 +508,10 @@
     "privacy": {
       "title": "Privacy Policy - Sanovias Medical Tourism",
       "description": "Read our comprehensive privacy policy to understand how Sanovias Medical Tourism protects and processes your personal data in compliance with GDPR and Austrian law."
+    },
+    "terms": {
+      "title": "Terms of Service - Sanovias Medical Tourism",
+      "description": "Read our comprehensive terms of service to understand the conditions for using Sanovias Medical Tourism platform and services for medical tourism in Tunisia."
     }
   },
   "cookies": {
@@ -841,6 +845,147 @@
       "paragraph1": "If you have any questions about this Cookie Policy, our use of cookies, or wish to exercise your data protection rights, please contact us:",
       "email": "Email:",
       "phone": "Phone:"
+    }
+  },
+  "termsOfService": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated:",
+    "lastUpdatedDate": "October 8, 2025",
+    "introduction": {
+      "title": "General Terms and Conditions",
+      "paragraph1": "These Terms of Service (\"Terms\") govern your use of the Sanovias Medical Tourism platform and services. By accessing or using our services, you agree to be bound by these Terms.",
+      "paragraph2": "Sanovias Medical Tourism is a platform that connects international patients with certified medical providers in Tunisia, facilitating medical tourism services including consultation, coordination, and support.",
+      "paragraph3": "These Terms constitute a legally binding agreement between you and Sanovias Medical Tourism. Please read them carefully before using our services."
+    },
+    "services": {
+      "title": "Services of Sanovias",
+      "introduction": "Sanovias provides a comprehensive medical tourism platform offering the following services:",
+      "platform": {
+        "title": "Platform Services",
+        "description": "Connection with certified medical providers in Tunisia, treatment information, cost estimates, and provider comparison tools."
+      },
+      "consultation": {
+        "title": "Medical Consultation",
+        "description": "Online consultations, telemedicine services, medical assessments, and treatment recommendations through our partner network."
+      },
+      "coordination": {
+        "title": "Travel Coordination",
+        "description": "Complete travel planning including accommodation booking, airport transfers, appointment scheduling, and local support services."
+      },
+      "records": {
+        "title": "Medical Records Management",
+        "description": "Secure storage and management of medical documents, treatment history, and communication with healthcare providers."
+      },
+      "disclaimer": {
+        "title": "Important Notice",
+        "description": "Sanovias acts as an intermediary platform. We do not provide direct medical services but facilitate connections with qualified medical professionals and institutions."
+      }
+    },
+    "registration": {
+      "title": "Registration by the Contracting Party",
+      "paragraph1": "To access our full range of services, patients may register on our platform by providing accurate and complete information about their identity and medical needs.",
+      "paragraph2": "Registration is voluntary but recommended to receive personalized service, secure communication, and access to your medical records and treatment history.",
+      "paragraph3": "By registering, you agree to provide truthful information and maintain the security of your account credentials.",
+      "requirements": {
+        "title": "Registration Requirements",
+        "age": "Must be 18 years or older, or have parental/guardian consent",
+        "info": "Provide accurate personal and medical information",
+        "consent": "Agree to these Terms of Service and Privacy Policy"
+      }
+    },
+    "contractParties": {
+      "title": "Identification of Contract Parties",
+      "paragraph1": "The contractual relationship exists between Sanovias Medical Tourism as the service provider and the patient as the service recipient.",
+      "paragraph2": "Additional contracts may be formed between the patient and individual medical providers, accommodations, or other service partners facilitated through our platform.",
+      "sanovias": {
+        "title": "Service Provider"
+      },
+      "patient": {
+        "title": "Service Recipient",
+        "description": "The registered patient or authorized representative seeking medical tourism services through our platform."
+      }
+    },
+    "platformUsage": {
+      "title": "Platform Usage, Usage Contract, and Usage Fees",
+      "paragraph1": "Basic access to our platform and initial consultations are provided free of charge. Our business model is based on commissions from partner medical providers and service partners.",
+      "paragraph2": "Once you accept a treatment offer through our platform, you become committed to that specific treatment plan and associated costs as outlined in your personalized quote.",
+      "paragraph3": "Cancellation policies and refund terms vary by treatment and provider, and will be clearly communicated before commitment.",
+      "commitment": {
+        "title": "Treatment Commitment",
+        "description": "By accepting a treatment offer, you enter into a binding agreement for the specified medical services, travel arrangements, and associated costs."
+      }
+    },
+    "content": {
+      "title": "Content and Information",
+      "paragraph1": "All content on our platform, including medical information, provider profiles, and treatment descriptions, is provided for informational purposes and should not replace professional medical advice.",
+      "paragraph2": "We strive to maintain accurate and up-to-date information but cannot guarantee the completeness or accuracy of all content. Medical information should always be verified with qualified healthcare professionals.",
+      "paragraph3": "Users are responsible for evaluating the suitability of treatments and providers based on their individual medical needs and circumstances."
+    },
+    "usageRights": {
+      "title": "Usage Rights and Restrictions",
+      "paragraph1": "You are granted a limited, non-exclusive, non-transferable right to access and use our platform for personal medical tourism purposes only.",
+      "paragraph2": "You may not use our platform for any commercial purposes, reproduce our content, or attempt to reverse engineer our systems.",
+      "prohibited": {
+        "title": "Prohibited Activities",
+        "commercial": "Commercial use or resale of our services",
+        "modification": "Modification or copying of platform content",
+        "distribution": "Unauthorized distribution of medical information",
+        "illegal": "Any illegal or fraudulent activities"
+      }
+    },
+    "guarantee": {
+      "title": "Guarantee and System Availability",
+      "paragraph1": "We strive to maintain high system availability but cannot guarantee uninterrupted access to our platform. Scheduled maintenance and updates may temporarily affect availability.",
+      "paragraph2": "While we work with certified medical providers, we cannot guarantee specific medical outcomes. Treatment results depend on individual circumstances and medical conditions.",
+      "paragraph3": "We provide our platform services \"as is\" and make no warranties regarding specific results or outcomes from using our services."
+    },
+    "liability": {
+      "title": "Liability and Limitations",
+      "paragraph1": "Sanovias Medical Tourism acts as an intermediary platform and is not liable for the medical services provided by third-party healthcare providers.",
+      "paragraph2": "Our liability is limited to the direct costs of our platform services and does not extend to medical outcomes, travel-related issues, or indirect damages.",
+      "paragraph3": "Users are advised to obtain appropriate travel and medical insurance to cover potential risks associated with medical tourism.",
+      "medical": {
+        "title": "Medical Liability Disclaimer",
+        "description": "We are not responsible for medical outcomes, complications, or adverse events related to treatments received through our partner providers. Medical liability rests with the treating healthcare professionals and institutions."
+      }
+    },
+    "dataProtection": {
+      "title": "Data Protection and Privacy",
+      "paragraph1": "We are committed to protecting your personal and medical information in accordance with applicable data protection laws including GDPR.",
+      "paragraph2": "Medical information is handled with the highest level of confidentiality and is only shared with authorized healthcare providers involved in your care.",
+      "reference": {
+        "title": "Privacy Policy Reference",
+        "description": "For detailed information about how we collect, use, and protect your data, please refer to our comprehensive Privacy Policy.",
+        "link": "View Privacy Policy →"
+      }
+    },
+    "confidentiality": {
+      "title": "Medical Confidentiality",
+      "paragraph1": "All medical information shared through our platform is subject to strict confidentiality requirements and professional medical ethics.",
+      "paragraph2": "We maintain secure systems and protocols to protect the confidentiality of your medical records and communications.",
+      "paragraph3": "Medical information is only disclosed to authorized healthcare providers directly involved in your treatment or as required by law."
+    },
+    "electronicCommunication": {
+      "title": "Electronic Communication",
+      "paragraph1": "By using our platform, you consent to receive communications from us via email, SMS, or through our secure messaging system.",
+      "paragraph2": "Important medical and administrative communications will be sent through secure channels to protect your privacy.",
+      "paragraph3": "You may opt out of marketing communications at any time while continuing to receive essential service-related messages."
+    },
+    "changes": {
+      "title": "Changes to Terms of Service",
+      "paragraph1": "We may update these Terms from time to time to reflect changes in our services, legal requirements, or business practices.",
+      "paragraph2": "Material changes will be communicated to registered users via email or platform notifications at least 30 days before they take effect.",
+      "paragraph3": "Continued use of our services after changes take effect constitutes acceptance of the updated Terms."
+    },
+    "finalProvisions": {
+      "title": "Final Provisions",
+      "paragraph1": "These Terms are governed by Tunisian law. Any disputes will be resolved through arbitration or competent courts in Tunisia.",
+      "paragraph2": "If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will continue in full force and effect.",
+      "paragraph3": "These Terms constitute the entire agreement between you and Sanovias Medical Tourism regarding the use of our services.",
+      "effectiveDate": {
+        "title": "Effective Date",
+        "description": "These Terms of Service are effective as of the date last updated above and apply to all users of our platform and services."
+      }
     }
   }
 }
