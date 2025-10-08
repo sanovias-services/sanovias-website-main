@@ -44,8 +44,9 @@
       "emailPlaceholder": "Your email address",
       "subscribe": "Subscribe"
     },
-    "copyright": "&copy; {year} Sanovias Medical Tourism. All rights reserved.",
+    "copyright": "&copy; {year} Sanovias. All rights reserved.",
     "legal": {
+      "impressum": "Impressum",
       "privacyPolicy": "Privacy Policy",
       "termsOfService": "Terms of Service",
       "cookiePolicy": "Cookie Policy"
@@ -512,6 +513,10 @@
     "terms": {
       "title": "Terms of Service - Sanovias Medical Tourism",
       "description": "Read our comprehensive terms of service to understand the conditions for using Sanovias Medical Tourism platform and services for medical tourism in Tunisia."
+    },
+    "impressum": {
+      "title": "Impressum - Sanovias Medical Tourism",
+      "description": "Legal information and company details for Sanovias Medical Tourism, including contact information, disclaimers, and regulatory compliance information."
     }
   },
   "cookies": {
@@ -985,6 +990,140 @@
       "effectiveDate": {
         "title": "Effective Date",
         "description": "These Terms of Service are effective as of the date last updated above and apply to all users of our platform and services."
+      }
+    },
+    "impressum": {
+      "title": "Impressum",
+      "subtitle": "Legal information and company details in compliance with Austrian and Tunisian regulations",
+      "companyInfo": {
+        "title": "Company Information",
+        "name": "Sanovias Medical Tourism GmbH",
+        "address": "Mariahilfer Straße 123",
+        "location": "1060 Vienna, Austria",
+        "contactTitle": "Contact Information:",
+        "phone": "Phone: +43 1 234 5678",
+        "email": "Email: info@sanovias.com",
+        "registrationTitle": "Business Registration:",
+        "registration": "Commercial Register: FN 123456a, Vienna Commercial Court",
+        "vatId": "VAT ID: ATU12345678"
+      },
+      "regulations": {
+        "title": "Professional Regulations",
+        "licensing": "Sanovias operates as a registered medical tourism facilitator under Austrian business law and maintains partnerships with licensed medical facilities in Tunisia that comply with international healthcare standards.",
+        "supervision": "Our Tunisian medical partners are supervised by the Tunisian Ministry of Health and hold relevant certifications from international healthcare organizations.",
+        "qualityStandards": "All medical procedures are performed in accordance with European and international medical standards, with full documentation and quality assurance protocols."
+      },
+      "editorial": {
+        "title": "Editorial Responsibility",
+        "responsible": "Responsible for the content of this website according to § 55 Abs. 2 RStV: Dr. Medical Director, Sanovias Medical Tourism GmbH",
+        "contact": "For editorial inquiries, please contact: editorial@sanovias.com"
+      },
+      "disputes": {
+        "title": "Dispute Resolution",
+        "platform": "The European Commission provides a platform for online dispute resolution (ODR) which can be accessed at:",
+        "linkText": "European ODR Platform:",
+        "obligation": "We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board."
+      },
+      "liability": {
+        "title": "Liability Disclaimer",
+        "content": "The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents' accuracy, completeness, or topicality.",
+        "external": "Our website contains links to external websites of third parties, on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents.",
+        "changes": "We reserve the right to make changes or additions to the provided information without prior notice."
+      },
+      "copyright": {
+        "title": "Copyright",
+        "protection": "The content and works on these pages created by the site operators are subject to Austrian copyright law.",
+        "usage": "Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator.",
+        "violations": "We will report any copyright violations to the appropriate authorities and pursue legal action."
+      },
+      "dataProtection": {
+        "title": "Data Protection",
+        "reference": "Information about how we handle your personal data can be found in our detailed",
+        "linkText": "Privacy Policy"
+      }
+    }
+  },
+  "impressum": {
+    "title": "Impressum (Legal Notice)",
+    "lastUpdated": "Last updated:",
+    "lastUpdatedDate": "October 8, 2025",
+    "companyInfo": {
+      "title": "Company Information",
+      "company": "Company",
+      "contact": "Contact Information",
+      "email": "Email:",
+      "phone": "Phone:",
+      "website": "Website:",
+      "description1": "Sanovias Medical Tourism is a platform that connects international patients with certified medical providers in Tunisia, facilitating comprehensive medical tourism services.",
+      "description2": "We operate as an intermediary service, providing consultation, coordination, and support for patients seeking medical treatments abroad."
+    },
+    "responsible": {
+      "title": "Responsible for Content",
+      "description": "Responsible for the editorial content of this website:",
+      "name": "Dr. Ahmed Ben Ali",
+      "position": "Medical Director, Sanovias Medical Tourism",
+      "email": "info@sanovias.com"
+    },
+    "disclaimer": {
+      "title": "Legal Disclaimers",
+      "content": {
+        "title": "1. Liability for Content",
+        "paragraph1": "The contents of this website have been created with the greatest possible care. However, we cannot guarantee the accuracy, completeness, or currentness of the content provided.",
+        "paragraph2": "The use of the content on this website is at your own risk. Articles that are identified by name reflect the respective author's opinion and do not necessarily represent the views of the provider."
+      },
+      "links": {
+        "title": "2. Liability for Links",
+        "paragraph1": "Our website contains links to external third-party websites whose contents we cannot influence. We cannot assume any liability for these external contents.",
+        "paragraph2": "At the time of linking, the linked pages were checked for possible legal violations. No illegal content was recognizable at the time of linking. However, permanent monitoring of the content of linked pages is not reasonable without concrete evidence of a violation of the law."
+      },
+      "copyright": {
+        "title": "3. Copyright and Intellectual Property",
+        "paragraph1": "All content published on this website is subject to copyright and intellectual property laws. Any use not permitted by copyright law requires the prior written consent of the provider or respective rights holder.",
+        "paragraph2": "This applies in particular to the reproduction, editing, translation, storage, and reproduction of content in electronic media or databases. Unauthorized reproduction or distribution of individual content or complete pages is not permitted and may be subject to criminal prosecution."
+      }
+    },
+    "medical": {
+      "title": "Medical Disclaimers",
+      "warning": {
+        "title": "Important Medical Notice",
+        "description": "The information provided on this website is for general informational purposes only and does not constitute medical advice, diagnosis, or treatment recommendations."
+      },
+      "paragraph1": "Sanovias Medical Tourism acts as an intermediary platform connecting patients with medical providers. We do not provide direct medical services or treatments.",
+      "paragraph2": "All medical information, treatment descriptions, and provider profiles are provided for informational purposes only. Patients should always consult with qualified healthcare professionals for medical advice specific to their condition.",
+      "paragraph3": "Treatment outcomes, recovery times, and costs may vary significantly based on individual circumstances, medical conditions, and chosen providers. We cannot guarantee specific results or outcomes."
+    },
+    "dataProtection": {
+      "title": "Data Protection",
+      "paragraph1": "When visiting our website, access data is stored anonymously, including date, time, and pages viewed. This data is used exclusively for statistical purposes and contains no personal information.",
+      "paragraph2": "We take the protection of your personal data seriously and handle your data in accordance with applicable data protection laws, including GDPR.",
+      "reference": {
+        "title": "Privacy Policy Reference",
+        "description": "For detailed information about how we collect, use, and protect your data, please refer to our comprehensive Privacy Policy.",
+        "link": "View Privacy Policy →"
+      }
+    },
+    "dispute": {
+      "title": "Dispute Resolution",
+      "paragraph1": "We are committed to resolving any disputes with our users in a fair and timely manner. If you have concerns about our services, please contact us directly first.",
+      "paragraph2": "We are neither willing nor obligated to participate in dispute resolution procedures before a consumer arbitration board.",
+      "eu": {
+        "title": "EU Online Dispute Resolution",
+        "description": "The European Commission provides a platform for online dispute resolution:",
+        "link": "https://ec.europa.eu/consumers/odr/"
+      }
+    },
+    "contactProtection": {
+      "title": "Contact Data Protection",
+      "paragraph1": "The use of contact data published in the impressum for commercial purposes is expressly prohibited, unless the provider has previously given written consent or there is already an existing business relationship.",
+      "paragraph2": "The provider and all persons mentioned on this website hereby object to any commercial use and disclosure of their data."
+    },
+    "final": {
+      "title": "Final Provisions",
+      "paragraph1": "Should individual provisions of this disclaimer be or become invalid, this does not affect the validity of the remaining content.",
+      "paragraph2": "This impressum was created with care and is regularly updated to reflect current legal requirements and business practices.",
+      "effectiveDate": {
+        "title": "Effective Date",
+        "description": "This impressum is effective as of the date last updated above and applies to all users of our website and services."
       }
     }
   }

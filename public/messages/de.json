@@ -44,8 +44,9 @@
       "emailPlaceholder": "Ihre E-Mail-Adresse",
       "subscribe": "Abonnieren"
     },
-    "copyright": "&copy; {year} Sanovias Medical Tourism. Alle Rechte vorbehalten.",
+    "copyright": "&copy; {year} Sanovias. Alle Rechte vorbehalten.",
     "legal": {
+      "impressum": "Impressum",
       "privacyPolicy": "Datenschutz",
       "termsOfService": "AGB",
       "cookiePolicy": "Cookie-Richtlinie"
@@ -512,6 +513,10 @@
     "terms": {
       "title": "Allgemeine Geschäftsbedingungen - Sanovias Medical Tourism",
       "description": "Lesen Sie unsere umfassenden Allgemeinen Geschäftsbedingungen, um die Bedingungen für die Nutzung der Sanovias Medical Tourism Plattform und Dienstleistungen für Medizintourismus in Tunesien zu verstehen."
+    },
+    "impressum": {
+      "title": "Impressum - Sanovias Medical Tourism",
+      "description": "Rechtliche Informationen und Unternehmensdetails für Sanovias Medical Tourism, einschließlich Kontaktinformationen, Haftungsausschlüssen und regulatorischen Compliance-Informationen."
     }
   },
   "cookies": {
@@ -985,6 +990,140 @@
       "effectiveDate": {
         "title": "Inkrafttreten",
         "description": "Diese Geschäftsbedingungen sind ab dem oben genannten Datum der letzten Aktualisierung wirksam und gelten für alle Nutzer unserer Plattform und Dienstleistungen."
+      }
+    },
+    "impressum": {
+      "title": "Impressum",
+      "subtitle": "Rechtliche Informationen und Firmenangaben gemäß österreichischen und tunesischen Vorschriften",
+      "companyInfo": {
+        "title": "Firmeninformationen",
+        "name": "Sanovias Medical Tourism GmbH",
+        "address": "Mariahilfer Straße 123",
+        "location": "1060 Wien, Österreich",
+        "contactTitle": "Kontaktinformationen:",
+        "phone": "Telefon: +43 1 234 5678",
+        "email": "E-Mail: info@sanovias.com",
+        "registrationTitle": "Unternehmensregistrierung:",
+        "registration": "Firmenbuch: FN 123456a, Handelsgericht Wien",
+        "vatId": "UID-Nr: ATU12345678"
+      },
+      "regulations": {
+        "title": "Berufliche Vorschriften",
+        "licensing": "Sanovias operiert als registrierter Medizintourismus-Vermittler nach österreichischem Gewerberecht und unterhält Partnerschaften mit lizenzierten medizinischen Einrichtungen in Tunesien, die internationalen Gesundheitsstandards entsprechen.",
+        "supervision": "Unsere tunesischen medizinischen Partner stehen unter der Aufsicht des tunesischen Gesundheitsministeriums und verfügen über relevante Zertifizierungen internationaler Gesundheitsorganisationen.",
+        "qualityStandards": "Alle medizinischen Eingriffe werden in Übereinstimmung mit europäischen und internationalen medizinischen Standards durchgeführt, mit vollständiger Dokumentation und Qualitätssicherung."
+      },
+      "editorial": {
+        "title": "Redaktionelle Verantwortung",
+        "responsible": "Verantwortlich für den Inhalt dieser Website gemäß § 55 Abs. 2 RStV: Dr. Medical Director, Sanovias Medical Tourism GmbH",
+        "contact": "Für redaktionelle Anfragen wenden Sie sich bitte an: editorial@sanovias.com"
+      },
+      "disputes": {
+        "title": "Streitbeilegung",
+        "platform": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) zur Verfügung, die unter folgender Adresse erreichbar ist:",
+        "linkText": "Europäische OS-Plattform:",
+        "obligation": "Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+      },
+      "liability": {
+        "title": "Haftungsausschluss",
+        "content": "Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.",
+        "external": "Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.",
+        "changes": "Wir behalten uns vor, ohne vorherige Ankündigung Änderungen oder Ergänzungen der bereitgestellten Informationen vorzunehmen."
+      },
+      "copyright": {
+        "title": "Urheberrecht",
+        "protection": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem österreichischen Urheberrecht.",
+        "usage": "Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
+        "violations": "Urheberrechtsverletzungen werden wir den entsprechenden Behörden melden und rechtlich verfolgen."
+      },
+      "dataProtection": {
+        "title": "Datenschutz",
+        "reference": "Informationen über den Umgang mit Ihren personenbezogenen Daten finden Sie in unserer ausführlichen",
+        "linkText": "Datenschutzerklärung"
+      }
+    }
+  },
+  "impressum": {
+    "title": "Impressum",
+    "lastUpdated": "Zuletzt aktualisiert:",
+    "lastUpdatedDate": "8. Oktober 2025",
+    "companyInfo": {
+      "title": "Unternehmensangaben",
+      "company": "Unternehmen",
+      "contact": "Kontaktinformationen",
+      "email": "E-Mail:",
+      "phone": "Telefon:",
+      "website": "Website:",
+      "description1": "Sanovias Medical Tourism ist eine Plattform, die internationale Patienten mit zertifizierten Medizinanbietern in Tunesien verbindet und umfassende Medizintourismus-Dienstleistungen ermöglicht.",
+      "description2": "Wir fungieren als Vermittlungsservice und bieten Beratung, Koordination und Unterstützung für Patienten, die medizinische Behandlungen im Ausland suchen."
+    },
+    "responsible": {
+      "title": "Verantwortlich für den Inhalt",
+      "description": "Inhaltlich verantwortlich für die redaktionellen Inhalte dieser Webseite:",
+      "name": "Dr. Ahmed Ben Ali",
+      "position": "Medizinischer Direktor, Sanovias Medical Tourism",
+      "email": "info@sanovias.com"
+    },
+    "disclaimer": {
+      "title": "Rechtliche Hinweise (Disclaimer)",
+      "content": {
+        "title": "1. Haftung für Inhalte",
+        "paragraph1": "Die Inhalte dieser Webseite wurden mit größtmöglicher Sorgfalt erstellt. Dennoch übernehmen wir keine Gewähr für die Aktualität, Vollständigkeit und Richtigkeit der bereitgestellten Informationen.",
+        "paragraph2": "Die Nutzung der Inhalte auf dieser Webseite erfolgt auf eigene Verantwortung des Nutzers. Beiträge, die namentlich gekennzeichnet sind, spiegeln die jeweilige Meinung des Autors wider und müssen nicht zwangsläufig die Auffassung des Anbieters darstellen."
+      },
+      "links": {
+        "title": "2. Haftung für Links",
+        "paragraph1": "Unsere Webseite enthält Verlinkungen zu externen Webseiten Dritter, deren Inhalte wir nicht beeinflussen können. Zum Zeitpunkt der Verlinkung wurden die externen Seiten auf mögliche Rechtsverstöße überprüft, wobei keine Rechtsverletzungen erkennbar waren.",
+        "paragraph2": "Da wir jedoch keinen Einfluss auf die zukünftige Gestaltung und Inhalte der verlinkten Seiten haben, übernehmen wir keine Haftung für deren Inhalte. Das Setzen externer Links bedeutet nicht, dass wir uns die Inhalte der verlinkten Seiten zu eigen machen."
+      },
+      "copyright": {
+        "title": "3. Urheberrecht und Leistungsschutz",
+        "paragraph1": "Alle auf dieser Webseite veröffentlichten Inhalte unterliegen dem Urheberrecht und Leistungsschutzrecht. Jegliche Verwertung, die nicht durch das Urheberrecht gestattet ist, erfordert die vorherige schriftliche Zustimmung des Anbieters oder des jeweiligen Rechteinhabers.",
+        "paragraph2": "Dies gilt insbesondere für die Vervielfältigung, Bearbeitung, Übersetzung, Speicherung und Wiedergabe von Inhalten in elektronischen Medien oder Datenbanken. Die unbefugte Vervielfältigung oder Weitergabe einzelner Inhalte oder vollständiger Seiten ist nicht gestattet und kann strafrechtlich verfolgt werden."
+      }
+    },
+    "medical": {
+      "title": "Medizinische Haftungsausschlüsse",
+      "warning": {
+        "title": "Wichtiger medizinischer Hinweis",
+        "description": "Die auf dieser Website bereitgestellten Informationen dienen nur allgemeinen Informationszwecken und stellen keine medizinische Beratung, Diagnose oder Behandlungsempfehlungen dar."
+      },
+      "paragraph1": "Sanovias Medical Tourism fungiert als Vermittlungsplattform, die Patienten mit Medizinanbietern verbindet. Wir bieten keine direkten medizinischen Dienstleistungen oder Behandlungen an.",
+      "paragraph2": "Alle medizinischen Informationen, Behandlungsbeschreibungen und Anbieterprofile werden nur zu Informationszwecken bereitgestellt. Patienten sollten sich immer von qualifizierten Gesundheitsfachkräften medizinisch beraten lassen, die auf ihre Erkrankung spezialisiert sind.",
+      "paragraph3": "Behandlungsergebnisse, Genesungszeiten und Kosten können je nach individuellen Umständen, medizinischen Bedingungen und gewählten Anbietern erheblich variieren. Wir können keine spezifischen Ergebnisse oder Resultate garantieren."
+    },
+    "dataProtection": {
+      "title": "Datenschutz",
+      "paragraph1": "Beim Besuch unserer Webseite werden Zugriffsdaten anonymisiert gespeichert, einschließlich Datum, Uhrzeit und betrachteter Seite. Diese Daten werden ausschließlich für statistische Zwecke genutzt und enthalten keine personenbezogenen Informationen.",
+      "paragraph2": "Wir nehmen den Schutz Ihrer personenbezogenen Daten ernst und behandeln Ihre Daten in Übereinstimmung mit den geltenden Datenschutzgesetzen, einschließlich der DSGVO.",
+      "reference": {
+        "title": "Verweis auf Datenschutzerklärung",
+        "description": "Für detaillierte Informationen darüber, wie wir Ihre Daten sammeln, verwenden und schützen, lesen Sie bitte unsere umfassende Datenschutzerklärung.",
+        "link": "Datenschutzerklärung ansehen →"
+      }
+    },
+    "dispute": {
+      "title": "Streitbeilegung",
+      "paragraph1": "Wir sind bestrebt, alle Streitigkeiten mit unseren Nutzern fair und zeitnah zu lösen. Wenn Sie Bedenken bezüglich unserer Dienstleistungen haben, kontaktieren Sie uns bitte zunächst direkt.",
+      "paragraph2": "Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+      "eu": {
+        "title": "EU-Online-Streitbeilegung",
+        "description": "Die Europäische Kommission bietet eine Plattform zur Online-Streitbeilegung:",
+        "link": "https://ec.europa.eu/consumers/odr/"
+      }
+    },
+    "contactProtection": {
+      "title": "Schutz der Kontaktdaten",
+      "paragraph1": "Die Nutzung der im Impressum veröffentlichten Kontaktdaten für gewerbliche Zwecke ist ausdrücklich untersagt, es sei denn, der Anbieter hat zuvor eine schriftliche Einwilligung erteilt oder es besteht bereits eine Geschäftsbeziehung.",
+      "paragraph2": "Der Anbieter und alle auf dieser Webseite genannten Personen widersprechen hiermit jeder kommerziellen Verwendung und Weitergabe ihrer Daten."
+    },
+    "final": {
+      "title": "Schlussbestimmungen",
+      "paragraph1": "Sollten einzelne Bestimmungen dieses Disclaimers unwirksam sein oder werden, so berührt dies nicht die Wirksamkeit der übrigen Inhalte.",
+      "paragraph2": "Dieses Impressum wurde mit Sorgfalt erstellt und wird regelmäßig aktualisiert, um aktuelle rechtliche Anforderungen und Geschäftspraktiken zu reflektieren.",
+      "effectiveDate": {
+        "title": "Inkrafttreten",
+        "description": "Dieses Impressum ist ab dem oben genannten Datum der letzten Aktualisierung wirksam und gilt für alle Nutzer unserer Website und Dienstleistungen."
       }
     }
   }

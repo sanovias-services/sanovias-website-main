@@ -7,7 +7,7 @@ import { useTranslations } from "../../../hooks/useTranslations";
 
 export default function Footer() {
   const locale = useLocale();
-  const { t } = useTranslations();
+  const { t, loading } = useTranslations();
   
   return (
     <footer className="bg-[#1C3C47] text-white pt-16 pb-8">
@@ -163,9 +163,22 @@ export default function Footer() {
         <div className="border-t border-gray-600 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p className="font-inter" dangerouslySetInnerHTML={{ __html: t('footer.copyright', { year: new Date().getFullYear() }) }} />
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href={`/${locale}/policies/privacy`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.privacyPolicy')}</Link>
-            <Link href={`/${locale}/policies/terms`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.termsOfService')}</Link>
-            <Link href={`/${locale}/policies/cookie`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.cookiePolicy')}</Link>
+            {loading ? (
+              // Show consistent placeholders while loading to prevent hydration mismatch
+              <>
+                <span className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">Impressum</span>
+                <span className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{locale === 'de' ? 'Datenschutz' : 'Privacy Policy'}</span>
+                <span className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{locale === 'de' ? 'AGB' : 'Terms of Service'}</span>
+                <span className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{locale === 'de' ? 'Cookie-Richtlinie' : 'Cookie Policy'}</span>
+              </>
+            ) : (
+              <>
+                <Link href={`/${locale}/policies/impressum`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.impressum')}</Link>
+                <Link href={`/${locale}/policies/privacy`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.privacyPolicy')}</Link>
+                <Link href={`/${locale}/policies/terms`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.termsOfService')}</Link>
+                <Link href={`/${locale}/policies/cookie`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.cookiePolicy')}</Link>
+              </>
+            )}
           </div>
         </div>
       </div>
