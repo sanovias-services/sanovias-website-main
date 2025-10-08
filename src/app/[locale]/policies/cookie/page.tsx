@@ -10,7 +10,7 @@ export default function CookiePolicyPage() {
       {/* Hero Section */}
       <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="font-playfair text-5xl font-bold text-[#1C3C47] mb-6">
+          <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-[#1C3C47] mb-6 leading-tight">
             {t('cookiePolicy.title')}
           </h1>
           <div className="inline-flex items-center bg-[#F7F5F2] px-6 py-3 rounded-lg">
@@ -26,12 +26,12 @@ export default function CookiePolicyPage() {
 
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="bg-white rounded-lg overflow-hidden" style={{ boxShadow: '0 4px 12px -4px rgba(0,0,0,0.12)' }}>
           <div className="p-8 lg:p-12">
             
             {/* Introduction */}
             <section className="mb-12">
-              <h2 className="font-playfair text-3xl font-semibold text-[#1C3C47] mb-6">
+              <h2 className="font-playfair text-2xl md:text-3xl font-semibold text-[#1C3C47] mb-6 leading-tight">
                 {t('cookiePolicy.introduction.title')}
               </h2>
               <div className="space-y-4 font-inter text-[#1F2937] leading-relaxed">
@@ -43,7 +43,7 @@ export default function CookiePolicyPage() {
 
             {/* What are Cookies */}
             <section className="mb-12">
-              <h2 className="font-playfair text-3xl font-semibold text-[#1C3C47] mb-6">
+              <h2 className="font-playfair text-2xl md:text-3xl font-semibold text-[#1C3C47] mb-6 leading-tight">
                 {t('cookiePolicy.whatAreCookies.title')}
               </h2>
               <div className="space-y-4 font-inter text-[#1F2937] leading-relaxed">
@@ -54,7 +54,7 @@ export default function CookiePolicyPage() {
 
             {/* How We Use Cookies */}
             <section className="mb-12">
-              <h2 className="font-playfair text-3xl font-semibold text-[#1C3C47] mb-6">
+              <h2 className="font-playfair text-2xl md:text-3xl font-semibold text-[#1C3C47] mb-6 leading-tight">
                 {t('cookiePolicy.howWeUseCookies.title')}
               </h2>
               <p className="font-inter text-[#1F2937] leading-relaxed mb-8">
@@ -177,7 +177,7 @@ export default function CookiePolicyPage() {
 
             {/* Cookie Management */}
             <section className="mb-12">
-              <h2 className="font-playfair text-3xl font-semibold text-[#1C3C47] mb-6">
+              <h2 className="font-playfair text-2xl md:text-3xl font-semibold text-[#1C3C47] mb-6 leading-tight">
                 {t('cookiePolicy.management.title')}
               </h2>
               <div className="space-y-4 font-inter text-[#1F2937] leading-relaxed">
@@ -189,7 +189,7 @@ export default function CookiePolicyPage() {
 
             {/* Browser Settings */}
             <section className="mb-12">
-              <h2 className="font-playfair text-3xl font-semibold text-[#1C3C47] mb-6">
+              <h2 className="font-playfair text-2xl md:text-3xl font-semibold text-[#1C3C47] mb-6 leading-tight">
                 {t('cookiePolicy.browserSettings.title')}
               </h2>
               <p className="font-inter text-[#1F2937] leading-relaxed mb-6">
@@ -218,7 +218,7 @@ export default function CookiePolicyPage() {
 
             {/* Legal Basis */}
             <section className="mb-12">
-              <h2 className="font-playfair text-3xl font-semibold text-[#1C3C47] mb-6">
+              <h2 className="font-playfair text-2xl md:text-3xl font-semibold text-[#1C3C47] mb-6 leading-tight">
                 {t('cookiePolicy.legalBasis.title')}
               </h2>
               <div className="space-y-4 font-inter text-[#1F2937] leading-relaxed">
@@ -230,7 +230,7 @@ export default function CookiePolicyPage() {
 
             {/* Data Protection Rights */}
             <section className="mb-12">
-              <h2 className="font-playfair text-3xl font-semibold text-[#1C3C47] mb-6">
+              <h2 className="font-playfair text-2xl md:text-3xl font-semibold text-[#1C3C47] mb-6 leading-tight">
                 {t('cookiePolicy.dataRights.title')}
               </h2>
               <p className="font-inter text-[#1F2937] leading-relaxed mb-6">
@@ -269,7 +269,7 @@ export default function CookiePolicyPage() {
 
             {/* Third Party Cookies */}
             <section className="mb-12">
-              <h2 className="font-playfair text-3xl font-semibold text-[#1C3C47] mb-6">
+              <h2 className="font-playfair text-2xl md:text-3xl font-semibold text-[#1C3C47] mb-6 leading-tight">
                 {t('cookiePolicy.thirdParty.title')}
               </h2>
               <div className="space-y-4 font-inter text-[#1F2937] leading-relaxed">
@@ -280,7 +280,7 @@ export default function CookiePolicyPage() {
 
             {/* Updates */}
             <section className="mb-12">
-              <h2 className="font-playfair text-3xl font-semibold text-[#1C3C47] mb-6">
+              <h2 className="font-playfair text-2xl md:text-3xl font-semibold text-[#1C3C47] mb-6 leading-tight">
                 {t('cookiePolicy.updates.title')}
               </h2>
               <div className="space-y-4 font-inter text-[#1F2937] leading-relaxed">
@@ -291,7 +291,7 @@ export default function CookiePolicyPage() {
 
             {/* Contact Information */}
             <section className="mb-12">
-              <h2 className="font-playfair text-3xl font-semibold text-[#1C3C47] mb-6">
+              <h2 className="font-playfair text-2xl md:text-3xl font-semibold text-[#1C3C47] mb-6 leading-tight">
                 {t('cookiePolicy.contact.title')}
               </h2>
               <p className="font-inter text-[#1F2937] leading-relaxed mb-6">
