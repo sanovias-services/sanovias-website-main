@@ -508,6 +508,10 @@
     "privacy": {
       "title": "Datenschutzerklärung - Sanovias Medical Tourism",
       "description": "Lesen Sie unsere umfassende Datenschutzerklärung, um zu verstehen, wie Sanovias Medical Tourism Ihre personenbezogenen Daten schützt und verarbeitet in Übereinstimmung mit der DSGVO und österreichischem Recht."
+    },
+    "terms": {
+      "title": "Allgemeine Geschäftsbedingungen - Sanovias Medical Tourism",
+      "description": "Lesen Sie unsere umfassenden Allgemeinen Geschäftsbedingungen, um die Bedingungen für die Nutzung der Sanovias Medical Tourism Plattform und Dienstleistungen für Medizintourismus in Tunesien zu verstehen."
     }
   },
   "cookies": {
@@ -841,6 +845,147 @@
       "paragraph1": "Wenn Sie Fragen zu dieser Cookie-Richtlinie, unserer Verwendung von Cookies haben oder Ihre Datenschutzrechte ausüben möchten, kontaktieren Sie uns bitte:",
       "email": "E-Mail:",
       "phone": "Telefon:"
+    }
+  },
+  "termsOfService": {
+    "title": "Allgemeine Geschäftsbedingungen",
+    "lastUpdated": "Zuletzt aktualisiert:",
+    "lastUpdatedDate": "8. Oktober 2025",
+    "introduction": {
+      "title": "Allgemeine Geschäftsbedingungen",
+      "paragraph1": "Diese Allgemeinen Geschäftsbedingungen (\"AGB\") regeln die Nutzung der Sanovias Medical Tourism Plattform und Dienstleistungen. Durch den Zugriff auf oder die Nutzung unserer Dienste stimmen Sie diesen AGB zu.",
+      "paragraph2": "Sanovias Medical Tourism ist eine Plattform, die internationale Patienten mit zertifizierten Medizinanbietern in Tunesien verbindet und Medizintourismus-Dienstleistungen einschließlich Beratung, Koordination und Unterstützung ermöglicht.",
+      "paragraph3": "Diese AGB stellen eine rechtlich bindende Vereinbarung zwischen Ihnen und Sanovias Medical Tourism dar. Bitte lesen Sie sie sorgfältig durch, bevor Sie unsere Dienste nutzen."
+    },
+    "services": {
+      "title": "Leistungen von Sanovias",
+      "introduction": "Sanovias bietet eine umfassende Medizintourismus-Plattform mit folgenden Dienstleistungen:",
+      "platform": {
+        "title": "Plattform-Dienstleistungen",
+        "description": "Verbindung zu zertifizierten Medizinanbietern in Tunesien, Behandlungsinformationen, Kostenschätzungen und Anbietervergleichstools."
+      },
+      "consultation": {
+        "title": "Medizinische Beratung",
+        "description": "Online-Konsultationen, Telemedizin-Dienste, medizinische Bewertungen und Behandlungsempfehlungen über unser Partner-Netzwerk."
+      },
+      "coordination": {
+        "title": "Reisekoordination",
+        "description": "Komplette Reiseplanung einschließlich Unterkunftsbuchung, Flughafentransfers, Terminplanung und lokale Unterstützungsdienste."
+      },
+      "records": {
+        "title": "Verwaltung medizinischer Unterlagen",
+        "description": "Sichere Speicherung und Verwaltung medizinischer Dokumente, Behandlungshistorie und Kommunikation mit Gesundheitsdienstleistern."
+      },
+      "disclaimer": {
+        "title": "Wichtiger Hinweis",
+        "description": "Sanovias fungiert als Vermittlungsplattform. Wir bieten keine direkten medizinischen Dienstleistungen, sondern erleichtern Verbindungen zu qualifizierten Medizinern und Institutionen."
+      }
+    },
+    "registration": {
+      "title": "Registrierung durch den Vertragspartner",
+      "paragraph1": "Um Zugang zu unserem vollständigen Dienstleistungsspektrum zu erhalten, können sich Patienten auf unserer Plattform registrieren, indem sie genaue und vollständige Informationen über ihre Identität und medizinischen Bedürfnisse bereitstellen.",
+      "paragraph2": "Die Registrierung ist freiwillig, aber empfohlen, um personalisierten Service, sichere Kommunikation und Zugang zu Ihren medizinischen Unterlagen und Behandlungshistorie zu erhalten.",
+      "paragraph3": "Durch die Registrierung verpflichten Sie sich, wahrheitsgemäße Informationen bereitzustellen und die Sicherheit Ihrer Kontodaten zu gewährleisten.",
+      "requirements": {
+        "title": "Registrierungsanforderungen",
+        "age": "Muss 18 Jahre oder älter sein oder die Zustimmung der Eltern/Erziehungsberechtigten haben",
+        "info": "Genaue persönliche und medizinische Informationen bereitstellen",
+        "consent": "Zustimmung zu diesen AGB und der Datenschutzerklärung"
+      }
+    },
+    "contractParties": {
+      "title": "Bestimmung der Vertragsparteien",
+      "paragraph1": "Das Vertragsverhältnis besteht zwischen Sanovias Medical Tourism als Dienstleister und dem Patienten als Dienstleistungsempfänger.",
+      "paragraph2": "Zusätzliche Verträge können zwischen dem Patienten und einzelnen Medizinanbietern, Unterkünften oder anderen Servicepartnern geschlossen werden, die über unsere Plattform vermittelt werden.",
+      "sanovias": {
+        "title": "Dienstleister"
+      },
+      "patient": {
+        "title": "Dienstleistungsempfänger",
+        "description": "Der registrierte Patient oder autorisierte Vertreter, der Medizintourismus-Dienstleistungen über unsere Plattform sucht."
+      }
+    },
+    "platformUsage": {
+      "title": "Plattformnutzung, Nutzungsvertrag und Nutzungsgebühren",
+      "paragraph1": "Der grundlegende Zugang zu unserer Plattform und erste Beratungen werden kostenlos bereitgestellt. Unser Geschäftsmodell basiert auf Provisionen von Partner-Medizinanbietern und Service-Partnern.",
+      "paragraph2": "Sobald Sie ein Behandlungsangebot über unsere Plattform annehmen, verpflichten Sie sich zu diesem spezifischen Behandlungsplan und den damit verbundenen Kosten, wie in Ihrem personalisierten Angebot dargelegt.",
+      "paragraph3": "Stornierungsrichtlinien und Rückerstattungsbedingungen variieren je nach Behandlung und Anbieter und werden vor der Verpflichtung klar kommuniziert.",
+      "commitment": {
+        "title": "Behandlungsverpflichtung",
+        "description": "Durch die Annahme eines Behandlungsangebots gehen Sie eine verbindliche Vereinbarung für die spezifizierten medizinischen Dienstleistungen, Reisearrangements und damit verbundenen Kosten ein."
+      }
+    },
+    "content": {
+      "title": "Inhalte und Informationen",
+      "paragraph1": "Alle Inhalte auf unserer Plattform, einschließlich medizinischer Informationen, Anbieterprofile und Behandlungsbeschreibungen, werden zu Informationszwecken bereitgestellt und sollten professionelle medizinische Beratung nicht ersetzen.",
+      "paragraph2": "Wir bemühen uns, genaue und aktuelle Informationen zu pflegen, können aber die Vollständigkeit oder Genauigkeit aller Inhalte nicht garantieren. Medizinische Informationen sollten immer mit qualifizierten Gesundheitsfachkräften verifiziert werden.",
+      "paragraph3": "Nutzer sind dafür verantwortlich, die Eignung von Behandlungen und Anbietern basierend auf ihren individuellen medizinischen Bedürfnissen und Umständen zu bewerten."
+    },
+    "usageRights": {
+      "title": "Nutzungsrechte und Einschränkungen",
+      "paragraph1": "Ihnen wird ein begrenztes, nicht-exklusives, nicht-übertragbares Recht gewährt, auf unsere Plattform zuzugreifen und sie ausschließlich für persönliche Medizintourismus-Zwecke zu nutzen.",
+      "paragraph2": "Sie dürfen unsere Plattform nicht für kommerzielle Zwecke nutzen, unsere Inhalte reproduzieren oder versuchen, unsere Systeme zu analysieren oder nachzubauen.",
+      "prohibited": {
+        "title": "Verbotene Aktivitäten",
+        "commercial": "Kommerzielle Nutzung oder Weiterverkauf unserer Dienstleistungen",
+        "modification": "Änderung oder Kopieren von Plattform-Inhalten",
+        "distribution": "Unbefugte Weitergabe medizinischer Informationen",
+        "illegal": "Illegale oder betrügerische Aktivitäten"
+      }
+    },
+    "guarantee": {
+      "title": "Garantie und Systemverfügbarkeit",
+      "paragraph1": "Wir bemühen uns um hohe Systemverfügbarkeit, können aber keinen ununterbrochenen Zugang zu unserer Plattform garantieren. Geplante Wartungen und Updates können die Verfügbarkeit vorübergehend beeinträchtigen.",
+      "paragraph2": "Obwohl wir mit zertifizierten Medizinanbietern arbeiten, können wir keine spezifischen medizinischen Ergebnisse garantieren. Behandlungsresultate hängen von individuellen Umständen und medizinischen Bedingungen ab.",
+      "paragraph3": "Wir stellen unsere Plattform-Dienstleistungen \"wie besehen\" zur Verfügung und geben keine Garantien bezüglich spezifischer Ergebnisse oder Resultate aus der Nutzung unserer Dienste."
+    },
+    "liability": {
+      "title": "Haftung und Haftungsbeschränkungen",
+      "paragraph1": "Sanovias Medical Tourism fungiert als Vermittlungsplattform und haftet nicht für die medizinischen Dienstleistungen, die von Drittanbieter-Gesundheitsdienstleistern erbracht werden.",
+      "paragraph2": "Unsere Haftung ist auf die direkten Kosten unserer Plattform-Dienstleistungen beschränkt und erstreckt sich nicht auf medizinische Ergebnisse, reisebezogene Probleme oder indirekte Schäden.",
+      "paragraph3": "Nutzern wird empfohlen, angemessene Reise- und Krankenversicherungen abzuschließen, um potenzielle Risiken im Zusammenhang mit Medizintourismus abzudecken.",
+      "medical": {
+        "title": "Haftungsausschluss für medizinische Angelegenheiten",
+        "description": "Wir sind nicht verantwortlich für medizinische Ergebnisse, Komplikationen oder Nebenwirkungen im Zusammenhang mit Behandlungen, die über unsere Partner-Anbieter erhalten werden. Die medizinische Haftung liegt bei den behandelnden Gesundheitsfachkräften und Institutionen."
+      }
+    },
+    "dataProtection": {
+      "title": "Datenschutz und Privatsphäre",
+      "paragraph1": "Wir verpflichten uns, Ihre persönlichen und medizinischen Informationen in Übereinstimmung mit geltenden Datenschutzgesetzen einschließlich der DSGVO zu schützen.",
+      "paragraph2": "Medizinische Informationen werden mit höchster Vertraulichkeit behandelt und nur mit autorisierten Gesundheitsdienstleistern geteilt, die an Ihrer Betreuung beteiligt sind.",
+      "reference": {
+        "title": "Verweis auf Datenschutzerklärung",
+        "description": "Für detaillierte Informationen darüber, wie wir Ihre Daten sammeln, verwenden und schützen, lesen Sie bitte unsere umfassende Datenschutzerklärung.",
+        "link": "Datenschutzerklärung anzeigen →"
+      }
+    },
+    "confidentiality": {
+      "title": "Medizinische Vertraulichkeit",
+      "paragraph1": "Alle medizinischen Informationen, die über unsere Plattform geteilt werden, unterliegen strengen Vertraulichkeitsanforderungen und professioneller medizinischer Ethik.",
+      "paragraph2": "Wir unterhalten sichere Systeme und Protokolle zum Schutz der Vertraulichkeit Ihrer medizinischen Unterlagen und Kommunikation.",
+      "paragraph3": "Medizinische Informationen werden nur an autorisierte Gesundheitsdienstleister weitergegeben, die direkt an Ihrer Behandlung beteiligt sind, oder wie gesetzlich vorgeschrieben."
+    },
+    "electronicCommunication": {
+      "title": "Elektronische Kommunikation",
+      "paragraph1": "Durch die Nutzung unserer Plattform stimmen Sie zu, Kommunikation von uns per E-Mail, SMS oder über unser sicheres Nachrichtensystem zu erhalten.",
+      "paragraph2": "Wichtige medizinische und administrative Mitteilungen werden über sichere Kanäle gesendet, um Ihre Privatsphäre zu schützen.",
+      "paragraph3": "Sie können sich jederzeit von Marketing-Kommunikation abmelden, während Sie weiterhin wesentliche dienstbezogene Nachrichten erhalten."
+    },
+    "changes": {
+      "title": "Änderungen der Geschäftsbedingungen",
+      "paragraph1": "Wir können diese AGB von Zeit zu Zeit aktualisieren, um Änderungen in unseren Dienstleistungen, rechtlichen Anforderungen oder Geschäftspraktiken widerzuspiegeln.",
+      "paragraph2": "Wesentliche Änderungen werden registrierten Nutzern per E-Mail oder Plattform-Benachrichtigungen mindestens 30 Tage vor Inkrafttreten mitgeteilt.",
+      "paragraph3": "Die fortgesetzte Nutzung unserer Dienste nach Inkrafttreten der Änderungen gilt als Zustimmung zu den aktualisierten AGB."
+    },
+    "finalProvisions": {
+      "title": "Schlussbestimmungen",
+      "paragraph1": "Diese AGB unterliegen tunesischem Recht. Streitigkeiten werden durch Schiedsverfahren oder zuständige Gerichte in Tunesien beigelegt.",
+      "paragraph2": "Sollte eine Bestimmung dieser AGB als ungültig oder nicht durchsetzbar befunden werden, bleiben die übrigen Bestimmungen in vollem Umfang in Kraft.",
+      "paragraph3": "Diese AGB stellen die gesamte Vereinbarung zwischen Ihnen und Sanovias Medical Tourism bezüglich der Nutzung unserer Dienste dar.",
+      "effectiveDate": {
+        "title": "Inkrafttreten",
+        "description": "Diese Geschäftsbedingungen sind ab dem oben genannten Datum der letzten Aktualisierung wirksam und gelten für alle Nutzer unserer Plattform und Dienstleistungen."
+      }
     }
   }
 }
