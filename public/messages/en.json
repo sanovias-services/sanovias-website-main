@@ -504,6 +504,10 @@
     "contact": {
       "title": "Contact Us",
       "description": "Get in touch with Sanovias for your medical tourism needs. We're here to help plan your healthcare journey."
+    },
+    "privacy": {
+      "title": "Privacy Policy - Sanovias Medical Tourism",
+      "description": "Read our comprehensive privacy policy to understand how Sanovias Medical Tourism protects and processes your personal data in compliance with GDPR and Austrian law."
     }
   },
   "cookies": {
@@ -535,6 +539,208 @@
         "title": "Marketing Cookies",
         "description": "Used to deliver relevant advertisements and track the effectiveness of marketing campaigns."
       }
+    }
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated:",
+    "lastUpdatedDate": "October 7, 2025",
+    "introduction": {
+      "title": "Privacy Policy at a Glance",
+      "paragraph1": "The protection of your data is very important to us. We want you to feel safe when visiting our website. It is important to us that you know which data is collected when using our online services and how it is used.",
+      "paragraph2": "In this privacy policy, we (Sanovias Medical Tourism) inform you about the processing of personal data when using our website. Personal data is information that relates to an identified or identifiable person. This includes information that allows conclusions to be drawn about your identity, such as your name, telephone number, address or email address.",
+      "paragraph3": "Statistical data that we collect when you visit our website and that cannot be linked to your person does not fall under the term personal data. You can print or save this privacy policy by using the usual functionality of your browser."
+    },
+    "contact": {
+      "title": "Contact Details",
+      "paragraph1": "The responsible party for data processing on this website is:",
+      "companyName": "Sanovias Medical Tourism",
+      "address": "123 Medical Avenue\nTunis 1002, Tunisia",
+      "email": "info@sanovias.com",
+      "phone": "+216 123 456 789",
+      "paragraph2": "The responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of processing personal data (e.g. names, email addresses, etc.)."
+    },
+    "dataProcessing": {
+      "title": "Scope of Data Processing, Processing Purposes and Legal Basis",
+      "paragraph1": "We detail the scope of data processing, processing purposes and legal basis below. The following come into consideration as legal basis for data processing:",
+      "legalBasis": {
+        "consent": "Art. 6 para. 1 sentence 1 lit. a GDPR serves as the legal basis for processing operations for which we obtain consent.",
+        "contract": "Art. 6 para. 1 sentence 1 lit. b GDPR is the legal basis insofar as the processing of personal data is necessary for the performance of a contract, e.g. when a website visitor purchases a product from us or we provide a service for them. This legal basis also applies to processing that is necessary for pre-contractual measures, such as inquiries about our products or services.",
+        "legalObligation": "Art. 6 para. 1 sentence 1 lit. c GDPR serves as the legal basis when processing is necessary to comply with a legal obligation.",
+        "vitalInterests": "Art. 6 para. 1 sentence 1 lit. d GDPR serves as the legal basis when processing is necessary to protect vital interests.",
+        "publicTask": "Art. 6 para. 1 sentence 1 lit. e GDPR serves as the legal basis when processing is necessary for the performance of a task carried out in the public interest.",
+        "legitimateInterests": "Art. 6 para. 1 sentence 1 lit. f GDPR serves as the legal basis when we can invoke legitimate interests for the processing of personal data, e.g. for cookies that are necessary for the technical operation of our website."
+      }
+    },
+    "dataTransfer": {
+      "title": "Data Processing Outside the EEA",
+      "paragraph1": "Insofar as we transfer data to service providers or other third parties outside the EEA, we guarantee the security of the data during transmission through adequacy decisions of the EU Commission (Art. 45 para. 3 GDPR) where available (e.g. for the United Kingdom, Canada and Israel).",
+      "paragraph2": "If no adequacy decision exists (e.g. for the USA), the legal basis for data transfer is generally standard contractual clauses. These are a set of rules adopted by the EU Commission and part of the contract with the respective third party. According to Art. 46 para. 2 lit. b GDPR, they ensure the security of data transfer.",
+      "paragraph3": "Many providers have given contractual guarantees beyond the standard contractual clauses that protect data beyond the standard contractual clauses. These include guarantees regarding data encryption or regarding an obligation of the third party to notify data subjects when law enforcement agencies want to access data."
+    },
+    "retention": {
+      "title": "Storage Duration",
+      "paragraph1": "Unless expressly stated otherwise in this privacy policy, data stored with us will be deleted as soon as it is no longer required for its intended purpose and deletion does not conflict with statutory retention obligations.",
+      "paragraph2": "If the data is not deleted because it is required for other and legally permissible purposes, its processing will be restricted, i.e. the data will be blocked and not processed for other purposes. This applies, for example, to data that we must retain for commercial or tax law reasons."
+    },
+    "dataRights": {
+      "title": "Rights of Data Subjects",
+      "introduction": "Data subjects have the following rights regarding personal data concerning them:",
+      "access": {
+        "title": "Right of Access",
+        "description": "Every person affected by the processing of personal data has the right granted by the European legislator to obtain free information at any time from the data controller about the personal data stored about their person and a copy of this information. Furthermore, the European legislator has granted the data subject information about the following information:",
+        "details": [
+          "the processing purposes",
+          "the categories of personal data being processed", 
+          "the recipients or categories of recipients to whom the personal data have been or will be disclosed, in particular recipients in third countries or international organizations",
+          "where possible, the planned duration for which the personal data will be stored, or, if not possible, the criteria for determining that duration",
+          "the existence of a right to rectification or erasure of personal data concerning them or to restriction of processing by the controller or a right to object to such processing",
+          "the existence of a right to lodge a complaint with a supervisory authority",
+          "where personal data are not collected from the data subject: any available information as to their source",
+          "the existence of automated decision-making, including profiling"
+        ]
+      },
+      "rectification": {
+        "title": "Right to Rectification",
+        "description": "Every person affected by the processing of personal data has the right granted by the European legislator to demand the immediate correction of incorrect personal data concerning them. Furthermore, the data subject has the right to request the completion of incomplete personal data, including by means of providing a supplementary statement, taking into account the purposes of the processing."
+      },
+      "erasure": {
+        "title": "Right to Erasure",
+        "description": "Every person affected by the processing of personal data has the right granted by the European legislator to obtain from the controller the erasure of personal data concerning them without undue delay, and the controller shall have the obligation to erase personal data without undue delay where one of the following grounds applies and processing is not necessary:",
+        "grounds": [
+          "Personal data are no longer necessary in relation to the purposes for which they were collected or otherwise processed",
+          "The data subject withdraws consent and there is no other legal ground for processing",
+          "The data subject objects to processing and there are no overriding legitimate grounds for processing",
+          "Personal data have been unlawfully processed",
+          "Personal data must be erased for compliance with a legal obligation"
+        ]
+      },
+      "restriction": {
+        "title": "Right to Restriction of Processing",
+        "description": "Every person affected by the processing of personal data has the right to obtain restriction of processing where one of the following applies:",
+        "conditions": [
+          "The accuracy of personal data is contested by the data subject",
+          "Processing is unlawful and the data subject opposes erasure",
+          "The controller no longer needs the personal data for processing but the data subject requires them for legal claims",
+          "The data subject has objected to processing pending verification of legitimate grounds"
+        ]
+      },
+      "portability": {
+        "title": "Right to Data Portability",
+        "description": "Every person affected by the processing of personal data has the right to receive personal data concerning them in a structured, commonly used and machine-readable format and have the right to transmit those data to another controller where processing is based on consent or contract and carried out by automated means."
+      },
+      "objection": {
+        "title": "Right to Object",
+        "description": "Every person affected by the processing of personal data has the right to object at any time to processing of personal data concerning them which is based on legitimate interests. The controller shall no longer process the personal data unless the controller demonstrates compelling legitimate grounds for the processing which override the interests, rights and freedoms of the data subject."
+      },
+      "withdrawConsent": {
+        "title": "Right to Withdraw Consent",
+        "description": "Every person affected by the processing of personal data has the right to withdraw consent to the processing of personal data at any time. The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal."
+      },
+      "complaint": {
+        "title": "Right to Lodge a Complaint",
+        "description": "Data subjects also have the right to lodge a complaint with a data protection supervisory authority regarding the processing of their personal data."
+      },
+      "contact": "If you wish to exercise any of these rights, you can contact our data protection officer or another employee of the data controller at any time using the contact details provided."
+    },
+    "dataProvision": {
+      "title": "Obligation to Provide Data",
+      "paragraph1": "Customers, prospects or third parties only need to provide us with personal data within the framework of a business relationship or other relationship that is necessary for the establishment, implementation and termination of the business relationship or other relationship or that we are legally obliged to collect.",
+      "paragraph2": "Without this data, we will generally have to refuse to conclude a contract or provide a service or will no longer be able to carry out an existing contract or other relationship. Mandatory information is marked as such."
+    },
+    "automatedDecision": {
+      "title": "No Automated Decision-Making",
+      "paragraph1": "To establish and carry out a business relationship or other relationship, we generally do not use fully automated decision-making according to Article 22 GDPR. Should we use these procedures in individual cases, we will inform you separately if this is required by law."
+    },
+    "websiteData": {
+      "title": "Data Processing on the Website",
+      "informational": {
+        "title": "Informational Use of the Website",
+        "paragraph1": "When using the website for informational purposes, i.e. when website visitors do not specifically transmit information to us, we collect the personal data that the browser transmits to our server in order to ensure the stability and security of our website. This is our legitimate interest, so the legal basis is Art. 6 para. 1 sentence 1 lit. f GDPR.",
+        "dataTypes": [
+          "IP address",
+          "Date and time of request",
+          "Time zone difference to Greenwich Mean Time (GMT)",
+          "Content of request (specific page)",
+          "Access status/HTTP status code",
+          "Website from which the request comes",
+          "Browser",
+          "Operating system and its interface",
+          "Language and version of browser software"
+        ],
+        "paragraph2": "This data is also stored in log files. It is deleted when its storage is no longer necessary, at the latest after 14 days."
+      },
+      "webhosting": {
+        "title": "Web Hosting and Website Provision",
+        "paragraph1": "We host our website with a hosting service provider. The use of hosting services is based on Art. 6 para. 1 lit. f GDPR. We have a legitimate interest in the most reliable presentation of our website possible.",
+        "paragraph2": "We have concluded a data processing agreement (DPA) with the hosting provider. This is a contract required by data protection law that ensures that the hosting provider only processes the personal data of our website visitors according to our instructions and in compliance with the GDPR."
+      },
+      "ssl": {
+        "title": "SSL/TLS Encryption",
+        "paragraph1": "This site uses SSL or TLS encryption for security reasons and to protect the transmission of confidential content, such as orders or inquiries that you send to us as the site operator. You can recognize an encrypted connection by the fact that the address line of the browser changes from \"http://\" to \"https://\" and by the lock symbol in your browser line.",
+        "paragraph2": "If SSL or TLS encryption is activated, the data you transmit to us cannot be read by third parties."
+      },
+      "contactForm": {
+        "title": "Contact Form",
+        "paragraph1": "When contacting us via the contact form on our website, we store the data requested there and the content of the message. The legal basis for processing is our legitimate interest in responding to inquiries directed to us. The legal basis for processing is therefore Art. 6 para. 1 sentence 1 lit. f GDPR.",
+        "paragraph2": "We delete the data arising in this context after storage is no longer necessary, or restrict processing if statutory retention obligations exist."
+      },
+      "medicalInquiries": {
+        "title": "Medical Inquiries and Consultations",
+        "paragraph1": "When you submit medical inquiries or request consultations through our website, we process your health data to provide medical tourism services. This includes treatment preferences, medical history information you provide, and consultation records.",
+        "paragraph2": "The legal basis for processing health data is your explicit consent (Art. 9 para. 2 lit. a GDPR) and processing necessary for healthcare purposes (Art. 9 para. 2 lit. h GDPR). We only process the minimum health data necessary to provide our services.",
+        "paragraph3": "Health data is subject to special protection and is only accessible to authorized personnel involved in your care coordination. We implement appropriate technical and organizational measures to protect this sensitive data."
+      },
+      "bookings": {
+        "title": "Medical Treatment Bookings",
+        "paragraph1": "When booking medical treatments through our website, we process personal data including medical preferences, travel information, and payment details to arrange your medical tourism package.",
+        "paragraph2": "The legal basis for processing is the performance of our service contract with you (Art. 6 para. 1 lit. b GDPR). For health data, we rely on your explicit consent (Art. 9 para. 2 lit. a GDPR)."
+      }
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "paragraph1": "We reserve the right to inform customers who have already used our services or purchased goods from time to time by email or other electronic means about our offers, provided they have not objected. The legal basis for this data processing is Art. 6 para. 1 sentence 1 lit. f GDPR. Our legitimate interest lies in direct marketing.",
+      "paragraph2": "Customers can object to the use of their email address for advertising purposes at any time without additional costs, for example via the link at the end of each email or by email to our email address mentioned above.",
+      "paragraph3": "Interested parties have the opportunity to subscribe to a free newsletter. We process the data provided during registration exclusively for sending the newsletter. Registration is done by selecting the appropriate field on our website or by another clear action whereby interested parties declare their consent to the processing of their data, so the legal basis is Art. 6 para. 1 sentence 1 lit. a GDPR.",
+      "paragraph4": "Consent can be withdrawn at any time, e.g. by clicking the appropriate link in the newsletter or by notification to our email address given above. The processing of data until withdrawal remains lawful even in case of withdrawal."
+    },
+    "thirdPartyServices": {
+      "title": "Third-Party Services",
+      "introduction": "We use various third-party services to provide and improve our website functionality:",
+      "analytics": {
+        "title": "Website Analytics",
+        "paragraph1": "We may use analytics services to understand how visitors use our website. These services help us improve our website performance and user experience.",
+        "paragraph2": "The legal basis for using analytics is our legitimate interest in website optimization (Art. 6 para. 1 lit. f GDPR). Where required, we obtain your consent."
+      },
+      "maps": {
+        "title": "Maps and Location Services",
+        "paragraph1": "We may use map services to show locations of our partner hospitals and clinics. These services may collect data about your location and device.",
+        "paragraph2": "The legal basis is our legitimate interest in providing location information for our medical tourism services (Art. 6 para. 1 lit. f GDPR)."
+      }
+    },
+    "socialMedia": {
+      "title": "Social Media",
+      "paragraph1": "We maintain profiles on social media networks to present our company and services there. The operators of these networks regularly process data of their users for advertising purposes, among other things creating user profiles from their online behavior.",
+      "paragraph2": "When users of the networks contact us via our profiles, we process the data communicated to us in order to answer the inquiries. Our legitimate interest lies in this, so the legal basis is Art. 6 para. 1 sentence 1 lit. f GDPR.",
+      "platforms": {
+        "facebook": "We maintain a profile on Facebook. Operator: Meta Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Ireland.",
+        "instagram": "We maintain a profile on Instagram. Operator: Meta Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Ireland.",
+        "linkedin": "We maintain a profile on LinkedIn. Operator: LinkedIn Ireland Unlimited Company, Wilton Place, Dublin 2, Ireland."
+      }
+    },
+    "dataProtectionOfficer": {
+      "title": "Data Protection Officer",
+      "paragraph1": "We have appointed a data protection officer who can be contacted at:",
+      "contact": "Email: privacy@sanovias.com\nPhone: +216 123 456 790"
+    },
+    "changes": {
+      "title": "Changes to this Privacy Policy",
+      "paragraph1": "We reserve the right to change this privacy policy with effect for the future. A current version is always available here.",
+      "paragraph2": "When we make material changes, we will notify you by updating the \"Last updated\" date at the top of this policy and, where appropriate, provide additional notice through our website or email."
+    },
+    "questions": {
+      "title": "Questions and Comments",
+      "paragraph1": "For questions or comments regarding this privacy policy, we are happy to be available under the contact details given above."
     }
   },
   "cookiePolicy": {
