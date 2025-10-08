@@ -4,6 +4,11 @@
 **Purpose:** Custom React hooks for reusable component logic  
 **Convention:** All files follow `useXxxXxx.ts` naming pattern
 
+## 📚 Available Hooks
+
+- **`useCSRFToken.ts`** - CSRF token management for secure form submissions  
+- **`useTranslations.ts`** - Custom translation system with locale support and caching
+
 ## 🎣 What are React Hooks?
 
 **Hooks** are special functions that let you "hook into" React features from your components. They allow you to use state and other React features without writing a class component.

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useLocale } from "./LocaleProvider";
-import { useTranslations } from "./useTranslations";
+import { useTranslations } from "../../../hooks/useTranslations";
 
 export default function Footer() {
   const locale = useLocale();
@@ -163,9 +163,9 @@ export default function Footer() {
         <div className="border-t border-gray-600 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p className="font-inter" dangerouslySetInnerHTML={{ __html: t('footer.copyright', { year: new Date().getFullYear() }) }} />
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href={`/${locale}/privacy`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.privacyPolicy')}</Link>
-            <Link href={`/${locale}/terms`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.termsOfService')}</Link>
-            <Link href={`/${locale}/cookies`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.cookiePolicy')}</Link>
+            <Link href={`/${locale}/policies/privacy`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.privacyPolicy')}</Link>
+            <Link href={`/${locale}/policies/terms`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.termsOfService')}</Link>
+            <Link href={`/${locale}/policies/cookie`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.cookiePolicy')}</Link>
           </div>
         </div>
       </div>

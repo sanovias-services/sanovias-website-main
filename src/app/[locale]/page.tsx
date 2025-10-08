@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
 import { useLocale } from './components/LocaleProvider';
-import { useTranslations } from './components/useTranslations';
+import { useTranslations } from '../../hooks/useTranslations';
 
 export default function Home() {
   const locale = useLocale();

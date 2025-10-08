@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale } from './LocaleProvider';
+import { useLocale } from '../app/[locale]/components/LocaleProvider';
 import { useState, useEffect } from 'react';
 
 type Messages = {

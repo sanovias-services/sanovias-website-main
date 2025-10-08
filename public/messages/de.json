@@ -504,6 +504,10 @@
     "contact": {
       "title": "Kontakt",
       "description": "Nehmen Sie Kontakt mit Sanovias für Ihre Medizintourismus-Bedürfnisse auf. Wir helfen Ihnen gerne bei der Planung Ihrer Gesundheitsreise."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung - Sanovias Medical Tourism",
+      "description": "Lesen Sie unsere umfassende Datenschutzerklärung, um zu verstehen, wie Sanovias Medical Tourism Ihre personenbezogenen Daten schützt und verarbeitet in Übereinstimmung mit der DSGVO und österreichischem Recht."
     }
   },
   "cookies": {
@@ -535,6 +539,308 @@
         "title": "Marketing-Cookies",
         "description": "Werden verwendet, um relevante Werbung zu liefern und die Wirksamkeit von Marketingkampagnen zu verfolgen."
       }
+    }
+  },
+  "privacyPolicy": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert:",
+    "lastUpdatedDate": "7. Oktober 2025",
+    "introduction": {
+      "title": "Datenschutz auf einen Blick",
+      "paragraph1": "Der Schutz Ihrer Daten ist uns ein wichtiges Anliegen. Wir möchten, dass Sie sich beim Besuch unserer Internet-Seiten sicher fühlen. Es ist uns wichtig, dass Sie wissen, welche Daten bei der Inanspruchnahme unseres Online-Angebots erhoben und wie diese verwendet werden.",
+      "paragraph2": "In dieser Datenschutzerklärung informieren wir (Sanovias Medical Tourism) Sie über die Verarbeitung personenbezogener Daten bei der Nutzung unserer Website. Personenbezogene Daten sind Informationen, die sich auf eine identifizierte oder identifizierbare Person beziehen. Hierunter fallen vor allem Angaben, die Rückschlüsse auf Ihre Identität ermöglichen, beispielsweise Ihr Name, Ihre Telefonnummer, Ihre Anschrift oder E-Mail-Adresse.",
+      "paragraph3": "Statistische Daten, die wir beispielsweise bei einem Besuch unserer Website erheben und die nicht mit Ihrer Person in Verbindung gebracht werden können, fallen nicht unter den Begriff des personenbezogenen Datums. Sie können diese Datenschutzerklärung ausdrucken oder speichern, indem Sie die übliche Funktionalität Ihres Browsers nutzen."
+    },
+    "contact": {
+      "title": "Kontaktdaten",
+      "paragraph1": "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:",
+      "companyName": "Sanovias Medical Tourism",
+      "address": "123 Medical Avenue\nTunis 1002, Tunesien",
+      "email": "info@sanovias.com",
+      "phone": "+216 123 456 789",
+      "paragraph2": "Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet."
+    },
+    "dataProcessing": {
+      "title": "Umfang der Datenverarbeitung, Verarbeitungszwecke und Rechtsgrundlagen",
+      "paragraph1": "Den Umfang der Verarbeitung der Daten, Verarbeitungszwecke und Rechtsgrundlagen führen wir im Detail weiter unten aus. Als Rechtsgrundlage für eine Datenverarbeitung kommen grundsätzlich die folgenden in Betracht:",
+      "legalBasis": {
+        "consent": "Art. 6 Abs. 1 S. 1 lit. a DSGVO dient uns als Rechtsgrundlage für Verarbeitungsvorgänge, für die wir eine Einwilligung einholen.",
+        "contract": "Art. 6 Abs. 1 S. 1 lit. b DSGVO ist Rechtsgrundlage, soweit die Verarbeitung personenbezogener Daten zur Erfüllung eines Vertrages erforderlich ist, z.B. wenn ein Seitenbesucher von uns ein Produkt erwirbt oder wir für ihn eine Leistung ausführen. Diese Rechtsgrundlage gilt auch für Verarbeitungen, die für vorvertragliche Maßnahmen erforderlich sind, etwa bei Anfragen zu unseren Produkten oder Leistungen.",
+        "legalObligation": "Art. 6 Abs. 1 S. 1 lit. c DSGVO dient als Rechtsgrundlage, wenn die Verarbeitung zur Erfüllung einer rechtlichen Verpflichtung erforderlich ist.",
+        "vitalInterests": "Art. 6 Abs. 1 S. 1 lit. d DSGVO dient als Rechtsgrundlage, wenn die Verarbeitung erforderlich ist, um lebenswichtige Interessen zu schützen.",
+        "publicTask": "Art. 6 Abs. 1 S. 1 lit. e DSGVO dient als Rechtsgrundlage, wenn die Verarbeitung für die Wahrnehmung einer Aufgabe erforderlich ist, die im öffentlichen Interesse liegt.",
+        "legitimateInterests": "Art. 6 Abs. 1 S. 1 lit. f DSGVO dient als Rechtsgrundlage, wenn wir uns zur Verarbeitung personenbezogener Daten auf berechtigte Interessen berufen können, z.B. für Cookies, die für den technischen Betrieb unserer Website erforderlich sind."
+      }
+    },
+    "dataTransfer": {
+      "title": "Datenverarbeitung außerhalb des EWR",
+      "paragraph1": "Soweit wir Daten an Dienstleister oder sonstige Dritte außerhalb des EWR übermitteln, garantieren wir die Sicherheit der Daten bei der Weitergabe durch Angemessenheitsbeschlüsse der EU-Kommission (Art. 45 Abs. 3 DSGVO), soweit vorhanden (z.B. für Großbritannien, Kanada und Israel).",
+      "paragraph2": "Wenn kein Angemessenheitsbeschluss existiert (z.B. für die USA), sind Rechtsgrundlage für die Datenweitergabe im Regelfall Standardvertragsklauseln. Diese sind ein von der EU-Kommission verabschiedetes Regelwerk und Teil des Vertrags mit dem jeweiligen Dritten. Nach Art. 46 Abs. 2 lit. b DSGVO gewährleisten sie die Sicherheit der Datenweitergabe.",
+      "paragraph3": "Viele der Anbieter haben über die Standardvertragsklauseln hinausgehende vertragliche Garantien abgegeben, die die Daten über die Standardvertragsklauseln hinaus schützen. Das sind z.B. Garantien hinsichtlich der Verschlüsselung der Daten oder hinsichtlich einer Pflicht des Dritten zum Hinweis an Betroffene, wenn Strafverfolgungsorgane auf Daten zugreifen wollen."
+    },
+    "retention": {
+      "title": "Speicherdauer",
+      "paragraph1": "Sofern nicht im Rahmen dieser Datenschutzerklärung ausdrücklich angegeben, werden die bei uns gespeicherten Daten gelöscht, sobald sie für ihre Zweckbestimmung nicht mehr erforderlich sind und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
+      "paragraph2": "Sofern die Daten nicht gelöscht werden, weil sie für andere und gesetzlich zulässige Zwecke erforderlich sind, wird ihre Verarbeitung eingeschränkt, d.h. die Daten werden gesperrt und nicht für andere Zwecke verarbeitet. Das gilt z.B. für Daten, die wir aus handels- oder steuerrechtlichen Gründen aufbewahren müssen."
+    },
+    "dataRights": {
+      "title": "Rechte der Betroffenen",
+      "introduction": "Betroffene haben gegenüber uns folgende Rechte hinsichtlich der sie betreffenden personenbezogenen Daten:",
+      "access": {
+        "title": "Recht auf Auskunft",
+        "description": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, jederzeit von dem für die Verarbeitung Verantwortlichen unentgeltliche Auskunft über die zu seiner Person gespeicherten personenbezogenen Daten und eine Kopie dieser Auskunft zu erhalten. Ferner hat der Europäische Richtlinien- und Verordnungsgeber der betroffenen Person Auskunft über folgende Informationen zugestanden:",
+        "details": [
+          "die Verarbeitungszwecke",
+          "die Kategorien personenbezogener Daten, die verarbeitet werden",
+          "die Empfänger oder Kategorien von Empfängern, gegenüber denen die personenbezogenen Daten offengelegt worden sind oder noch offengelegt werden, insbesondere bei Empfängern in Drittländern oder bei internationalen Organisationen",
+          "falls möglich die geplante Dauer, für die die personenbezogenen Daten gespeichert werden, oder, falls dies nicht möglich ist, die Kriterien für die Festlegung dieser Dauer",
+          "das Bestehen eines Rechts auf Berichtigung oder Löschung der sie betreffenden personenbezogenen Daten oder auf Einschränkung der Verarbeitung durch den Verantwortlichen oder eines Widerspruchsrechts gegen diese Verarbeitung",
+          "das Bestehen eines Beschwerderechts bei einer Aufsichtsbehörde",
+          "wenn die personenbezogenen Daten nicht bei der betroffenen Person erhoben werden: Alle verfügbaren Informationen über die Herkunft der Daten",
+          "das Bestehen einer automatisierten Entscheidungsfindung einschließlich Profiling"
+        ]
+      },
+      "rectification": {
+        "title": "Recht auf Berichtigung",
+        "description": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, die unverzügliche Berichtigung sie betreffender unrichtiger personenbezogener Daten zu verlangen. Ferner steht der betroffenen Person das Recht zu, unter Berücksichtigung der Zwecke der Verarbeitung, die Vervollständigung unvollständiger personenbezogener Daten zu verlangen."
+      },
+      "erasure": {
+        "title": "Recht auf Löschung",
+        "description": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, von dem Verantwortlichen zu verlangen, dass die sie betreffenden personenbezogenen Daten unverzüglich gelöscht werden, sofern einer der folgenden Gründe zutrifft und soweit die Verarbeitung nicht erforderlich ist:",
+        "grounds": [
+          "Die personenbezogenen Daten wurden für solche Zwecke erhoben oder auf sonstige Weise verarbeitet, für welche sie nicht mehr notwendig sind",
+          "Die betroffene Person widerruft ihre Einwilligung und es fehlt an einer anderweitigen Rechtsgrundlage für die Verarbeitung",
+          "Die betroffene Person legt Widerspruch gegen die Verarbeitung ein und es liegen keine vorrangigen berechtigten Gründe für die Verarbeitung vor",
+          "Die personenbezogenen Daten wurden unrechtmäßig verarbeitet",
+          "Die Löschung der personenbezogenen Daten ist zur Erfüllung einer rechtlichen Verpflichtung erforderlich"
+        ]
+      },
+      "restriction": {
+        "title": "Recht auf Einschränkung der Verarbeitung",
+        "description": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, von dem Verantwortlichen die Einschränkung der Verarbeitung zu verlangen, wenn eine der folgenden Voraussetzungen gegeben ist:",
+        "conditions": [
+          "Die Richtigkeit der personenbezogenen Daten wird von der betroffenen Person bestritten",
+          "Die Verarbeitung ist unrechtmäßig, die betroffene Person lehnt die Löschung ab und verlangt stattdessen die Einschränkung",
+          "Der Verantwortliche benötigt die Daten nicht länger, die betroffene Person benötigt sie jedoch zur Geltendmachung von Rechtsansprüchen",
+          "Die betroffene Person hat Widerspruch gegen die Verarbeitung eingelegt"
+        ]
+      },
+      "portability": {
+        "title": "Recht auf Datenübertragbarkeit",
+        "description": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, die sie betreffenden personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten und das Recht, diese Daten einem anderen Verantwortlichen zu übermitteln."
+      },
+      "objection": {
+        "title": "Widerspruchsrecht",
+        "description": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, jederzeit gegen die Verarbeitung sie betreffender personenbezogener Daten Widerspruch einzulegen, wenn die Verarbeitung auf berechtigten Interessen beruht."
+      },
+      "withdrawConsent": {
+        "title": "Recht auf Widerruf der Einwilligung",
+        "description": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, eine Einwilligung zur Verarbeitung personenbezogener Daten jederzeit zu widerrufen."
+      },
+      "complaint": {
+        "title": "Beschwerderecht",
+        "description": "Betroffene haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung ihrer personenbezogenen Daten zu beschweren."
+      },
+      "contact": "Möchten Sie eines dieser Rechte in Anspruch nehmen, können Sie sich hierzu jederzeit an unseren Datenschutzbeauftragten oder einen anderen Mitarbeiter des für die Verarbeitung Verantwortlichen unter den angegebenen Kontaktdaten wenden."
+    },
+    "dataProvision": {
+      "title": "Pflicht zur Bereitstellung von Daten",
+      "paragraph1": "Kunden, Interessenten oder Dritte müssen uns im Rahmen einer Geschäftsbeziehung oder sonstigen Beziehung nur diejenigen personenbezogenen Daten bereitstellen, die für die Begründung, Durchführung und Beendigung der Geschäftsbeziehung oder eine sonstige Beziehung erforderlich sind oder zu deren Erhebung wir gesetzlich verpflichtet sind.",
+      "paragraph2": "Ohne diese Daten werden wir in der Regel den Abschluss eines Vertrages oder die Bereitstellung einer Leistung ablehnen müssen oder einen bestehenden Vertrag oder sonstige Beziehung nicht mehr durchführen können. Pflichtangaben sind als solche gekennzeichnet."
+    },
+    "automatedDecision": {
+      "title": "Keine automatische Entscheidungsfindung im Einzelfall",
+      "paragraph1": "Zur Begründung und Durchführung einer Geschäftsbeziehung oder sonstigen Beziehung nutzen wir grundsätzlich keine vollautomatisierte Entscheidungsfindung gemäß Artikel 22 DSGVO. Sollten wir diese Verfahren in Einzelfällen einsetzen, werden wir hierüber gesondert informieren, sofern dies gesetzlich geboten ist."
+    },
+    "websiteData": {
+      "title": "Datenverarbeitung auf der Website",
+      "informational": {
+        "title": "Informatorische Nutzung der Website",
+        "paragraph1": "Bei der informatorischen Nutzung der Website, also wenn Seitenbesucher uns nicht gesondert Informationen übermitteln, erheben wir die personenbezogenen Daten, die der Browser an unseren Server übermittelt, um die Stabilität und Sicherheit unserer Website zu gewährleisten. Darin liegt unser berechtigtes Interesse, so dass Rechtsgrundlage Art. 6 Abs. 1 S. 1 lit. f DSGVO ist.",
+        "dataTypes": [
+          "IP-Adresse",
+          "Datum und Uhrzeit der Anfrage",
+          "Zeitzonendifferenz zur Greenwich Mean Time (GMT)",
+          "Inhalt der Anfrage (konkrete Seite)",
+          "Zugriffsstatus/HTTP-Statuscode",
+          "Website, von der die Anfrage kommt",
+          "Browser",
+          "Betriebssystem und dessen Oberfläche",
+          "Sprache und Version der Browsersoftware"
+        ],
+        "paragraph2": "Diese Daten werden außerdem in Logfiles gespeichert. Sie werden gelöscht, wenn ihre Speicherung nicht mehr erforderlich ist, spätestens nach 14 Tagen."
+      },
+      "webhosting": {
+        "title": "Webhosting und Bereitstellung der Website",
+        "paragraph1": "Wir hosten unsere Website bei einem Hosting-Anbieter. Die Verwendung von Hosting-Services erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website.",
+        "paragraph2": "Wir haben einen Vertrag über Auftragsverarbeitung (AVV) mit dem Hosting-Anbieter geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der gewährleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet."
+      },
+      "ssl": {
+        "title": "SSL- bzw. TLS-Verschlüsselung",
+        "paragraph1": "Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von \"http://\" auf \"https://\" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.",
+        "paragraph2": "Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden."
+      },
+      "contactForm": {
+        "title": "Kontaktformular",
+        "paragraph1": "Bei Kontaktaufnahme über das Kontaktformular auf unserer Website speichern wir die dort abgefragten Daten und den Inhalt der Nachricht. Rechtsgrundlage für die Verarbeitung ist unser berechtigtes Interesse, an uns gerichtete Anfragen zu beantworten. Rechtsgrundlage für die Verarbeitung ist deshalb Art. 6 Abs. 1 S. 1 lit. f DSGVO.",
+        "paragraph2": "Die in diesem Zusammenhang anfallenden Daten löschen wir, nachdem die Speicherung nicht mehr erforderlich ist, oder schränken die Verarbeitung ein, falls gesetzliche Aufbewahrungspflichten bestehen."
+      },
+      "medicalInquiries": {
+        "title": "Medizinische Anfragen und Beratungen",
+        "paragraph1": "Wenn Sie medizinische Anfragen über unsere Website stellen oder Beratungen anfordern, verarbeiten wir Ihre Gesundheitsdaten, um Medizintourismus-Dienstleistungen zu erbringen. Dies umfasst Behandlungspräferenzen, von Ihnen bereitgestellte Krankengeschichte und Beratungsunterlagen.",
+        "paragraph2": "Rechtsgrundlage für die Verarbeitung von Gesundheitsdaten ist Ihre ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a DSGVO) und die Verarbeitung für Zwecke der Gesundheitsvorsorge (Art. 9 Abs. 2 lit. h DSGVO). Wir verarbeiten nur die für unsere Dienstleistungen erforderlichen minimalen Gesundheitsdaten.",
+        "paragraph3": "Gesundheitsdaten unterliegen einem besonderen Schutz und sind nur für autorisiertes Personal zugänglich, das an Ihrer Behandlungskoordination beteiligt ist. Wir setzen angemessene technische und organisatorische Maßnahmen zum Schutz dieser sensiblen Daten um."
+      },
+      "bookings": {
+        "title": "Buchungen medizinischer Behandlungen",
+        "paragraph1": "Bei der Buchung medizinischer Behandlungen über unsere Website verarbeiten wir personenbezogene Daten einschließlich medizinischer Präferenzen, Reiseinformationen und Zahlungsdetails, um Ihr Medizintourismus-Paket zu arrangieren.",
+        "paragraph2": "Rechtsgrundlage für die Verarbeitung ist die Erfüllung unseres Dienstleistungsvertrags mit Ihnen (Art. 6 Abs. 1 lit. b DSGVO). Für Gesundheitsdaten stützen wir uns auf Ihre ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a DSGVO)."
+      }
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "paragraph1": "Wir behalten uns vor, Kunden, die bereits Dienstleistungen von uns in Anspruch genommen haben oder Waren gekauft haben, von Zeit zu Zeit per E-Mail oder auf anderem Weg elektronisch über unsere Angebote zu informieren, falls sie dem nicht widersprochen haben. Rechtsgrundlage für diese Datenverarbeitung ist Art. 6 Abs. 1 S. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der Direktwerbung.",
+      "paragraph2": "Kunden können der Verwendung ihrer E-Mail-Adresse zu Werbezwecken jederzeit ohne zusätzliche Kosten widersprechen, zum Beispiel über den Link am Ende einer jeden E-Mail oder per E-Mail an unsere oben genannte E-Mail-Adresse.",
+      "paragraph3": "Interessenten haben die Möglichkeit, einen kostenlosen Newsletter zu abonnieren. Wir verarbeiten die bei der Anmeldung angegebenen Daten ausschließlich für den Versand des Newsletters. Die Anmeldung erfolgt über die Auswahl des entsprechenden Feldes auf unserer Website oder durch eine andere eindeutige Handlung, wodurch Interessenten ihr Einverständnis in die Verarbeitung ihrer Daten erklären, so dass Rechtsgrundlage Art. 6 Abs. 1 S. 1 lit. a DSGVO ist.",
+      "paragraph4": "Die Einwilligung kann jederzeit widerrufen werden, z.B. durch Klicken des entsprechenden Links im Newsletter oder Hinweis an unsere oben angegebene E-Mail-Adresse. Die Verarbeitung der Daten bis zum Widerruf bleibt auch im Falle eines Widerrufs rechtmäßig."
+    },
+    "thirdPartyServices": {
+      "title": "Dienste von Drittanbietern",
+      "introduction": "Wir nutzen verschiedene Dienste von Drittanbietern, um unsere Website-Funktionalität bereitzustellen und zu verbessern:",
+      "analytics": {
+        "title": "Website-Analyse",
+        "paragraph1": "Wir können Analysedienste verwenden, um zu verstehen, wie Besucher unsere Website nutzen. Diese Dienste helfen uns, unsere Website-Leistung und Benutzererfahrung zu verbessern.",
+        "paragraph2": "Rechtsgrundlage für die Nutzung von Analysediensten ist unser berechtigtes Interesse an der Website-Optimierung (Art. 6 Abs. 1 lit. f DSGVO). Soweit erforderlich, holen wir Ihre Einwilligung ein."
+      },
+      "maps": {
+        "title": "Karten- und Standortdienste",
+        "paragraph1": "Wir können Kartendienste verwenden, um Standorte unserer Partnerkrankenhäuser und -kliniken anzuzeigen. Diese Dienste können Daten über Ihren Standort und Ihr Gerät sammeln.",
+        "paragraph2": "Rechtsgrundlage ist unser berechtigtes Interesse an der Bereitstellung von Standortinformationen für unsere Medizintourismus-Dienstleistungen (Art. 6 Abs. 1 lit. f DSGVO)."
+      }
+    },
+    "socialMedia": {
+      "title": "Social Media",
+      "paragraph1": "Wir sind in Social Media-Netzwerken vertreten, um dort unser Unternehmen und unsere Leistungen vorzustellen. Die Betreiber dieser Netzwerke verarbeiten Daten ihrer Nutzer regelmäßig zu Werbezwecken und erstellen Nutzerprofile aus ihrem Onlineverhalten.",
+      "paragraph2": "Wenn Nutzer der Netzwerke mit uns über unsere Profile in Kontakt treten, verarbeiten wir die uns mitgeteilten Daten, um die Anfragen zu beantworten. Darin liegt unser berechtigtes Interesse, so dass Rechtsgrundlage Art. 6 Abs. 1 S. 1 lit. f DSGVO ist.",
+      "platforms": {
+        "facebook": "Wir unterhalten ein Profil auf Facebook. Betreiber: Meta Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland.",
+        "instagram": "Wir unterhalten ein Profil auf Instagram. Betreiber: Meta Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland.",
+        "linkedin": "Wir unterhalten ein Profil auf LinkedIn. Betreiber: LinkedIn Ireland Unlimited Company, Wilton Place, Dublin 2, Irland."
+      }
+    },
+    "dataProtectionOfficer": {
+      "title": "Datenschutzbeauftragter",
+      "paragraph1": "Wir haben einen Datenschutzbeauftragten bestellt, der unter folgenden Kontaktdaten erreichbar ist:",
+      "contact": "E-Mail: privacy@sanovias.com\nTelefon: +216 123 456 790"
+    },
+    "changes": {
+      "title": "Änderung dieser Datenschutzerklärung",
+      "paragraph1": "Wir behalten uns das Recht vor, diese Datenschutzerklärung mit Wirkung für die Zukunft zu ändern. Eine aktuelle Version ist jeweils hier verfügbar.",
+      "paragraph2": "Bei wesentlichen Änderungen werden wir Sie benachrichtigen, indem wir das Datum \"Zuletzt aktualisiert\" oben in dieser Richtlinie aktualisieren und gegebenenfalls zusätzliche Hinweise über unsere Website oder E-Mail bereitstellen."
+    },
+    "questions": {
+      "title": "Fragen und Kommentare",
+      "paragraph1": "Für Fragen oder Kommentare bezüglich dieser Datenschutzerklärung stehen wir gern unter den oben angegebenen Kontaktdaten zur Verfügung."
+    }
+  },
+  "cookiePolicy": {
+    "title": "Cookie-Richtlinie",
+    "lastUpdated": "Zuletzt aktualisiert:",
+    "lastUpdatedDate": "7. Oktober 2025",
+    "introduction": {
+      "title": "Einführung",
+      "paragraph1": "Diese Cookie-Richtlinie erklärt, wie Sanovias Medical Tourism (\"wir\", \"uns\" oder \"unser\") Cookies und ähnliche Technologien verwendet, wenn Sie unsere Website sanovias.com (\"Service\") besuchen.",
+      "paragraph2": "Diese Richtlinie entspricht den Anforderungen der Datenschutz-Grundverordnung (DSGVO) der Europäischen Union, des österreichischen Datenschutzgesetzes (DSG) und der ePrivacy-Richtlinie für Cookie-Einwilligung und Transparenz.",
+      "paragraph3": "Durch die Nutzung unseres Services stimmen Sie der Verwendung von Cookies zu, wie in dieser Richtlinie beschrieben, vorbehaltlich Ihrer Cookie-Präferenzen, die Sie jederzeit verwalten können."
+    },
+    "whatAreCookies": {
+      "title": "Was sind Cookies?",
+      "paragraph1": "Cookies sind kleine Textdateien, die auf Ihrem Gerät (Computer, Smartphone oder Tablet) platziert werden, wenn Sie unsere Website besuchen. Sie helfen uns, Ihnen eine bessere Erfahrung zu bieten, indem sie sich an Ihre Präferenzen erinnern und verstehen, wie Sie unsere Website nutzen.",
+      "paragraph2": "Cookies enthalten Informationen, die auf die Festplatte Ihres Geräts übertragen und dort gespeichert werden. Sie können keine Programme ausführen oder Viren an Ihr Gerät übertragen und können nicht auf Ihre persönlichen Dateien zugreifen."
+    },
+    "howWeUseCookies": {
+      "title": "Wie wir Cookies verwenden",
+      "introduction": "Wir verwenden Cookies für verschiedene Zwecke, um Ihre Erfahrung zu verbessern und sicherzustellen, dass unsere Website ordnungsgemäß funktioniert. Unsere Cookies sind wie folgt kategorisiert:"
+    },
+    "categories": {
+      "essential": {
+        "title": "Essentielle Cookies (Immer aktiv)",
+        "description": "Diese Cookies sind unbedingt erforderlich, damit unsere Website ordnungsgemäß funktioniert. Sie ermöglichen grundlegende Funktionen wie Seitennavigation, Formularübermittlungen und Sicherheitsfeatures. Sie können diese Cookies nicht deaktivieren, da sie für den von Ihnen angeforderten Service unerlässlich sind.",
+        "legal": "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO - Vertragserfüllung und Art. 6 Abs. 1 lit. f DSGVO - berechtigte Interessen an Website-Sicherheit und -Funktionalität."
+      },
+      "functional": {
+        "title": "Funktionale Cookies (Erfordert Einwilligung)",
+        "description": "Diese Cookies verbessern Ihre Erfahrung, indem sie sich an Ihre Präferenzen und Einstellungen erinnern. Sie ermöglichen Funktionen wie Sprachauswahl und automatisches Speichern von Formularen.",
+        "legal": "Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO - Einwilligung. Sie können Ihre Einwilligung jederzeit über unsere Cookie-Einstellungen widerrufen."
+      }
+    },
+    "table": {
+      "name": "Cookie-Name",
+      "purpose": "Zweck",
+      "duration": "Dauer"
+    },
+    "cookies": {
+      "prerender_bypass": "Ermöglicht den Inhaltsvorschau-Modus für Redakteure, um Entwurfsinhalte vor der Veröffentlichung anzuzeigen",
+      "next_preview_data": "Speichert Vorschau-Authentifizierungstoken für das Content-Management-System",
+      "cookie_consent": "Speichert Ihre Cookie-Präferenzen, um sich an Ihre Entscheidungen bei zukünftigen Besuchen zu erinnern",
+      "session": "Behält Ihre Sitzung für Formularübermittlungen, Sicherheit und Benutzerpräferenzen beim Neuladen von Seiten bei",
+      "csrf_token": "Verhindert Cross-Site-Request-Forgery-Angriffe auf Formularübermittlungen zum Schutz Ihrer Daten",
+      "language": "Merkt sich Ihre bevorzugte Sprache (Englisch/Deutsch) für zukünftige Besuche",
+      "contact_form": "Speichert Ihren Kontaktformular-Fortschritt, um Datenverlust zu verhindern, wenn Sie wegnavigieren"
+    },
+    "durations": {
+      "session": "Sitzung (wird beim Schließen des Browsers gelöscht)",
+      "hours2": "2 Stunden",
+      "hours24": "24 Stunden",
+      "days7": "7 Tage",
+      "year1": "1 Jahr"
+    },
+    "management": {
+      "title": "Verwaltung Ihrer Cookie-Präferenzen",
+      "paragraph1": "Sie haben die volle Kontrolle darüber, welche Cookies wir auf Ihrem Gerät setzen. Sie können Ihre Präferenzen über unser Cookie-Banner verwalten, das beim ersten Besuch unserer Website erscheint, oder durch Anpassung Ihrer Browser-Einstellungen.",
+      "paragraph2": "Bitte beachten Sie, dass das Deaktivieren bestimmter Cookies die Funktionalität unserer Website beeinträchtigen kann. Essentielle Cookies können nicht deaktiviert werden, da sie für den grundlegenden Website-Betrieb und die Sicherheit erforderlich sind.",
+      "paragraph3": "Um Ihre Cookie-Präferenzen auf unserer Website zu aktualisieren, können Sie über das Cookie-Banner auf die Cookie-Einstellungen zugreifen oder uns direkt kontaktieren."
+    },
+    "browserSettings": {
+      "title": "Browser-Cookie-Einstellungen",
+      "introduction": "Sie können Cookies auch über Ihre Browser-Einstellungen steuern. So verwalten Sie Cookies in gängigen Browsern:",
+      "chrome": "Einstellungen > Datenschutz und Sicherheit > Cookies und andere Website-Daten",
+      "firefox": "Einstellungen > Datenschutz & Sicherheit > Cookies und Website-Daten",
+      "safari": "Einstellungen > Datenschutz > Website-Daten verwalten",
+      "edge": "Einstellungen > Datenschutz, Suche und Dienste > Cookies und Website-Berechtigungen"
+    },
+    "legalBasis": {
+      "title": "Rechtsgrundlage für die Verarbeitung",
+      "paragraph1": "Unter der DSGVO und dem österreichischen Datenschutzgesetz verarbeiten wir Ihre Daten auf folgenden Rechtsgrundlagen:",
+      "paragraph2": "Essentielle Cookies: Verarbeitet basierend auf unseren berechtigten Interessen (Art. 6 Abs. 1 lit. f DSGVO) zur Bereitstellung von Website-Funktionalität und -Sicherheit sowie zur Erfüllung unserer Dienstleistungen (Art. 6 Abs. 1 lit. b DSGVO).",
+      "paragraph3": "Funktionale Cookies: Verarbeitet basierend auf Ihrer ausdrücklichen Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie jederzeit widerrufen können, ohne dass dies die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung berührt."
+    },
+    "dataRights": {
+      "title": "Ihre Datenschutzrechte",
+      "introduction": "Unter der DSGVO und österreichischem Recht haben Sie folgende Rechte bezüglich Ihrer personenbezogenen Daten:",
+      "access": "Recht auf Auskunft: Kopien Ihrer in Cookies gespeicherten personenbezogenen Daten anfordern",
+      "rectification": "Recht auf Berichtigung: Korrektur unrichtiger personenbezogener Daten anfordern",
+      "erasure": "Recht auf Löschung: Löschung Ihrer personenbezogenen Daten unter bestimmten Umständen anfordern",
+      "portability": "Recht auf Datenübertragbarkeit: Übertragung Ihrer Daten in einem strukturierten Format anfordern",
+      "objection": "Widerspruchsrecht: Widerspruch gegen Verarbeitung aufgrund berechtigter Interessen",
+      "restriction": "Recht auf Einschränkung: Einschränkung der Verarbeitung unter bestimmten Umständen anfordern",
+      "contact": "Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter info@sanovias.com oder nutzen Sie die unten angegebenen Kontaktinformationen."
+    },
+    "thirdParty": {
+      "title": "Drittanbieter-Cookies",
+      "paragraph1": "Derzeit verwenden wir keine Drittanbieter-Cookies auf unserer Website. Alle Cookies werden direkt von Sanovias Medical Tourism gesetzt und kontrolliert.",
+      "paragraph2": "Falls wir in Zukunft Drittanbieter-Services implementieren (wie Analytics- oder Marketing-Tools), werden wir diese Richtlinie aktualisieren und gegebenenfalls Ihre Einwilligung gemäß geltendem Recht einholen."
+    },
+    "updates": {
+      "title": "Aktualisierungen dieser Richtlinie",
+      "paragraph1": "Wir können diese Cookie-Richtlinie von Zeit zu Zeit aktualisieren, um Änderungen in unseren Praktiken, Technologie, rechtlichen Anforderungen oder aus anderen betrieblichen Gründen zu reflektieren.",
+      "paragraph2": "Bei wesentlichen Änderungen werden wir Sie benachrichtigen, indem wir das Datum \"Zuletzt aktualisiert\" oben in dieser Richtlinie aktualisieren und gegebenenfalls zusätzliche Hinweise über unsere Website oder E-Mail bereitstellen."
+    },
+    "contact": {
+      "title": "Kontaktinformationen",
+      "paragraph1": "Wenn Sie Fragen zu dieser Cookie-Richtlinie, unserer Verwendung von Cookies haben oder Ihre Datenschutzrechte ausüben möchten, kontaktieren Sie uns bitte:",
+      "email": "E-Mail:",
+      "phone": "Telefon:"
     }
   }
 }
