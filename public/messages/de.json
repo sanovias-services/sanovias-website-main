@@ -30,7 +30,15 @@
       "faqs": "Häufige Fragen",
       "ourTeam": "Unser Team",
       "dentalCare": "Zahnpflege",
-      "plasticSurgery": "Plastische Chirurgie"
+      "plasticSurgery": "Plastische Chirurgie",
+      "blog": "Blog",
+      "events": "Veranstaltungen",
+      "press": "Presse",
+      "team": "Team",
+      "partners": "Partner",
+      "orthopedy": "Orthopädie",
+      "termsOfService": "Nutzungsbedingungen",
+      "jobs": "Stellenangebote"
     },
     "contactInfo": {
       "title": "Kontaktieren Sie uns",
@@ -1125,6 +1133,60 @@
         "title": "Inkrafttreten",
         "description": "Dieses Impressum ist ab dem oben genannten Datum der letzten Aktualisierung wirksam und gilt für alle Nutzer unserer Website und Dienstleistungen."
       }
+    }
+  },
+  "press": {
+    "meta": {
+      "title": "Presse - Sanovias Medical Tourism",
+      "description": "Bleiben Sie über die neuesten Nachrichten und Pressemitteilungen von Sanovias Medical Tourism informiert. Bald verfügbar - folgen Sie unserem Newsletter für Updates."
+    },
+    "hero": {
+      "title": "Presse & Medien",
+      "description": "Wir arbeiten noch an diesem Bereich. In der Zwischenzeit bleiben Sie über unseren Newsletter und unsere Social-Media-Kanäle mit uns verbunden, um die neuesten Updates und Ankündigungen zu erhalten."
+    },
+    "social": {
+      "title": "Folgen Sie uns in den sozialen Medien",
+      "description": "Verbinden Sie sich mit uns auf unseren sozialen Plattformen für Echtzeit-Updates, Hinter-den-Kulissen-Inhalte und die neuesten Einblicke in den Medizintourismus."
+    },
+    "cta": {
+      "title": "Benötigen Sie Medieninformationen?",
+      "description": "Wenn Sie spezifische Presseinformationen oder Medienressourcen suchen, wenden Sie sich gerne direkt an unser Team."
+    }
+  },
+  "events": {
+    "meta": {
+      "title": "Veranstaltungen - Sanovias Medical Tourism",
+      "description": "Entdecken Sie kommende Medizintourismus-Veranstaltungen und Konferenzen mit Sanovias. Bald verfügbar - abonnieren Sie unseren Newsletter für Event-Updates."
+    },
+    "hero": {
+      "title": "Veranstaltungen & Konferenzen",
+      "description": "Wir bereiten uns noch auf die nächste Veranstaltung vor. Abonnieren Sie unseren Newsletter und folgen Sie uns in den sozialen Medien, um als Erste von unseren kommenden Medizintourismus-Veranstaltungen und Konferenzen zu erfahren."
+    },
+    "social": {
+      "title": "In Verbindung bleiben",
+      "description": "Folgen Sie uns in den sozialen Medien, um Echtzeit-Updates über unsere kommenden Veranstaltungen, Konferenzen und Medizintourismus-Möglichkeiten zu erhalten."
+    },
+    "cta": {
+      "title": "Interessiert an unseren Veranstaltungen?",
+      "description": "Möchten Sie mehr über unsere kommenden Veranstaltungen erfahren oder mit uns zusammenarbeiten? Nehmen Sie Kontakt mit unserem Team auf."
+    }
+  },
+  "jobs": {
+    "meta": {
+      "title": "Karriere - Sanovias Medical Tourism",
+      "description": "Werden Sie Teil des Sanovias-Teams! Wir stellen noch nicht ein, aber wir wachsen. Abonnieren Sie unseren Newsletter, um als Erste von Karrieremöglichkeiten zu erfahren."
+    },
+    "hero": {
+      "title": "Werden Sie Teil unseres Teams",
+      "description": "Wir stellen noch nicht ein, aber bald brauchen wir Sie in unserem Team! Abonnieren Sie unseren Newsletter und folgen Sie uns in den sozialen Medien, um als Erste zu erfahren, wann spannende Karrieremöglichkeiten verfügbar werden."
+    },
+    "social": {
+      "title": "Vernetzen Sie sich mit uns",
+      "description": "Folgen Sie uns in den sozialen Medien, um mehr über unsere Unternehmenskultur und Team-Updates zu erfahren und benachrichtigt zu werden, wenn wir mit der Rekrutierung beginnen."
+    },
+    "cta": {
+      "title": "Bereit, etwas zu bewegen?",
+      "description": "Interessiert daran, in Zukunft mit uns zu arbeiten? Wenden Sie sich an unser Team und teilen Sie uns Ihren Hintergrund und Ihre Interessen mit."
     }
   }
 }
