@@ -13,8 +13,8 @@ export default function Footer() {
     <footer className="bg-[#1C3C47] text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-          {/* Company Info */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-8 lg:mb-10">
+          {/* Company Info, Contact Info & Social Media */}
           <div>
             <Link href={`/${locale}`}>
               <Image
@@ -28,7 +28,120 @@ export default function Footer() {
             <p className="text-gray-300 text-sm mb-6 font-inter leading-relaxed">
               {t('footer.description')}
             </p>
-            <div className="flex space-x-4">
+            
+            {/* Contact Info */}
+            <div className="mb-6">
+              <h4 className="font-semibold text-base mb-3 text-teal-300">{t('footer.contactInfo.title')}</h4>
+              <address className="text-gray-300 text-sm not-italic space-y-2">
+                <div className="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-teal-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span dangerouslySetInnerHTML={{ __html: t('footer.contactInfo.address') }} />
+                </div>
+                <div className="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-teal-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <a href={`mailto:${t('footer.contactInfo.email')}`} className="hover:text-white transition-colors duration-200">{t('footer.contactInfo.email')}</a>
+                </div>
+                <div className="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-teal-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <a href={`tel:${t('footer.contactInfo.phone').replace(/\s+/g, '')}`} className="hover:text-white transition-colors duration-200">{t('footer.contactInfo.phone')}</a>
+                </div>
+              </address>
+            </div>
+          </div>
+
+          {/* Site Map - Spans 2 columns */}
+          <div className="lg:col-span-2">
+            <h3 className="font-semibold text-lg mb-6 text-teal-300">{t('footer.siteMap.title')}</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 lg:gap-x-6 gap-y-3">
+              <Link href={`/${locale}/about`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+                {t('navigation.about')}
+              </Link>
+              <Link href={`/${locale}/about#team`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+                {t('footer.siteMap.team')}
+              </Link>
+              <Link href={`/${locale}/about#partners`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+                {t('footer.siteMap.partners')}
+              </Link>
+              <Link href={`/${locale}/how`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+                {t('navigation.how')}
+              </Link>
+              <Link href={`/${locale}/services#plastic`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+                {t('footer.siteMap.plasticSurgery')}
+              </Link>
+              <Link href={`/${locale}/services#dental`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+                {t('footer.siteMap.dentalCare')}
+              </Link>
+              <Link href={`/${locale}/services#orthopedy`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+                {t('footer.siteMap.orthopedy')}
+              </Link>
+              <Link href={`/${locale}/policies/terms`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+                {t('footer.siteMap.termsOfService')}
+              </Link>
+              <Link href={`/${locale}/contact`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+                {t('navigation.contact')}
+              </Link>
+            </div>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4 text-teal-300">{t('footer.newsletter.title')}</h3>
+            <p className="text-gray-300 text-sm mb-4">{t('footer.newsletter.description')}</p>
+            <form className="flex flex-col space-y-2">
+              <input 
+                type="email" 
+                placeholder={t('footer.newsletter.emailPlaceholder')} 
+                className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 text-white" 
+              />
+              <button 
+                type="button" 
+                className="px-6 py-3 bg-[#2CA6A4] hover:bg-[#26928F] rounded-lg transition-colors duration-150 font-inter font-semibold text-sm uppercase tracking-wide"
+              >
+                {t('footer.newsletter.subscribe')}
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        {/* Combined Social Media and Additional Links - Between horizontal lines */}
+        <div className="border-t border-gray-600 pt-6 pb-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            {/* Social Media - Left side, aligned with first column */}
+            <div className="flex space-x-4 order-2 sm:order-1">
               <a href="https://www.facebook.com/sanovias" target="_blank" rel="noopener noreferrer" aria-label={t('footer.socialMedia.facebook')}>
                 <div className="bg-gray-700 hover:bg-[#2CA6A4] p-2 rounded-full transition-all duration-300 transform hover:-translate-y-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 320 512" aria-hidden="true">
@@ -51,131 +164,46 @@ export default function Footer() {
                 </div>
               </a>
             </div>
-          </div>
 
-          {/* Site Map */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4 text-teal-300">{t('footer.siteMap.title')}</h3>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-              <Link href={`/${locale}`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-transform duration-200 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-                {t('navigation.home')}
+            {/* Additional Links - Center */}
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-sm order-1 sm:order-2">
+              <Link href={`/${locale}/blog`} className="text-gray-300 hover:text-white transition-colors duration-200">
+                {t('footer.siteMap.blog')}
               </Link>
-              <Link href={`/${locale}/services`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-transform duration-200 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-                {t('navigation.services')}
+              <span className="text-gray-500">-</span>
+              <Link href={`/${locale}/press`} className="text-gray-300 hover:text-white transition-colors duration-200">
+                {t('footer.siteMap.press')}
               </Link>
-              <Link href={`/${locale}/about`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-transform duration-200 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-                {t('navigation.about')}
+              <span className="text-gray-500">-</span>
+              <Link href={`/${locale}/events`} className="text-gray-300 hover:text-white transition-colors duration-200">
+                {t('footer.siteMap.events')}
               </Link>
-              <Link href={`/${locale}/contact`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-transform duration-200 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-                {t('navigation.contact')}
-              </Link>
-              <Link href={`/${locale}/how`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-transform duration-200 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-                {t('navigation.how')}
-              </Link>
-              <Link href={`/${locale}/about#partners`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-transform duration-200 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-                {t('footer.siteMap.ourPartners')}
-              </Link>
-              <Link href={`/${locale}/about#faq`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-transform duration-200 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-                {t('footer.siteMap.faqs')}
-              </Link>
-              <Link href={`/${locale}/about#team`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-transform duration-200 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-                {t('footer.siteMap.ourTeam')}
-              </Link>
-              <Link href={`/${locale}/services#dental`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-transform duration-200 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-                {t('footer.siteMap.dentalCare')}
-              </Link>
-              <Link href={`/${locale}/services#plastic`} className="text-gray-300 hover:text-white hover:translate-x-1 transition-transform duration-200 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-                {t('footer.siteMap.plasticSurgery')}
+              <span className="text-gray-500">-</span>
+              <Link href={`/${locale}/jobs`} className="text-gray-300 hover:text-white transition-colors duration-200">
+                {t('footer.siteMap.jobs')}
               </Link>
             </div>
-          </div>
-          
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4 text-teal-300">{t('footer.contactInfo.title')}</h3>
-            <address className="text-gray-300 text-sm not-italic space-y-3">
-              <div className="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 text-teal-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span dangerouslySetInnerHTML={{ __html: t('footer.contactInfo.address') }} />
-              </div>
-              <div className="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 text-teal-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <a href={`mailto:${t('footer.contactInfo.email')}`} className="hover:text-white transition-colors duration-200">{t('footer.contactInfo.email')}</a>
-              </div>
-              <div className="flex items-start">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 text-teal-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <a href={`tel:${t('footer.contactInfo.phone').replace(/\s+/g, '')}`} className="hover:text-white transition-colors duration-200">{t('footer.contactInfo.phone')}</a>
-              </div>
-            </address>
-          </div>
 
-          {/* Newsletter */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4 text-teal-300">{t('footer.newsletter.title')}</h3>
-            <p className="text-gray-300 text-sm mb-4">{t('footer.newsletter.description')}</p>
-            <form className="flex flex-col space-y-2">
-              <input type="email" placeholder={t('footer.newsletter.emailPlaceholder')} className="px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 text-white" />
-              <button type="button" className="px-6 py-3 bg-[#2CA6A4] hover:bg-[#26928F] rounded-lg transition-colors duration-150 font-inter font-semibold text-sm uppercase tracking-wide">
-                {t('footer.newsletter.subscribe')}
-              </button>
-            </form>
+            {/* Empty space on right to balance layout */}
+            <div className="hidden sm:block w-24 lg:w-32 order-3"></div>
           </div>
         </div>
         
         {/* Bottom Footer */}
-        <div className="border-t border-gray-600 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <p className="font-inter" dangerouslySetInnerHTML={{ __html: t('footer.copyright', { year: new Date().getFullYear() }) }} />
-          <div className="flex space-x-6 mt-4 md:mt-0">
+        <div className="border-t border-gray-600 pt-6 lg:pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400 gap-4">
+          <p className="font-inter text-center sm:text-left" dangerouslySetInnerHTML={{ __html: t('footer.copyright', { year: new Date().getFullYear() }) }} />
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             {loading ? (
               // Show consistent placeholders while loading to prevent hydration mismatch
               <>
-                <span className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">Impressum</span>
-                <span className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{locale === 'de' ? 'Datenschutz' : 'Privacy Policy'}</span>
-                <span className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{locale === 'de' ? 'AGB' : 'Terms of Service'}</span>
-                <span className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{locale === 'de' ? 'Cookie-Richtlinie' : 'Cookie Policy'}</span>
+                <span className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.impressum')}</span>
+                <span className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.privacyPolicy')}</span>
+                <span className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.cookiePolicy')}</span>
               </>
             ) : (
               <>
                 <Link href={`/${locale}/policies/impressum`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.impressum')}</Link>
                 <Link href={`/${locale}/policies/privacy`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.privacyPolicy')}</Link>
-                <Link href={`/${locale}/policies/terms`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.termsOfService')}</Link>
                 <Link href={`/${locale}/policies/cookie`} className="font-inter hover:text-[#2CA6A4] transition-colors duration-200">{t('footer.legal.cookiePolicy')}</Link>
               </>
             )}
